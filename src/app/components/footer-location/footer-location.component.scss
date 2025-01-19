@@ -1,0 +1,10 @@
+@use "../../ui/styles/mixins.scss" as mixins;
+@use "../../ui/styles/variables.scss" as variables;
+
+.duties__footer-location {
+  @include mixins.flex-center(column, flex-start, flex-start);
+
+  &-title {
+    color: variables.$color-primary;
+  }
+}

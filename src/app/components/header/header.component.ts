@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
-import { MenuComponent } from '../menu/menu.component';
+import { HeaderNavigationComponent } from '../header-navigation/header-navigation.component';
 
 @Component({
   selector: 'app-header',
-  imports: [MenuComponent],
+  imports: [HeaderNavigationComponent],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrl: './header.component.scss',
 })
-export class HeaderComponent {
-
-}
+export class HeaderComponent {}

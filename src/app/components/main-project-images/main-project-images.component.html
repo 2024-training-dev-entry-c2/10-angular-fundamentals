@@ -1,0 +1,17 @@
+<a
+  href="#"
+  class="duties__project duties__project-link"
+  [attr.aria-label]="'Featured Projects ' + (images[0].title || '')"
+>
+  <div [class]="projectClass">
+    @for (image of images; track image) {
+    <img
+      [src]="image.src"
+      [alt]="image.alt"
+      class="duties__project-image"
+      [title]="image.title"
+      loading="lazy"
+    />
+    }
+  </div>
+</a>

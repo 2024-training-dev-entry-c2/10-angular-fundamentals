@@ -1,0 +1,45 @@
+@use "../../ui/styles/mixins.scss" as mixins;
+@use "../../ui/styles/variables.scss" as variables;
+
+.duties__footer-nav {
+  &-list {
+    list-style: none;
+    @include mixins.flex-center(column, flex-start, flex-start);
+  }
+
+  &-item {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    height: 19px;
+  }
+
+  &-link {
+    position: relative;
+    text-decoration: none;
+    color: variables.$color-primary;
+
+    &:hover {
+      color: rgb(191, 191, 191);
+      z-index: 10;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgb(0, 0, 0);
+      z-index: -1;
+      transform: translateX(-110%);
+      transition: transform 0.2s ease-in-out;
+      pointer-events: none;
+    }
+
+    &:hover::after {
+      transform: translateX(0);
+    }
+  }
+}

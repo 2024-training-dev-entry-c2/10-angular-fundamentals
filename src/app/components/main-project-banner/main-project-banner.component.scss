@@ -1,0 +1,50 @@
+@use "../../ui/styles/mixins.scss" as mixins;
+@use "../../ui/styles/variables.scss" as variables;
+@use "../../ui/styles/animations.scss" as animations;
+
+.duties__project-scope {
+  position: relative;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+
+  &-title {
+    font-size: 1.6rem;
+    margin-right: 10px;
+  }
+
+  &-separator {
+    height: 8px;
+    width: 8px;
+    background-color: variables.$color-primary;
+    border-radius: 8px;
+    margin: 0 10px;
+  }
+
+  &-ticket {
+    overflow: hidden;
+    background-color: variables.$scope-color;
+    width: 20dvw;
+    padding: 5px;
+
+    &-dot {
+      font-family: sans-serif;
+      font-size: 1.9rem;
+      margin-right: 5px;
+    }
+  }
+
+  &-list {
+    @include mixins.flex-center(row, flex-start, flex-start, 20px);
+    list-style: none;
+    cursor: pointer;
+    animation: ticker-animation 15s linear infinite;
+    padding: 0;
+    margin: 0;
+
+    &-item {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

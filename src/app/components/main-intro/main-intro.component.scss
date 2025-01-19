@@ -1,0 +1,68 @@
+@use "../../ui/styles/mixins.scss" as mixins;
+@use "../../ui/styles/variables.scss" as variables;
+
+.duties__intro {
+  &-content {
+    @include mixins.flex-center(row, space-between, flex-start, 7dvw);
+    width: 100%;
+    @include mixins.responsive-font-size(14px, 16px);
+    margin-bottom: 20px;
+    margin-left: 15px;
+    &-wrapper {
+      @include mixins.flex-center(
+        row,
+        flex-start,
+        flex-start,
+        variables.$gap-large
+      );
+      width: 60%;
+    }
+  }
+
+  &-title {
+    grid-column: 1 / span 2;
+    height: min-content;
+    white-space: nowrap;
+  }
+
+  &-helper {
+    @include mixins.flex-center(row, flex-start, flex-start, 80px);
+  }
+
+  &-list {
+    list-style: none;
+  }
+}
+
+.duties__status {
+  width: 40%;
+  margin-right: 35px;
+  @include mixins.flex-center(column, flex-star, flex-end);
+
+  &-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: variables.$indicator-color;
+    animation: opacity 2s infinite;
+    display: inline-block;
+    margin: -2px 6px 0 0;
+  }
+
+  &-title {
+    padding-right: 5px;
+  }
+
+  &-wrapper {
+    @include mixins.flex-center(row);
+  }
+
+  &-opening {
+    @include mixins.flex-center(
+      row,
+      flex-start,
+      flex-start,
+      variables.$gap-small
+    );
+  }
+}

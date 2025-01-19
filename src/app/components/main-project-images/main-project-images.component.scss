@@ -1,0 +1,31 @@
+@use "../../ui/styles/mixins.scss" as mixins;
+@use "../../ui/styles/variables.scss" as variables;
+
+.duties__project {
+  &-neural-codex,
+  &-made-machine,
+  &-figures-project {
+    gap: 15px;
+    width: 100%;
+    cursor: url("/public/cursor.svg"), context-menu;
+
+    > img {
+      width: 100%;
+      border-radius: variables.$border-radius;
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+
+  &-neural-codex {
+    @include mixins.grid-template(1.4fr 2fr 1fr);
+  }
+
+  &-made-machine {
+    @include mixins.grid-template(1.9fr 1fr 1.3fr);
+  }
+
+  &-figures-project {
+    @include mixins.grid-template(1fr 2fr 1.3fr);
+  }
+}

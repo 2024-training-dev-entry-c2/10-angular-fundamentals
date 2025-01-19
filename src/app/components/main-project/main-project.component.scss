@@ -1,0 +1,26 @@
+@use "../../ui/styles/mixins.scss" as mixins;
+@use "../../ui/styles/variables.scss" as variables;
+@use "../../ui/styles/animations.scss" as animations;
+
+.duties__project {
+  &-title {
+    font-family: "AS Therma Bold Condensed";
+    white-space: pre;
+    margin-left: 14px;
+    font-size: 5.3rem;
+    color: rgb(37, 37, 37);
+    letter-spacing: -0.06em;
+    line-height: 80%;
+    margin-top: 15px;
+    font-size: clamp(48px, 42.2529px + 1.53257vw, 68px);
+  }
+
+  &-info {
+    @include mixins.flex-center(row, space-between);
+
+    &-wrapper {
+      @include mixins.flex-center(row, space-between);
+      width: 40%;
+    }
+  }
+}
