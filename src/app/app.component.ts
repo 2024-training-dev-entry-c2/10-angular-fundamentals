@@ -5,6 +5,7 @@ import { HeroComponent } from './components/hero/hero.component';
 import { SlidingBandComponent } from './components/sliding-band/sliding-band.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { ProductsGalleryComponent } from './components/products-gallery/products-gallery.component';
+import { GalleryButtonComponent } from './components/gallery-button/gallery-button.component';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,7 @@ import { ProductsGalleryComponent } from './components/products-gallery/products
     HeroComponent,
     SlidingBandComponent,
     ProductsGalleryComponent,
+    GalleryButtonComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
