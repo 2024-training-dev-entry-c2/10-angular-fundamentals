@@ -3,6 +3,8 @@ import { PromotionBandComponent } from './components/promotion-band/promotion-ba
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { SlidingBandComponent } from './components/sliding-band/sliding-band.component';
+import { ProductCardComponent } from './components/product-card/product-card.component';
+import { ProductsGalleryComponent } from './components/products-gallery/products-gallery.component';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +13,7 @@ import { SlidingBandComponent } from './components/sliding-band/sliding-band.com
     NavbarComponent,
     HeroComponent,
     SlidingBandComponent,
+    ProductsGalleryComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
