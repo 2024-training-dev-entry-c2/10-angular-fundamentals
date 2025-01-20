@@ -1,0 +1,22 @@
+<div class="hero__item">
+    <a class="hero__link" href="link">
+        <!-- <img *ngIf="imageSrc" class="hero__video" [src]="imageSrc" [alt]="imageAlt"> -->
+        @if (imageSrc) {
+        <img class="hero__video" [src]="'assets/images/'+imageSrc" [alt]="imageAlt">
+        }
+        <!-- <video *ngIf="videoSrc" class="hero__video" autoplay="autoplay" muted="muted" loop="loop" [src]="videoSrc"> </video> -->
+        @if (videoSrc) {
+        <video class="hero__video" autoplay="autoplay" muted="muted" loop="loop" [muted]="true"
+            [src]="videoSrc"></video>
+        }
+        <div class="hero__content-right">
+            <svg class="arrow" width="20" height="16" xmlns="http://www.w3.org/2000/svg">
+                <g stroke="#fff" fill="none" fill-rule="evenodd">
+                    <path d="M18.31 8.22H0M11.16 1l7.15 7.15-7.33 7.34"></path>
+                </g>
+            </svg>
+            <span class="hero__content-link" href="#">voir</span>
+        </div>
+        <p class="hero__text">{{ text }}</p>
+    </a>
+</div>
