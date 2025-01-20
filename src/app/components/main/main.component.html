@@ -1,0 +1,62 @@
+<main class="main">
+    @for (section of mainSections; track section.id) {
+      <section class="main__section">
+        @if (!section.reversed) {
+          <div class="main__section-content">
+            <h2 class="main__subtitle" [id]="section.id">{{ section.title }}</h2>
+            @if (section.hasSpanWith) {
+              <span>With...</span>
+            }
+            <menu class="main__list" [attr.aria-labelledby]="section.id">
+              @for (item of section.listItems; track item) {
+                <li>
+                  <img src="/images/check.svg" alt="Check mark icon">{{ item }}
+                </li>
+              }
+            </menu>
+            @if (section.paragraphs) {
+              @for (paragraph of section.paragraphs; track paragraph) {
+                <p class="main__paragraph">{{ paragraph }}</p>
+              }
+            }
+          </div>
+          <div class="main__image">
+            <img [src]="section.imageSrc" [alt]="section.imageAlt">
+          </div>
+        } @else {
+          <div class="main__image">
+            <img [src]="section.imageSrc" [alt]="section.imageAlt">
+          </div>
+          <div class="main__section-content">
+            <h2 class="main__subtitle" [id]="section.id">{{ section.title }}</h2>
+            @if (section.hasSpanWith) {
+              <span>With...</span>
+            }
+            <menu class="main__list" [attr.aria-labelledby]="section.id">
+              @for (item of section.listItems; track item) {
+                <li>
+                  <img src="/images/check.svg" alt="Check mark icon">{{ item }}
+                </li>
+              }
+            </menu>
+            @if (section.paragraphs) {
+              @for (paragraph of section.paragraphs; track paragraph) {
+                <p class="main__paragraph">{{ paragraph }}</p>
+              }
+            }
+          </div>
+        }
+      </section>
+    }
+  
+    <section class="main__message">
+      <h2 id="message-title">{{ finalMessage.title }}</h2>
+      <a href="#" class="main__learn-button--dark" aria-labelledby="message-title">
+        {{ finalMessage.buttonText }}
+      </a>
+    </section>
+  
+    <div class="main__image--finish">
+      <img src="./images/section5.svg" alt="Final illustration marking the end of the journey and the completion of a project.">
+    </div>
+  </main>
