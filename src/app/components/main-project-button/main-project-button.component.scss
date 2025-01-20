@@ -4,13 +4,13 @@
 
 .duties__project {
   &-cta {
-    @include mixins.flex-center(row, flex-start, flex-start, 15px);
+    @include mixins.flex-center(row, flex-start, flex-start, 10px);
     background-color: variables.$color-primary;
     color: variables.$color-background;
     text-decoration: none;
     padding: 7px 10px;
     border-radius: 3px;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     height: fit-content;
     margin-right: 15px;
     border: none;

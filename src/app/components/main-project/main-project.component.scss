@@ -19,8 +19,8 @@
     @include mixins.flex-center(row, space-between);
 
     &-wrapper {
-      @include mixins.flex-center(row, space-between);
-      width: 40%;
+      @include mixins.flex-center(row, flex-start, center, 20px);
+      width: 50%;
     }
   }
 }

@@ -5,7 +5,7 @@
   &-neural-codex,
   &-made-machine,
   &-figures-project {
-    gap: 15px;
+    gap: 12px;
     width: 100%;
     cursor: url("/public/cursor.svg"), context-menu;
 
@@ -22,7 +22,7 @@
   }
 
   &-made-machine {
-    @include mixins.grid-template(1.9fr 1fr 1.3fr);
+    @include mixins.grid-template(1.85fr 1fr 1.3fr);
   }
 
   &-figures-project {
