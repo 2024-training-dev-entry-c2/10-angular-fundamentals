@@ -32,7 +32,12 @@ export class MainComponent implements AfterViewInit {
       if (icon) {
         const clone = icon.cloneNode(true) as SVGElement;
         clone.classList.add('duties__about-cta-icon-clone');
-        cta.appendChild(clone);
+
+        if (icon.parentNode === cta) {
+          cta.insertBefore(clone, icon);
+        } else {
+          icon.parentElement?.insertBefore(clone, icon.nextSibling);
+        }
 
         let originalTransform = icon.style.transform;
 
@@ -57,6 +62,7 @@ export class MainComponent implements AfterViewInit {
       }
     });
   }
+
   handleProjectClick(title: string) {
     console.log('Project clicked:', title);
   }
