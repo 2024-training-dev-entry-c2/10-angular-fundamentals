@@ -1,0 +1,39 @@
+@use '../../ui/styles/variables.scss' as var;
+
+.promotion-band {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var.$primary-color;
+    color: var.$secondary-color;
+    overflow: hidden;
+    margin: 0;
+    text-align: center;
+    white-space: nowrap;
+    display: flex;
+    z-index: 1000;
+
+    &__content {
+        display: flex;
+        gap: 50px;
+        align-items: center;
+        line-height: 18px;
+    }
+
+    &__text {
+        font-size: 12px;
+        font-weight: 500;
+        animation: slide 5s linear infinite;
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
