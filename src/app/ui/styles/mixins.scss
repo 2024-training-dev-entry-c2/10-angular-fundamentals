@@ -18,3 +18,26 @@
 @mixin responsive-font-size($min-size, $max-size) {
   font-size: clamp($min-size, 1vw + $min-size, $max-size);
 }
+
+@mixin cta-base(
+  $direction: row,
+  $bg-color: variables.$color-primary,
+  $text-color: variables.$color-background,
+  $padding: 7px 10px,
+  $radius: 3px
+) {
+  @include flex-center($direction, flex-start, flex-start, 10px);
+  background-color: $bg-color;
+  color: $text-color;
+  text-decoration: none;
+  padding: $padding;
+  border-radius: $radius;
+  border: none;
+  position: relative;
+  font-size: 1.6rem;
+  height: fit-content;
+
+  &:hover {
+    background-color: variables.$color-hover;
+  }
+}

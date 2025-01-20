@@ -16,7 +16,17 @@
     <div class="duties__status">
       <div class="duties__status-wrapper">
         <p class="duties__status-title">CURRENTLY:</p>
-        <div class="duties__status-indicator"></div>
+
+        @if (isWorkingHours) {
+        <div
+          class="duties__status-indicator duties__status-indicator--on"
+        ></div>
+        } @else {
+        <div
+          class="duties__status-indicator duties__status-indicator--off"
+        ></div>
+        }
+
         <span class="duties__status-label">ON-DUTY</span>
       </div>
       <div class="duties__status-opening">

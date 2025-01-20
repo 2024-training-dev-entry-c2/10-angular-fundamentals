@@ -100,28 +100,3 @@
     }
   }
 }
-
-@keyframes moveRight {
-  to {
-    transform: translateX(110%);
-  }
-}
-
-@keyframes appear {
-  to {
-    transform: translateX(150%);
-    opacity: 1;
-  }
-}
-
-@keyframes moveLeft {
-  to {
-    transform: translateX(0);
-  }
-}
-@keyframes disappear {
-  to {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-}

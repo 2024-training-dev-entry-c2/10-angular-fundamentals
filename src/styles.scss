@@ -1,4 +1,5 @@
 @use "./app/ui/styles/variables.scss" as variables;
+@use "./app/ui/styles/animations.scss" as animations;
 
 *,
 *::after,
@@ -11,28 +12,4 @@
 html {
   font-size: 62.5%;
   font-family: variables.$font-family-secondary;
-}
-
-.scramble-text {
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.scramble-text::before {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  color: var(--text-color);
-  background: var(--background-color);
-  transition: opacity var(--transition-duration) ease-in-out;
-  opacity: 0;
-}
-
-.scramble-text:hover::before {
-  opacity: 1;
 }

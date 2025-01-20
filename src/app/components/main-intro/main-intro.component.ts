@@ -1,11 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-main-intro',
-  imports: [],
   templateUrl: './main-intro.component.html',
-  styleUrl: './main-intro.component.scss'
+  styleUrls: ['./main-intro.component.scss'],
 })
-export class MainIntroComponent {
+export class MainIntroComponent implements OnInit {
+  isWorkingHours: boolean = false;
 
+  ngOnInit(): void {
+    this.checkWorkingHours();
+  }
+
+  checkWorkingHours(): void {
+    const currentHour = new Date().getHours();
+    this.isWorkingHours = currentHour >= 8 && currentHour < 18;
+  }
 }
