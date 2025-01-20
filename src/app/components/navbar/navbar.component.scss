@@ -72,10 +72,22 @@
             text-transform: uppercase;
             text-align: left;
         }
+
+        /* Contenedor para detectar el hover sobre el dropdown y el submenu */
+        .dropdown-container {
+            position: relative;
+
+            &:hover .navbar__dropdown {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
     }
 
     &__dropdown {
-        display: none;
+        visibility: hidden;
+        opacity: 0;
+        // transition: opacity 0.3s ease, visibility 0.3s ease;
         padding: 15px;
         position: absolute;
         top: 100%;
@@ -120,8 +132,11 @@
         width: 60%;
     }
 
-    #shop-submenu:hover #shop-dropdown {
+    #shop-submenu:hover .navbar__dropdown {
+        visibility: visible;
+        opacity: 1;
         display: flex;
+        /* Asegúrate de que se muestre correctamente */
         justify-content: space-between;
         font-size: 15px;
     }
@@ -133,7 +148,9 @@
         width: 39%;
     }
 
-    #collection-submenu:hover #collection-dropdown {
+    #collection-submenu:hover .navbar__dropdown {
+        visibility: visible;
+        opacity: 1;
         display: flex;
         justify-content: space-between;
         font-size: 15px;
