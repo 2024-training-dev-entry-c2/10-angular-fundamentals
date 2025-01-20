@@ -26,7 +26,7 @@
   }
 
   &-helper {
-    @include mixins.flex-center(row, flex-start, flex-start, 80px);
+    @include mixins.flex-center(row, flex-start, flex-start, 90px);
   }
 
   &-list {
