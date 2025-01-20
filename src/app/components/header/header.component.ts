@@ -7,4 +7,13 @@ import { MenuComponent } from '../menu/menu.component';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  menuItems = [
+    { name: 'Phone', link: null },
+    { name: 'Audio', link: null },
+    { name: 'CMF', link: '#' },
+    { name: 'Store', link: '#' },
+    { name: 'Community', link: '#' },
+    { name: 'Support', link: '#' },
+  ];
+}

@@ -15,9 +15,15 @@ import { FooterComponent } from './components/footer/footer.component';
   template: `
     <app-header></app-header>
     <app-product></app-product>
-    <app-testimonial></app-testimonial>
+    <app-testimonial
+      (testimonialSelected)="handleTestimonialSelected($event)"
+    ></app-testimonial>
     <app-footer></app-footer>
   `,
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {}
+export class AppComponent {
+  handleTestimonialSelected(testimonial: { title: string; quote: string }) {
+    console.log('Selected Testimonial:', testimonial);
+  }
+}
