@@ -1,0 +1,166 @@
+@use '../../ui/styles/variables.scss' as var;
+@use '../../ui/styles/mixins.scss' as mix;
+
+#scroll-logo {
+    z-index: 1000;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+#main-logo,
+#scroll-logo {
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    opacity: 1;
+    visibility: visible;
+}
+
+#main-logo.hidden,
+#scroll-logo.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.navbar {
+    position: fixed;
+    top: 18px;
+    display: flex;
+    min-height: 56px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 0px;
+    background-color: var.$secondary-color;
+    border-bottom: 1px solid var.$primary-color;
+    z-index: 999;
+    width: 100%;
+
+    &__logo-container {
+        @include mix.flex-center;
+        height: 56px;
+        border-right: var.$primary-color 1px solid;
+        flex: 1;
+        padding-left: 15px;
+        padding-right: 30px;
+    }
+
+    &__logo {
+        padding-left: 20px;
+        padding-left: 20px;
+        transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+        opacity: 1;
+        visibility: visible;
+
+        &.hidden {
+            opacity: 0;
+            visibility: hidden;
+            display: none;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        justify-content: space-around;
+
+        li a {
+            text-decoration: none;
+            color: var.$primary-color;
+            font-size: 2.5dvh;
+            font-weight: 500;
+            text-transform: uppercase;
+            text-align: left;
+        }
+    }
+
+    &__dropdown {
+        display: none;
+        padding: 15px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var.$secondary-color;
+        border: 1px solid var.$gray-color;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+
+        ul {
+            padding: 1rem;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            line-height: 18px;
+
+            li {
+                margin-bottom: 2rem;
+
+                a {
+                    text-decoration: none;
+                    font-size: 1rem;
+                    color: black;
+
+                    &:hover {
+                        color: gray;
+                    }
+                }
+
+                img {
+                    max-height: 1.3rem;
+                }
+            }
+        }
+    }
+
+    #shop-dropdown {
+        position: absolute;
+        top: 100%;
+        left: 40%;
+        width: 60%;
+    }
+
+    #shop-submenu:hover #shop-dropdown {
+        display: flex;
+        justify-content: space-between;
+        font-size: 15px;
+    }
+
+    #collection-dropdown {
+        position: absolute;
+        top: 100%;
+        left: 61%;
+        width: 39%;
+    }
+
+    #collection-submenu:hover #collection-dropdown {
+        display: flex;
+        justify-content: space-between;
+        font-size: 15px;
+    }
+
+    &__cart {
+        @include mix.flex-center;
+        position: relative;
+        border-left: var.$primary-color 1px solid;
+        height: 56px;
+        padding: 5px 15px;
+    }
+
+    &__sac {
+        width: 22px;
+        height: 34px;
+        display: block;
+    }
+
+    a:hover {
+        cursor: url(//vision-naire.com/cdn/shop/t/3/assets/cursor-active_small.png?v=79124357518556369791658233708) 21 16, auto;
+        cursor: -webkit-image-set(url(//vision-naire.com/cdn/shop/t/3/assets/cursor-active_small.png?v=79124357518556369791658233708) 1x, url(//vision-naire.com/cdn/shop/t/3/assets/cursor-active@2x_small.png?v=11241328135293569261658233706) 2x) 21 16, auto
+    }
+
+    a:active {
+        cursor: url(//vision-naire.com/cdn/shop/t/3/assets/cursor-hover_small.png?v=25506985200570235831658233708) 21 16, auto;
+        cursor: -webkit-image-set(url(//vision-naire.com/cdn/shop/t/3/assets/cursor-hover_small.png?v=25506985200570235831658233708) 1x, url(//vision-naire.com/cdn/shop/t/3/assets/cursor-hover@2x_small.png?v=69560968883176258041658233702) 2x) 21 16, auto
+    }
+
+}
