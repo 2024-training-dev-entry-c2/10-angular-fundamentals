@@ -6,6 +6,7 @@ import { SlidingBandComponent } from './components/sliding-band/sliding-band.com
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { ProductsGalleryComponent } from './components/products-gallery/products-gallery.component';
 import { GalleryButtonComponent } from './components/gallery-button/gallery-button.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +17,7 @@ import { GalleryButtonComponent } from './components/gallery-button/gallery-butt
     SlidingBandComponent,
     ProductsGalleryComponent,
     GalleryButtonComponent,
+    FooterComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
