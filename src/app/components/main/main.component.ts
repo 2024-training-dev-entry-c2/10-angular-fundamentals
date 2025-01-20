@@ -21,7 +21,7 @@ export class MainComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     const ctaElements = document.querySelectorAll(
-      '.duties__project-cta, .duties__about-cta'
+      '.duties__project-cta, .duties__about-cta-text'
     );
 
     ctaElements.forEach((cta) => {

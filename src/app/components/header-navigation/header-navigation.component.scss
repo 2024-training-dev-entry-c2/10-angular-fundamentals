@@ -35,6 +35,7 @@
       }
 
       svg {
+        margin-right: 2px;
         width: 24px;
         transition: transform 0.2s ease-in-out;
       }
@@ -87,5 +88,23 @@
         font-size: 1.6rem;
       }
     }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-reverse {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
