@@ -7,9 +7,12 @@ import { ProductCardComponent } from './components/product-card/product-card.com
 import { ProductsGalleryComponent } from './components/products-gallery/products-gallery.component';
 import { GalleryButtonComponent } from './components/gallery-button/gallery-button.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { HeroMosaicComponent } from './components/hero-mosaic/hero-mosaic.component';
+import { NewspaperComponent } from './components/newspaper/newspaper.component';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [
     PromotionBandComponent,
     NavbarComponent,
@@ -17,6 +20,8 @@ import { FooterComponent } from './components/footer/footer.component';
     SlidingBandComponent,
     ProductsGalleryComponent,
     GalleryButtonComponent,
+    HeroMosaicComponent,
+    NewspaperComponent,
     FooterComponent,
   ],
   templateUrl: './app.component.html',
