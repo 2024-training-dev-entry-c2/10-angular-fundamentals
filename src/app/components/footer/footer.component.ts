@@ -1,17 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
-  imports: [],
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss'
+  styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
-  footerMenuItems = [
-    { label: 'SOFTWARE ENGINEERING', link: '#' },
-    { label: 'APPROACH', link: '#' },
-    { label: 'PROJECTS', link: '#' },
-    { label: 'ABOUT US', link: '#' },
-    { label: 'CAREERS', link: '#' }
-  ];
+  @Input() footerMenuItems: { label: string, link: string }[] = [];
+  @Output() footerMenuItemClick = new EventEmitter<string>();
+
+  onFooterMenuItemClick(label: string) {
+    this.footerMenuItemClick.emit(label);
+  }
 }

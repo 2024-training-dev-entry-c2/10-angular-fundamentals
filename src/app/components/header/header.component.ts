@@ -1,17 +1,16 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-header',
-  imports: [],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
   @HostListener('window:scroll', ['$event'])
   onScroll(event: Event) {
     const navbar = document.querySelector<HTMLElement>('.header__nav');
-    if(navbar){
-      if(window.scrollY > 50){
+    if(navbar) {
+      if(window.scrollY > 50) {
         navbar.classList.add('scrolled');
       } else {
         navbar.classList.remove('scrolled');
@@ -19,11 +18,10 @@ export class HeaderComponent {
     }
   }
 
-  headerMenuItems = [
-    { label: 'SOFTWARE ENGINEERING', link: '#' },
-    { label: 'APPROACH', link: '#' },
-    { label: 'PROJECTS', link: '#' },
-    { label: 'ABOUT US', link: '#' },
-    { label: 'CAREERS', link: '#' }
-  ];
+  @Input() headerMenuItems: { label: string, link: string }[] = []; 
+  @Output() headerMenuItemClick = new EventEmitter<string>();
+
+  onMenuItemClick(label: string) {
+    this.headerMenuItemClick.emit(label);
+  }
 }
