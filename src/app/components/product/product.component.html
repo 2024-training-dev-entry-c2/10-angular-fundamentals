@@ -1,0 +1,33 @@
+<section class="product">
+  <div class="product__container" *ngFor="let product of products">
+    <div class="product__image">
+      <a [href]="product.link" class="product__image-link">
+        <img
+          *ngIf="product.mediaType === 'image'; else videoTemplate"
+          [src]="product.mediaUrl"
+          [alt]="product.name"
+          class="product__image-img"
+        />
+        <ng-template #videoTemplate>
+          <video class="product__image-video" muted loop>
+            <source [src]="product.mediaUrl" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </ng-template>
+      </a>
+    </div>
+    <div class="product__info">
+      <h2 class="product__info-title">
+        {{ product.name }}
+      </h2>
+      <p class="product__info-content">
+        {{ product.description }}
+      </p>
+      <div class="product__button-container">
+        <a [href]="product.link" class="product__button">
+          {{ product.buttonText }}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

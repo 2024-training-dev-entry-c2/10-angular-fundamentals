@@ -1,15 +1,10 @@
-@mixin container($justify: start) {
+@mixin container($justify: start, $align: center) {
   display: flex;
-  align-items: center;
   justify-content: $justify;
+  align-items: $align;
 }
 
-
-@mixin container-gap($gap: 0) {
-  @include container;
+@mixin container-gap($gap: 0, $justify: start, $align: center) {
+  @include container($justify, $align);
   gap: $gap;
-}
-
-@function px-to-rem($px, $base: 16) {
-  @return $px / $base * 1rem;
 }

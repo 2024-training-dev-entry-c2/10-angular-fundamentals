@@ -1,1 +1,70 @@
-$gray: #00000052;
+$black: #000;
+$white: #fff;
+$gray-light: #888888;
+$gray-dark: #333333;
+$blue-dark: #002F6C;
+$blue-light: #1DA1F2;
+$background-light: #f5f5f5;
+$background-dark: #111111;
+$highlight-color: rgb(81, 81, 81);
+$highlight-light: rgb(206, 206, 206);
+$button-bg: #002F6C;
+$footer-bg: #000;
+$footer-text: rgb(206, 206, 206);
+$font-family: 'Press Start 2P', sans-serif;
+
+@function px-to-rem($px, $base: 16) {
+  @return $px / $base * 1rem;
+}
+
+@function get-color($name) {
+  @if $name == 'black' {
+    @return $black;
+  } @else if $name == 'white' {
+    @return $white;
+  } @else if $name == 'gray-light' {
+    @return $gray-light;
+  } @else if $name == 'gray-dark' {
+    @return $gray-dark;
+  } @else if $name == 'blue-dark' {
+    @return $blue-dark;
+  } @else if $name == 'blue-light' {
+    @return $blue-light;
+  } @else if $name == 'highlight' {
+    @return $highlight-color;
+  } @else if $name == 'highlight-light' {
+    @return $highlight-light;
+  } @else if $name == 'button-bg' {
+    @return $button-bg;
+  } @else if $name == 'footer-bg' {
+    @return $footer-bg;
+  } @else if $name == 'footer-text' {
+    @return $footer-text;
+  } @else {
+    @error "Color not defined: #{$name}";
+  }
+}
+
+$font-size-base: 16px;
+$font-size-large: 20px;
+$font-size-small: 12px;
+
+$spacing-small: 10px;
+$spacing-medium: 20px;
+$spacing-large: 40px;
+$spacing-xlarge: 70px;
+
+
+@function get-spacing($size) {
+  @if $size == 'small' {
+    @return $spacing-small;
+  } @else if $size == 'medium' {
+    @return $spacing-medium;
+  } @else if $size == 'large' {
+    @return $spacing-large;
+  } @else if $size == 'xlarge' {
+    @return $spacing-xlarge;
+  } @else {
+    @error "Spacing size not defined: #{$size}";
+  }
+}
