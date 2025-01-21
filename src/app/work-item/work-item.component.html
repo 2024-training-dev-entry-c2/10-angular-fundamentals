@@ -1,0 +1,25 @@
+<article class="works__content" [class.is-open]="work.isOpen">
+  <h3 class="works__name">{{ work.name }}</h3>
+
+  <div class="works__details">
+    <em class="works__date">{{ work.date }}</em>
+
+    @if (work.hasExtraInfo) {
+      <app-work-toggle
+        [workType]="work.type"
+        [isOpen]="work.isOpen"
+        (onToggle)="toggleItem($event)"
+      ></app-work-toggle>
+
+      <div class="works__extra-info" [class.is-open]="work.isOpen">
+        <p class="works__extra-text">{{ work.extraInfo }}</p>
+      </div>
+    }
+
+    <small 
+      class="works__type works__type--single" 
+      [class.is-hidden]="work.hasExtraInfo">
+      {{ work.type }}
+    </small>
+  </div>
+</article>

@@ -1,0 +1,21 @@
+@use "../ui/styles/variables.scss";
+@use "../ui/styles/mixins.scss";
+
+.works {
+  gap: 2rem;
+  padding: 1rem 0;
+
+  &__resume {
+    display: flex;
+    position: relative;
+    gap: 1rem;
+    padding: 1rem 0;
+
+    &--link {
+      text-decoration: none;
+      color: black;
+      margin-left: 900px;
+      @include mixins.bottom-underline(variables.$gren, 3px, 0.3s, 24px);
+    }
+  }
+}

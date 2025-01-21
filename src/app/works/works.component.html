@@ -1,0 +1,14 @@
+<main>
+  <section class="works">
+    <div class="works__resume">
+      <a href="https://static1.squarespace.com/static/5e2e7365bbda8d2962233262/t/64da6352cfe73e7cb44221e4/1692033876958/Taiki-Murayama-2023-Resume.pdf" target="_blank" class="works__resume works__resume--link">✻ View resume</a>
+    </div>
+    @for (work of works; track $index) {
+      <app-work-item
+        [work]="work"
+        [index]="$index"
+        (onClick)="toggleItem($event)"
+      ></app-work-item>
+    }
+  </section>
+</main>

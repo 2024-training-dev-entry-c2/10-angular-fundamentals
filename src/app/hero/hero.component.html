@@ -1,0 +1,30 @@
+<section class="hero">
+    <div class="hero__content">
+      <h1 class="hero__title">TAIKI MURAYAMA
+        <span class="hero__design">(DESIGN ©2024)</span>
+      </h1>
+    </div>
+    @for (image of images; track $index){
+      <img src="{{image.src}}"
+      alt="{{image.alt}}" 
+      title="{{image.title}}"
+      class="hero__image hero__image--{{$index + 1}}" 
+      role="img" [attr.aria-label]="image.ariaLabel" />
+    }
+  </section>
+  <section class="experience">
+    <div class="experience__container experience__container--name">
+      <p class="experience__name">
+        Designer & design director in Los Angeles. Brand, art direction, product, and experiential. Currently at
+        Apple.
+      </p>
+    </div>
+    <div class="experience__container experience__container--companies">
+      <p class="experience__companies">
+        AMAZON / APPLE / ASICS / AT&T / AXE / BMW / COINTREAU / CRUISE / DICKIES / DUREX / FX / GRAND MARNIER / H&M /
+        HBO / LACOSE / LEXUS / LINCOLN / MADEWELL / MADISON SQUARE GARDEN / MTV2 / NY RANGERS / PARKER / RED BULL /
+        REFINERY29 / SOUNDCLOUD / TACO BELL / TARGET / TOYOTA / UBER
+      </p>
+    </div>
+  </section>
+
