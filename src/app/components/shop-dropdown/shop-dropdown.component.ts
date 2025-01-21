@@ -7,5 +7,20 @@ import { Component } from '@angular/core';
   styleUrl: './shop-dropdown.component.scss'
 })
 export class ShopDropdownComponent {
-
+  firstColumn = [
+    'soldes',
+    'tout voir',
+    'Nouveautés',
+    'HARRY POTTER | VISIONNAIRE',
+    'VESTES',
+    'SWEAT',
+  ];
+  secondColumn = [
+    'T-shirt',
+    'ACCESSOIRES',
+    'Pantalons',
+    'CHEMISES',
+    'SHORT',
+    'CASQUETTES & BOB',
+  ];
 }
