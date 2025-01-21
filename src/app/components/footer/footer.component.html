@@ -1,0 +1,49 @@
+<!----FOOTER---->
+<footer class="footer" role="contentinfo">
+  <div class="footer__content">
+    @for (card of footerCards(); track card.title){
+    <div class="footer__card" [class]="'footer__card--'+card.title.toLowerCase()">
+      <h2 class="footer__card-title">{{card.title}}</h2>
+      <p class="footer__card-description">
+        {{card.description}}
+      </p>
+      <a href="#" class="footer__card-link" [attr.aria-label]="card.linkAriaLabel">
+        <svg class="footer__card__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 0 23 22" width="16" height="16" aria-hidden="true" focusable="false">
+          <path [attr.d]="card.iconPath" fill="transparent" stroke-width="1.16" stroke="hsl(0, 0%, 46%)"
+            stroke-linecap="round" stroke-linejoin="round">
+          </path>
+        </svg>
+      </a>
+    </div>
+    }
+    <div class="footer__card footer__card--newsletter">
+      <h2 class="footer__card-title">Stay in the loop</h2>
+      <p class="footer__card-description">
+        Follow our journey in enabling sovereign individuals truly own their data. Better yet, be a part of it.
+      </p>
+      <form class="footer__newsletter-form" action="#" method="post" aria-label="Newsletter form">
+        <input type="email" class="footer__newsletter-input" placeholder="Email" aria-label="Enter your email"
+          required />
+        <button class="footer__newsletter-button" type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="footer__social">
+      @for(link of socialLinks(); track link.ariaLabel){
+      <a [href]="link.href" class="footer__social__link" [attr.aria-label]="link.ariaLabel">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17" width="15" height="15">
+          <path fill="#919191" [attr.d]="link.iconPath" />
+        </svg>
+      </a>
+      }
+    </div>
+
+    <div class="footer__links">
+      @for (item of footerItems(); track item){
+      <a (click)="handleClick(item)" href="#" class="footer__link">{{item}}</a>
+      }
+    </div>
+  </div>
+</footer>

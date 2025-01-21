@@ -1,0 +1,21 @@
+<div class="background__footer">
+  <div class="background__buttons">
+    <button class="btn">Browse Umbrel App Store</button>
+    <button class="btn">Launch Your Own App</button>
+  </div>
+
+  <section class="carousel">
+    <div class="carousel__track">
+      @for (icon of repeatedIcons; track icon.src) {
+      <img [src]="icon.src" [alt]="icon.alt">
+      }
+    </div>
+  </section>
+  <section class="carousel">
+    <div class="carousel__track__reverse">
+      @for (icon of repeatedIcons; track icon.src) {
+      <img [src]="icon.src" [alt]="icon.alt">
+      }
+    </div>
+  </section>
+</div>
