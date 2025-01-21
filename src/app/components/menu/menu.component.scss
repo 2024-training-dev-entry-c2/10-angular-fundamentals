@@ -1,24 +1,47 @@
-@use '../../ui/styles/variables.scss' as variables;
-@use '../../ui/styles/mixins.scss' as mixins;
+@use "../../ui/styles/variables.scss" as variables;
+@use "../../ui/styles/mixins.scss" as mixin;
 
-.menu {
-  @include mixins.container-gap(40px);
-  list-style: none;
+.header-container__nav {
+  @include mixin.container(center);
+  width: 494.31px;
+  height: 45px;
+  border-radius: 10px;
+  background-color: variables.$color-background-light;
+  color: variables.$color-secondary;
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(10px);
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
 
-  &__item {
-    font-weight: 600;
-  }
-  
-  &__item, &__icon {
-    @include mixins.container-gap(3px);
-  }
-  
-  &__icon {
-    color: variables.$gray;
-  }
-  
-  &__link {
-    color: #000;
-    text-decoration: none;
+  &__menu {
+    @include mixin.container(center);
+    width: 100%;
+    list-style-type: none;
+    gap: 30px;
+
+    &__item {
+      margin: 0 10px;
+      &__link {
+        border: none;
+        background: none;
+        color: variables.$color-secondary;
+        font-size: 14px;
+        opacity: 1;
+        cursor: pointer;
+        transition: color 0.3s ease;
+        &:hover {
+          opacity: 1;
+        }
+        &:hover ~ button .menu__link {
+          opacity: 0.5;
+        }
+        &.white-text {
+          color: variables.$color-background;
+        }
+        &.black-text {
+          color: variables.$color-text-light;
+        }
+      }
+    }
   }
 }

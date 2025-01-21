@@ -1,11 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@use "./app/ui/styles/variables.scss" as variables;
+@use "./app/ui/styles/mixins.scss" as mixin;
 
-* {
+@font-face {
+  font-family: 'PP Neue Montreal Thin';
+  font-style: normal;
+  font-weight: 350;
+  src: local('PP Neue Montreal Thin'), url('../public/pp-neue-montreal-cufonfonts-webfont/ppneuemontreal-thin.woff') format('woff');
+}
+@font-face {
+  font-family: 'PP Neue Montreal';
+  font-style: normal;
+  font-weight: 350;
+  src: local('PP Neue Montreal'), url('../public/pp-neue-montreal-cufonfonts-webfont/ppneuemontreal-book.woff') format('woff');
+}
+
+*,
+:after,
+:before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
 
+}
 html {
-  font-family: "Poppins", serif;
+  font-size: 10px;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: variables.$color-background;
+  color: variables.$color-secondary;
+  font-family: variables.$fontFamily-principal;
 }

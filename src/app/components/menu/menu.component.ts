@@ -1,25 +1,20 @@
-import { Component } from '@angular/core';
-import { SubMenuComponent } from '../sub-menu/sub-menu.component';
-import { CommonModule } from '@angular/common';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-menu',
-  imports: [SubMenuComponent, CommonModule],
+  imports: [],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.scss'
 })
 export class MenuComponent {
-  public subMenuItems = {
-    1: ['Design', 'Collaboration', 'Prototyping', 'Developer Handoff', 'All features'],
-    2: ['Sketch in 2024', 'Smart Animate', 'Easy Library Swaps'],
-    3: ['Blog', 'Resources', 'Extension & Plugins'],
-    4: ['Sketch 101', 'Sketch 102'],
-    5: ['Help Center', 'Documentation', 'Contact Us', 'Community Forum']
-  };
-
-  public isVisible: boolean = true;
-
-  handleClick(item: string): void {
-    console.log(item);
+  menuItems = signal([
+    { name: 'Wearable', id: 1 },
+    { name: 'Neural', id: 2 },
+    { name: 'Programs', id: 3 },
+    { name: 'Updates', id: 4 },
+    { name: 'Search', id: 5 },
+  ]);
+  handleClick(item: { name: string; id: number }) {
+    console.log('Clicked:', item.name);
   }
 }

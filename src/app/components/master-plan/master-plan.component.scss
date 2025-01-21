@@ -1,0 +1,74 @@
+@use "../../ui/styles/variables.scss" as variables;
+@use "../../ui/styles/mixins.scss" as mixin;
+
+.container-master-plan {
+  width: 100dvw;
+  height: 80dvh;
+  background: variables.$color-primary;
+  padding: 8.125vw 0 9.7222222222vw;
+  color: variables.$color-background;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 200px;
+    padding: 0 4.7961630695vw;
+    column-gap: 2.3980815348vw;
+
+    &__content {
+      grid-column: 2/5;
+      display: flex;
+
+      span {
+        font-size: 18px;
+        font-weight: 800;
+      }
+      &__pro {
+        margin-left: 6rem;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        h2:nth-child(1) {
+          font-size: 35px;
+        }
+        p:nth-child(2) {
+          font-size: 14px;
+          opacity: 0.5;
+          margin: 2.8rem 0 0;
+          max-width: 18rem;
+        }
+        &__link {
+          @include mixin.container(center);
+          gap: 16px;
+          margin-top: 4rem;
+
+          span:nth-child(1) {
+            @include mixin.container(center);
+            column-gap: 3.5rem;
+            flex-direction: row;
+            text-align: left;
+            border-radius: 20px;
+            border: 1px solid variables.$color-background;
+            color: variables.$color-background;
+            height: 2.8rem;
+            width: 1.8rem;
+
+            svg {
+              width: 7;
+              height: 9;
+              fill: none;
+            }
+
+            svg:nth-child(1) {
+              display: none;
+            }
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}

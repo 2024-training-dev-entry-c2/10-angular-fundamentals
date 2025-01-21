@@ -1,0 +1,123 @@
+@use "../../ui/styles/variables.scss" as variables;
+@use "../../ui/styles/mixins.scss" as mixin;
+
+
+.container-info {
+  width: 100dvw;
+  height: 80dvh;
+  background: variables.$color-background;
+  padding: 10vw 0;
+  display: flex;
+  justify-content: center;
+
+  &__options {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 200px;
+    font-family: variables.$fontFamily-secondary;
+    column-gap: 2.3980815348vw;
+    row-gap: 3.1944444444vw;
+    width: 80%;
+    &-career {
+      grid-column: 2/4;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: 30px;
+      font-size: 1.4rem;
+
+      span:nth-child(1) {
+        color: variables.$color-primary;
+      }
+
+      h2:nth-child(1) {
+        font-size: 1.4rem;
+        margin: 4px 0 0;
+      }
+      &__content {
+        h2:nth-child(1) {
+          font-size: 25px;
+          font-family: variables.$fontFamily-principal;
+          font-weight: 200;
+        }
+        p:nth-child(2) {
+          margin-top: 2.2rem;
+          max-width: 20rem;
+          text-align: left;
+          opacity: 0.5;
+        }
+
+        a:nth-child(3) {
+          margin-top: 3.6rem;
+          color: variables.$color-primary;
+          display: flex;
+          gap: 16px;
+
+          span:nth-child(1) {
+            border: 1px solid variables.$color-primary;
+            width: 2rem;
+            height: 1.4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            svg:nth-child(1) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    &-news {
+      grid-column: 4/6;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: 30px;
+      font-size: 1.4rem;
+
+      span:nth-child(1) {
+        color: variables.$color-primary;
+      }
+
+      h2:nth-child(1) {
+        font-size: 1.4rem;
+        margin: 4px 0 0;
+      }
+
+      &__content {
+        h2:nth-child(1) {
+          font-size: 25px;
+          font-family: variables.$fontFamily-principal;
+          font-weight: 200;
+        }
+        p:nth-child(2) {
+          margin-top: 2.2rem;
+          max-width: 19rem;
+          text-align: left;
+          opacity: 0.5;
+        }
+
+        a:nth-child(3) {
+          margin-top: 3.6rem;
+          color: variables.$color-primary;
+          display: flex;
+          gap: 16px;
+
+          span:nth-child(1) {
+            border: 1px solid variables.$color-primary;
+            width: 2rem;
+            height: 1.4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            svg:nth-child(1) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

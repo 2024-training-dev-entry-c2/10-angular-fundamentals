@@ -1,0 +1,142 @@
+@use "../../ui/styles/variables.scss" as variables;
+@use "../../ui/styles/mixins.scss" as mixin;
+
+.description-container {
+  @include mixin.container(center);
+  width: 100%;
+  height: 98dvh;
+  gap: 20px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background: variables.$color-background;
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    width: 214px;
+    height: 170px;
+
+    &__text1 {
+      color: variables.$color-secondary;
+      opacity: 0.5;
+    }
+    &__texto2 {
+      filter: blur(0px);
+      opacity: 1;
+      visibility: inherit;
+    }
+  }
+  &__content {
+    width: 461.84px;
+    height: 170.91px;
+    font-size: 25px;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-weight: 800;
+    position: relative;
+    animation-name: mymoveabove;
+    animation-duration: 1s;
+    transition: opacity 1s ease-in-out, filter 1s ease-in-out,
+    transform 1s ease-in-out;
+    & .visible {
+      opacity: 1;
+      animation: mymoveabove 1s forwards;
+    }
+    &__text-dinamico {
+      color: variables.$color-primary;
+      font-size: 25px;
+      position: relative;
+      width: 100%;
+
+      &__text-slide {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        width: 100%;
+        transition: opacity 1s, filter 2s;
+
+        & .show {
+          display: inline-block;
+          opacity: 1;
+          filter: blur(0);
+          z-index: 2;
+          transition: opacity 1s, filter 1s;
+        }
+        & .hide {
+          display: none;
+          opacity: 0;
+          filter: blur(10px);
+          z-index: 1;
+        }
+      }
+    }
+
+    &__link {
+      @include mixin.container(flex-start);
+      width: 200px;
+
+      &__icon {
+        @include mixin.container(flex-start);
+        width: 200px;
+        gap: 16px;
+        text-decoration: none;
+        border: 1 solid #0071e3;
+        &__icono {
+          @include mixin.container(center);
+          border: 1px solid #0071e3;
+          width: 22px;
+          height: 14px;
+          border-radius: 20px 20px;
+
+        }
+        &__text-link {
+          text-decoration: none;
+          color: #0071e3;
+          font-size: 14px;
+        }
+
+      }
+
+      }
+
+    }
+    &__scroll-button {
+      display: none;
+      background: variables.$color-primary;
+      color: variables.$color-secondary;
+      border: none;
+      width: 56px;
+      height: 32px;
+      position: fixed;
+      top: 50%;
+      left: 20px;
+      border-radius: 2px;
+      cursor: pointer;
+      padding: 2px;
+      z-index: 1000;
+      transition: opacity 0.5s;
+    }
+    .scroll__button.show {
+      display: block;
+      opacity: 1;
+    }
+  }
+
+
+@keyframes mymoveabove {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

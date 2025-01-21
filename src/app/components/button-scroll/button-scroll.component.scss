@@ -1,0 +1,35 @@
+@use "../../ui/styles/variables.scss" as variables;
+@use "../../ui/styles/mixins.scss" as mixin;
+
+.home-container__button-scroll {
+  &__scroll-indicator {
+    width: 18px;
+    height: 40px;
+    border-radius: 30px;
+    border-color: variables.$color-background-light;
+    position: relative;
+    overflow: hidden;
+
+    &__icon {
+      position: absolute;
+      right: -0.5rem;
+      top: 50%;
+      width: 2.2rem;
+      cursor: pointer;
+
+      &:hover {
+        animation: mymove2 1s;
+        animation-timing-function: linear forwards;
+        -webkit-animation: mymove2 1s;
+
+      }
+    }
+  }
+}
+@keyframes mymove2 {
+  from {
+    top: 0;
+  }
+  to { bottom: 200px;
+   }
+}

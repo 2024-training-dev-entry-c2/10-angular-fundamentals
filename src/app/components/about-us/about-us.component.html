@@ -1,0 +1,29 @@
+<section class="container__about-us dark-bg">
+  <div class="container__list">
+    <div class="list__title">
+      <span class="title1">
+        <h3>At Eyes</h3>
+      </span>
+      <span class="title2">
+        <h3>We put Humans First</h3>
+      </span>
+    </div>
+    <div class="list__content">
+      <ul>
+        @for (item of headItems(); track item.id) {
+        <li class="head">
+          <div class="head__number">
+            <span>{{item.number}}</span>
+            <span>{{item.title}}</span>
+          </div>
+          <div class="head__titles">
+            <span>{{item.description}}</span>
+            <span [class]="{'item-head-line': item.hasLine}"></span>
+          </div>
+        </li>
+      }
+
+      </ul>
+    </div>
+  </div>
+</section>

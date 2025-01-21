@@ -1,0 +1,28 @@
+<section class="container__abous-parte2 dark-bg">
+  <div class="container__abous-parte2__grilla">
+    <span class="horizontal-line"></span>
+    <ul class="container__abous-parte2__grilla__bottom-items">
+      @for (item of bottomItems(); track item.id) {
+        <li class="container__abous-parte2__grilla__bottom-items__item">
+        <div class="container__abous-parte2__grilla__bottom-items__item__title">{{ item.title }}</div>
+        <div class="container__abous-parte2__grilla__bottom-items__item__copy"> <span>{{ item.copy }}</span> </div>
+      </li>
+    }
+    </ul>
+    <div class="container__abous-parte2__grilla__bottom-services">
+      <div class="container__abous-parte2__grilla__bottom-services__item-head">
+        <span class="container__abous-parte2__grilla__bottom-services__item-head__number">0.4</span>
+        <span data-v-10c219c9="">How We Talk</span>
+      </div>
+      <div class="container__abous-parte2__grilla__bottom-services__items">
+        @for (item of bottomServices(); track item.id) {
+        <div class="container__abous-parte2__grilla__bottom-services__items__item">
+          <span class="container__abous-parte2__grilla__bottom-services__items__item__bracket-text">{{ item.bracketText }}</span>
+          <span class="container__abous-parte2__grilla__bottom-services__items__item__item-name">{{ item.itemName }}</span>
+        </div>
+      }
+
+      </div>
+    </div>
+  </div>
+</section>
