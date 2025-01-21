@@ -1,26 +1,10 @@
 <footer>
   <div class="footer-links">
     <div class="footer-links__container">
-      <div>
-        <p class="footer-links__title">Products</p>
+      <div *ngFor="let section of footerSections">
+        <p class="footer-links__title">{{ section.title }}</p>
         <menu class="footer-links__menu">
-          <li class="footer-links__item" *ngFor="let link of productLinks">
-            <a [href]="link.link" class="footer-links__link">{{ link.name }}</a>
-          </li>
-        </menu>
-      </div>
-      <div>
-        <p class="footer-links__title">Company</p>
-        <menu class="footer-links__menu">
-          <li class="footer-links__item" *ngFor="let link of companyLinks">
-            <a [href]="link.link" class="footer-links__link">{{ link.name }}</a>
-          </li>
-        </menu>
-      </div>
-      <div>
-        <p class="footer-links__title">Support</p>
-        <menu class="footer-links__menu">
-          <li class="footer-links__item" *ngFor="let link of supportLinks">
+          <li class="footer-links__item" *ngFor="let link of section.links">
             <a [href]="link.link" class="footer-links__link">{{ link.name }}</a>
           </li>
         </menu>
@@ -44,7 +28,7 @@
     </menu>
     <div class="footer-legal__icon-city">
       <div class="footer-legal__icon">
-        <!-- Instagram -->
+        <!-- Iconos de redes sociales -->
         <svg
           fill="none"
           height="25"

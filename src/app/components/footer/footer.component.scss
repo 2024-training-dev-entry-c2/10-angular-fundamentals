@@ -1,10 +1,9 @@
-@use '../../ui/styles/mixins.scss' as mixins;
-@use '../../ui/styles/variables.scss' as variables;
-
+@use "../../ui/styles/mixins.scss" as mixins;
+@use "../../ui/styles/variables.scss" as variables;
 
 footer {
-  background-color: variables.get-color('black');
-  color: variables.get-color('white');  
+  background-color: variables.$black;
+  color: variables.$white;
   padding: 40px 20px;
 
   .footer-links {
@@ -27,7 +26,7 @@ footer {
       font-size: 1.2rem;
       font-weight: bold;
       margin-bottom: 15px;
-      color: variables.get-color('footer-text'); 
+      color: variables.$footer-text;
     }
 
     &__link {
@@ -35,7 +34,7 @@ footer {
       list-style: none;
       line-height: 2rem;
       font-size: 1.2rem;
-      color: variables.get-color('footer-text'); 
+      color: variables.$footer-text;
     }
 
     &__menu {
@@ -46,7 +45,7 @@ footer {
         margin-bottom: 8px;
 
         &__link {
-          color: variables.get-color('white'); 
+          color: variables.$white;
           text-decoration: none;
 
           &:hover {
@@ -60,46 +59,46 @@ footer {
   .footer-email__container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; 
+    align-items: flex-start;
     width: 50%;
     padding-left: 80px;
-  
+
     h3 {
       font-size: 1.2rem;
       font-weight: bold;
       margin-bottom: 10px;
     }
-  
+
     .footer-email__input-wrapper {
       position: relative;
       width: 100%;
       max-width: 500px;
-      color: variables.get-color('white');
-      
+      color: variables.$white;
+
       .footer-email__input {
-            height: 3.75rem;
-    padding: .875rem;
-    width: 100%;
-    border: 0.8px solid #AAAAAA;
-    border-radius: .9375rem;
-    background-color: rgba(0, 0, 0, 0) !important;
+        height: 3.75rem;
+        padding: 0.875rem;
+        width: 100%;
+        border: 0.8px solid #aaaaaa;
+        border-radius: 0.9375rem;
+        background-color: rgba(0, 0, 0, 0) !important;
 
         > span {
-          font-family: 'Press Start 2P', sans-serif; 
+          font-family: "Press Start 2P", sans-serif;
         }
-  
+
         &::placeholder {
-          color: variables.get-color('white');
+          color: variables.$white;
         }
       }
-  
+
       .footer-email__icon {
         position: absolute;
         right: 15px;
         top: 50%;
         transform: translateY(-50%);
         font-size: 1.5rem;
-        color: variables.get-color('white'); 
+        color: variables.$white;
         pointer-events: none;
       }
     }
@@ -109,7 +108,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid variables.get-color('gray-dark'); 
+    border-top: 1px solid variables.$gray-dark;
     padding-top: 20px;
     padding-bottom: 30px;
 
@@ -122,7 +121,7 @@ footer {
     }
 
     &__link {
-      color: variables.get-color('white'); 
+      color: variables.$white;
       text-decoration: none;
     }
 
@@ -136,7 +135,7 @@ footer {
 
       &__item {
         &__link {
-          color: variables.get-color('white');
+          color: variables.$white;
           text-decoration: none;
 
           &:hover {
@@ -159,18 +158,17 @@ footer {
     &__city {
       p {
         margin: 0;
-        color: variables.get-color('white'); 
+        color: variables.$white;
       }
     }
   }
 }
 
-
 .footer-email__input {
-    height: 3.75rem;
-    padding: .875rem;
-    width: 100%;
-    border: 0.8px solid #AAAAAA;
-    border-radius: .9375rem;
-    background-color: rgba(0, 0, 0, 0) !important;
+  height: 3.75rem;
+  padding: 0.875rem;
+  width: 100%;
+  border: 0.8px solid #aaaaaa;
+  border-radius: 0.9375rem;
+  background-color: rgba(0, 0, 0, 0) !important;
 }
