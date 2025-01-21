@@ -1,0 +1,16 @@
+<footer class="footer" role="contentinfo">
+    <menu class="footer__menu" aria-label="Footer navigation">
+        <li id="service-retours" class="footer__menu-item">
+            <a class="footer__menu-link" href="#">
+                <app-footer-menu-icon></app-footer-menu-icon>
+                Service client & retours
+            </a>
+        </li>
+        @for (item of menuItems; track $index) {
+        <li class="footer__menu-item">
+            <a class="footer__menu-link" href="{{ item.link }}">{{ item.label }}</a>
+        </li>
+        }
+    </menu>
+    <div>©Visionnaire 2025</div>
+</footer>

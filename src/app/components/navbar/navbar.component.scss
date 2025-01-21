@@ -1,0 +1,94 @@
+@use '../../ui/styles/variables.scss' as var;
+@use '../../ui/styles/mixins.scss' as mix;
+
+.hidden {
+    opacity: 0;
+    display: none;
+}
+
+.navbar {
+    position: fixed;
+    top: 18px;
+    display: flex;
+    min-height: 56px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 0px;
+    background-color: var.$secondary-color;
+    border-bottom: 1px solid var.$primary-color;
+    z-index: 999;
+    width: 100%;
+
+    &__logo-container {
+        @include mix.flex-center;
+        height: 56px;
+        border-right: var.$primary-color 1px solid;
+        flex: 1;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        // &.scrolled {
+        //     animation: containerWidth 0.5s cubic-bezier(0.23, 1, 0.320, 1) forwards;
+        // }
+
+        // &:not(.scrolled) {
+        //     animation: containerWidth 0.5s cubic-bezier(0.23, 1, 0.320, 1) reverse forwards;
+        // }TODO: Make animation Work!!
+    }
+
+    // @keyframes containerWidth {
+    //     from {
+    //         width: 204px;
+    //     }
+
+    //     to {
+    //         width: 72px;
+    //     }
+    // }
+
+    &__menu {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 56px;
+        align-items: center;
+        justify-content: space-around;
+
+        li {
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            a {
+                text-decoration: none;
+                color: var.$primary-color;
+                font-size: 2.5dvh;
+                font-weight: 500;
+                text-transform: uppercase;
+                text-align: left;
+            }
+        }
+    }
+
+    &__cart {
+        @include mix.flex-center;
+        position: relative;
+        border-left: var.$primary-color 1px solid;
+        height: 56px;
+        padding: 5px 25px;
+    }
+
+    a:hover {
+        cursor: url(//vision-naire.com/cdn/shop/t/3/assets/cursor-active_small.png?v=79124357518556369791658233708) 21 16, auto;
+        cursor: -webkit-image-set(url(//vision-naire.com/cdn/shop/t/3/assets/cursor-active_small.png?v=79124357518556369791658233708) 1x, url(//vision-naire.com/cdn/shop/t/3/assets/cursor-active@2x_small.png?v=11241328135293569261658233706) 2x) 21 16, auto
+    }
+
+    a:active {
+        cursor: url(//vision-naire.com/cdn/shop/t/3/assets/cursor-hover_small.png?v=25506985200570235831658233708) 21 16, auto;
+        cursor: -webkit-image-set(url(//vision-naire.com/cdn/shop/t/3/assets/cursor-hover_small.png?v=25506985200570235831658233708) 1x, url(//vision-naire.com/cdn/shop/t/3/assets/cursor-hover@2x_small.png?v=69560968883176258041658233702) 2x) 21 16, auto
+    }
+
+}

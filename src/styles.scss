@@ -1,4 +1,65 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face {
+  font-family: "PP Neue Montreal Book";
+  font-style: normal;
+  font-weight: normal;
+  src: local("PP Neue Montreal Book"),
+    url("assets/fonts/ppneuemontreal-book.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PP Neue Montreal Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("PP Neue Montreal Italic"),
+    url("assets/fonts/ppneuemontreal-italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PP Neue Montreal Thin";
+  font-style: normal;
+  font-weight: normal;
+  src: local("PP Neue Montreal Thin"),
+    url("assets/fonts/ppneuemontreal-thin.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PP Neue Montreal Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: local("PP Neue Montreal Medium"),
+    url("assets/fonts/ppneuemontreal-medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PP Neue Montreal SemiBold italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("PP Neue Montreal SemiBold italic"),
+    url("assets/fonts/ppneuemontreal-semibolditalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PP Neue Montreal Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("PP Neue Montreal Bold"),
+    url("assets/fonts/ppneuemontreal-bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Apple Garmond Light";
+  font-style: normal;
+  font-weight: lighter;
+  src: local("Apple Garmond Light"),
+    url("assets/fonts/AppleGaramond-Light.ttf") format("truetype");
+}
+
+.sliding-band {
+  p {
+    font-family: "Apple Garmond Light", serif;
+    font-weight: 200;
+  }
+}
 
 * {
   margin: 0;
@@ -7,5 +68,27 @@
 }
 
 html {
-  font-family: "Poppins", serif;
+  font-family: "PP Neue Montreal", system-ui, sans-serif;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+
+  /* IE and Edge */
+  &::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari and Opera */
+  }
+}
+
+body {
+  overflow-y: scroll;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+
+  /* IE and Edge */
+  &::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari and Opera */
+  }
 }

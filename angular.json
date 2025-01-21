@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "sketch-angular": {
+    "angular-migration": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/sketch-angular",
+            "outputPath": "dist/angular-migration",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -26,6 +26,8 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
+              "src/assets",
+              "src/favicon.ico",
               {
                 "glob": "**/*",
                 "input": "public"
@@ -64,10 +66,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "sketch-angular:build:production"
+              "buildTarget": "angular-migration:build:production"
             },
             "development": {
-              "buildTarget": "sketch-angular:build:development"
+              "buildTarget": "angular-migration:build:development"
             }
           },
           "defaultConfiguration": "development"

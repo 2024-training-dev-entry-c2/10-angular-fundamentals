@@ -1,0 +1,22 @@
+<section aria-label="Main navigation bar">
+    <nav class="navbar" role="navigation">
+        <a class="navbar__logo-container" [class.scrolled]="isScrolled"
+            aria-label="Main VISSIONNAIRE logo that redirect to the home page" href="#">
+            <app-navbar-logotype [class.hidden]="isScrolled"></app-navbar-logotype>
+            <app-navbar-isotype [class.hidden]="!isScrolled"></app-navbar-isotype>
+        </a>
+        <menu class="navbar__menu">
+            <li role="menuitem" aria-label="New products gallery of novelties">
+                <a href="#">NOUVEAUTÉS</a>
+            </li>
+            <app-shop-dropdown [class.scrolled]="isScrolled"></app-shop-dropdown>
+            <app-collections-dropdown [class.scrolled]="isScrolled"></app-collections-dropdown>
+            <li role="menuitem" aria-label="Promotions page">
+                <a href="#">PROMOS</a>
+            </li>
+        </menu>
+        <a class="navbar__cart" href="#">
+            <app-navbar-cart></app-navbar-cart>
+        </a>
+    </nav>
+</section>

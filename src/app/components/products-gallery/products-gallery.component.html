@@ -1,0 +1,9 @@
+<section class="products-gallery">
+    <h2>Nouveautés</h2>
+    <div class="products-gallery__grid-container">
+        <!-- <app-product-card *ngFor="let product of products" [product]="product"></app-product-card> -->
+        @for (product of products; track $index) {
+            <app-product-card [product]="product"></app-product-card>
+        }
+    </div>
+</section>

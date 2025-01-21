@@ -1,0 +1,14 @@
+.footer__menu-icon {
+    animation: spin 3s infinite linear;
+    margin-right: 5px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

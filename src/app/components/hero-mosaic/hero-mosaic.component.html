@@ -1,0 +1,11 @@
+<section class="mosaic">
+    @for (hero of heroItems; track $index) {
+        <app-hero-item 
+            [imageSrc]="hero.imageSrc"
+            [imageAlt]="hero.altText"
+            [videoSrc]="hero.videoSrc"
+            [text]="hero.text"
+            [link]="hero.link"
+        ></app-hero-item>
+    }
+</section>

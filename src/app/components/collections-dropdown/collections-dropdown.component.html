@@ -1,0 +1,21 @@
+<li class="collections-dropdown" role="menuitem" aria-label="Collections page">
+        <a class="collections-dropdown__link" href="#">COLLECTIONS</a>
+        <div class="collections-dropdown__submenu ">
+                <ul class="collections-dropdown__list">
+                        @for(item of firstColumn; track $index){<li class="collections-dropdown__item">
+                                <a class="collections-dropdown__item--link" href="#">{{item}}
+                                </a>
+                        </li>}
+                </ul>
+
+                <ul class="collections-dropdown__list">
+                        @for(item of secondColumn; track $index){<li class="collections-dropdown__item">
+                                <a class="collections-dropdown__item--link" href="#">{{item}}
+                                </a>
+                        </li>}
+                </ul>
+                <img class="collections-dropdown__preview"
+                        src="../../../assets/images/group_of_models_harry_otter_collab.webp"
+                        alt="Respresentative picture of the selected products collection" style="max-height: 450px;">
+        </div>
+</li>
