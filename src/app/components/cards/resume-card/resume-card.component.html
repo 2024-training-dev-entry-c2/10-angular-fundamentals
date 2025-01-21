@@ -1,0 +1,38 @@
+<section>
+    <div class="section-pocket">
+      <div class="section-pocket__container">
+        <div class="section-pocket__container__data">
+            @if(data().icon) {
+                <div class="section-pocket__container__data__logo">
+                   <img [src]="data().iconSource">
+                </div>
+            }
+          <div class="section-pocket__container__data__info">
+            <h1 class="section-pocket__container__data__info__title">{{data().title}}</h1>
+            <p class="section-pocket__container__data__info__description">{{data().description}}</p>
+            @if(data().button){
+                <a class="section-pocket__container__data__info__button" href="#">
+                    <div class="section-pocket__container__data__info__button__content">
+                      {{data().buttonTitle}}
+                      <img [src]="data().buttonImage">
+                    </div>
+                  </a>
+            }
+        
+        </div>
+        </div>
+        <div>
+          <div class="section-pocket__container__svg">
+            <div class="section-pocket__container__svg__animation">
+                @if(data().image) {
+                    <img [src]="data().multimedia">
+                } @else {
+                    <video autoplay muted loop playsinline [src]="data().multimedia"></video>
+                }
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>

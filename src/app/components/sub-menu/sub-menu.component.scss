@@ -1,0 +1,76 @@
+@use '../../../assets/styles/abstracts/mixins' as mixins;
+@use '../../../assets/styles/abstracts/variables' as variables;
+
+.menu {
+    position: fixed;
+    background: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 16px;
+    border-radius: 8px;
+    padding: 4px;
+    list-style: none;
+    top: 68px;
+
+    li {
+        padding: 8px 8px 8px 12px;
+    }
+
+    li:hover {
+        border-radius: 6px;
+        background: rgba(247, 247, 247, 0.822);
+    }
+
+
+    &__item {
+        @include mixins.container-flex-gap(16px);
+        text-decoration: none;
+
+        &__icon {
+            box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 0px 1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0.6rem;
+            width: 36px;
+            height: 36px;
+        }
+
+        &__info {
+
+            span {
+                color: variables.$primary-text-color-light;
+            }
+
+            &__badge {
+                @include mixins.container-flex-gap(6px);
+            }
+
+            &__badge span {
+                border-radius: 5px;
+                padding: 0px 6px 0px 4px;
+                user-select: none;
+                background: rgb(248 246 244);
+                font-size: 12px;
+                color: rgb(132, 130, 129);
+            }
+            
+
+            h5 {
+                font-weight: 600;
+                font-size: 15px;
+                line-height: 22px;
+                letter-spacing: -0.13px;
+                color: variables.$primary-text-color-dark;
+            }
+
+            p {
+                width: 240px;
+                font-weight: 500;
+                font-size: 15px;
+                line-height: 20px;
+                letter-spacing: -0.09px;
+                color: rgb(132, 130, 129);
+            }
+
+        }
+    }
+}

@@ -1,0 +1,28 @@
+<section>
+    <div class="section-publications">
+      <h1 class="section-publications__title">The latest from Family</h1>
+      <ul class="section-publications__list">
+
+        @for (item of publications; track $index) {
+          <li>
+            <a href="#" class="section-publications__list__item">
+              <article>
+                <div class="section-publications__list__item__imagen">
+                  <img [src]="item.img"
+                    alt="Show mobiles with application of wallet in diferent sections">
+                  <p>{{item.date}}</p>
+                </div>
+                <div class="section-publications__list__item__data">
+                  <h5>{{item.title}}</h5>
+                  <div>
+                    <p>{{item.description}}</p>
+                  </div>
+                </div>
+              </article>
+            </a>
+          </li>
+        }
+      </ul>
+    </div>
+
+  </section>

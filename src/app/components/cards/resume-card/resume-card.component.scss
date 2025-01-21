@@ -1,0 +1,88 @@
+@use '../../../../assets/styles/abstracts/mixins' as mixins;
+@use '../../../../assets/styles/abstracts/variables' as variables;
+
+.section-pocket {
+    @include mixins.container-size();
+    margin-top: 60px;
+    background: rgb(251 250 249);
+
+    &__container {
+        display: grid;
+        -webkit-box-align: center;
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5.75rem;
+        padding: 3.625rem 3.875rem 5rem;
+        background: rgb(251 250 249);
+        border-radius: 1.25rem;
+
+        &__data{
+            @include mixins.container-flex-column(18px);
+
+            &__info{
+                @include mixins.container-flex-column(26px);
+                grid-template-columns: repeat(2, 1fr);
+
+                &__title {
+                    @include mixins.default-h1;
+
+                }
+
+                &__description {
+                    color: variables.$primary-text-color-light;
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 26px;
+                    letter-spacing: -0.22px;
+                }
+
+                &__button {
+
+                    display: inline;
+                    cursor: pointer;
+                    text-decoration: none;
+                    position: relative;
+                    color: inherit;
+                    transition: 0.2s ease-out;
+                    font-weight: 600;
+
+                    :hover {
+                        background: rgb(225 238 249);
+                        transform: scale(1.02);
+                    }
+
+                    &__content {
+                        position: relative;
+                        display: inline-flex;
+                        -webkit-box-align: center;
+                        align-items: center;
+                        color: variables.$fourth-text-color-light;
+                        font-size: 18px;
+                        font-weight: 600;
+                        letter-spacing: -0.44px;
+                        gap: 8px;
+                        margin: 0px -0.75rem;
+                        padding: 0.5rem 0.75rem;
+                        border-radius: 8px;
+                    }
+                }
+            }
+        }
+
+        &__svg {
+            display: flex;
+            -webkit-box-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            align-items: center;
+
+            &__animation {
+                display: block;
+                position: absolute;
+            }
+
+        }
+
+    }
+
+}

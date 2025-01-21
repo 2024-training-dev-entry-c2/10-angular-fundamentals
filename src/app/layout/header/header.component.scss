@@ -1,0 +1,31 @@
+@use '../../../assets/styles/abstracts/variables' as variables;
+@use '../../../assets/styles/abstracts/mixins' as mixins;
+
+header {
+    background: variables.$second-text-color-light;
+    top: 0;
+    position: sticky;
+    z-index: 10;
+}
+
+.header {
+    @include mixins.container-flex(space-between, center);
+    @include mixins.container-size();
+    padding-block: 1.5rem;
+
+    &__actions {
+        @include mixins.container-flex-gap(30px);
+    }
+
+    &__button {
+        color: #FFF;
+        background-color: #000;
+        padding: 8px 14px;
+        border-radius: 32px;
+        font-size: 15px;
+        letter-spacing: -0.09px;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+    }
+}

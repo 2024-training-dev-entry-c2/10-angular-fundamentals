@@ -1,0 +1,39 @@
+<footer>
+    <div class="footer">
+        <div class="footer__left">
+            <div class="footer__left__icon">
+                <img src="assets/images/icon-footer.png" aria-hidden="true">
+            </div>
+            <nav>
+                <ul class="footer__left__menu">
+                    @for (item of menu; track $index) {
+                    <li class="footer__left__menu__item" aria-level="1">
+                        <span>{{item.label}}</span>
+                        <ul class="footer__left__menu__item__sub">
+                            @for (sub of item.sub; track $index) {
+                            <li class="footer__left__menu__item__sub__item" aria-level="2"><a
+                                    href="#"><span>{{sub}}</span></a></li>
+                            }
+                        </ul>
+                    </li>
+                    }
+                </ul>
+            </nav>
+        </div>
+
+        <div class="footer__rigth">
+            <p>© 2025</p>
+            <ul class="footer__rigth__list">
+                @for (item of navIcons; track $index) {
+                <li class="footer__rigth__list__item">
+                    <a href="#">
+                        <svg>
+                            <use [attr.href]="item"></use>
+                        </svg>
+                    </a>
+                </li>
+                }
+            </ul>
+        </div>
+    </div>
+</footer>

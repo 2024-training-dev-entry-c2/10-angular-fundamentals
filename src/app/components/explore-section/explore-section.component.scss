@@ -1,0 +1,25 @@
+@use '../../../assets/styles/abstracts/mixins' as mixins;
+@use '../../../assets/styles/abstracts/variables' as variables;
+
+.section-explore {
+    @include mixins.container-size();
+    padding: 4.625rem 0px 5.5625rem;
+
+    &__title {
+        @include mixins.default-h1();
+        text-align: center;
+    }
+
+    &__container {
+        margin-top: 3.625rem;
+        display: grid;
+        gap: 34px;
+        grid-auto-rows: 4fr;
+        grid-template: "left . ." 1fr "left . ." 1fr / 1fr 1fr 1fr;
+
+        &__item--first {
+            grid-area: left;
+        }
+    }
+
+}

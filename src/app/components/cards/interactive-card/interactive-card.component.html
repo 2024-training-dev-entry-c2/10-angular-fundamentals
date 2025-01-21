@@ -1,0 +1,68 @@
+<section class="section-card-info">
+    <div [class]="'section-card-info__container ' + (data().reverse ? 'section-card-info__container--reverse' : '')">
+       
+        @if (data().image) {
+            <div class="section-card-info__container__clip">
+                <video autoplay muted loop playsinline [src]="data().clip"></video>
+            </div>
+        } 
+        @else {
+            <div class="section-card-info__container__icon">
+                <video autoplay muted loop playsinline [src]="data().clip"></video>
+            </div>
+        }
+       
+        <div class="section-card-info__container__data">
+            <span class="section-card-info__container__data__theme"
+                [ngClass]="{
+                'section-card-info__container__data__theme--wallet': data().class === 'wallet',
+                'section-card-info__container__data__theme--care': data().class === 'care',
+                'section-card-info__container__data__theme--secure': data().class === 'secure'
+                }">
+            {{data().theme}}</span>
+            <div class="section-card-info__container__data__info"> 
+                <h1 class="section-card-info__container__data__info__title">{{data().title}}</h1>
+                <p class="section-card-info__container__data__info__description">{{data().description}}</p>
+            </div>
+
+            @if(data().points) {
+                <ul class="section-card-info__container__data__points">
+                    @for (item of data().list; track $index) {
+                        <li>
+                            <div class="section-card-info__container__data__points__item">
+                                <img [src]="item.svg">
+                                <span>{{item.label}}</span>
+                            </div>
+                        </li>
+                    }
+                </ul>
+            }
+
+            @if(!data().points) {
+                <ul class="section-card-info__container__data__list" [ngClass]="{
+                    'section-card-info__container__data__list--care': data().class === 'care',
+                    'section-card-info__container__data__list--secure': data().class === 'secure'
+                    }">
+                    @for (item of data().list; track $index) {
+                        <li class="section-card-info__container__data__list__item">
+                            <img  width="18" 
+                            height="25" [src]="item.svg">
+                            <span>{{item.label}}</span>
+                        </li>
+                    }
+                </ul>
+            }
+            
+            @if(data().button) {
+                <button class="section-card-info__container__demo">
+                    <img [src]="data().buttonImage" alt="Image of demo to use NFTs">
+                    <div class="section-card-info__container__demo__data">
+                        <h5>{{data().buttonTitle}}</h5>
+                        <span>{{data().buttonDescription}}</span>
+                    </div>
+                </button>
+            }
+            
+        </div>
+    </div>
+</section>

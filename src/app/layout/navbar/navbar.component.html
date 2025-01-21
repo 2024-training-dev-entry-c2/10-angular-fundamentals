@@ -1,0 +1,19 @@
+<nav>
+    <menu class="menu">
+        <li class="menu__item" aria-level="1">
+            <a href="#" class="menu__link" tabindex="1">
+                <img src="assets/svgs/logo.svg" alt="Logo to page for the entrprise">
+            </a>
+        </li>
+        
+        @for (item of menu; track $index) {
+            <li class="menu__item" aria-level="1" [tabindex]="$index + 1">
+                <span class="menu__item__label">{{item.label}}</span>
+                @if(item.sub) {
+                    <img class="menu__item__icon" [src]="item.svg" aria-hidden="true">
+                    <app-sub-menu class="menu__item__sub" [subMenu]="item.sub.list"></app-sub-menu>
+                }
+            </li>
+        }
+    </menu>
+</nav>

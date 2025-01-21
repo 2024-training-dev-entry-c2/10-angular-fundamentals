@@ -1,7 +1,24 @@
-<menu>
-  @for (item of items(); track $index) {
-    <li (click)="handleClick(item)"><a [tabindex]="$index" href="#">{{item}}</a></li>
-  }
-
-  <!-- <li *ngFor="let item of items(); index as i"><a [tabindex]="i" href="#">{{item}}</a></li> -->
+<menu class="menu" aria-expanded="false">
+    @for (item of subMenu(); track $index) {
+    <li aria-level="2">
+        <a class="menu__item" [href]="item.href">
+            @if (!item.single) {
+            <div class="menu__item__icon">
+                <img [src]="item.svg" aria-hidden="true">
+            </div>
+            }
+            <div class="menu__item__info">
+                @if (!item.single) {
+                <div class="menu__item__info__badge">
+                    <h5>{{item.option}}</h5>
+                    <span>{{item.info}}</span>
+                </div>
+                <p>{{item.description}}</p>
+                } @else {
+                <span>{{item.option}}</span>
+                }
+            </div>
+        </a>
+    </li>
+    }
 </menu>

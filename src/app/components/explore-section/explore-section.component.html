@@ -1,0 +1,10 @@
+<section>
+    <div class="section-explore">
+      <h1 class="section-explore__title">Explore Ethereum in a whole new way.</h1>
+      <div class="section-explore__container">
+        @for (item of exploreOptions; track $index) {
+            <app-info-card [data]="item" [className]="$index == 0 ? 'section-explore__container__item--first': ''"></app-info-card>
+        }
+      </div>
+    </div>
+  </section>

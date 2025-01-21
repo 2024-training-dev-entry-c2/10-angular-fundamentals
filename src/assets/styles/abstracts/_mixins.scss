@@ -1,0 +1,39 @@
+@use './variables' as variables;
+
+@mixin container-flex($justify: start, $align: center) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+@mixin container-flex-gap($gap: 0, $justify: start, $align: center) {
+    @include container-flex($justify, $align);
+    gap: $gap;
+}
+
+@mixin container-flex-column($gap: 0){
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+}
+
+@mixin container-size($size: 67rem) {
+    max-width: $size;
+    margin: 0 auto;
+}
+
+@mixin default-h1() {
+    font-family: Family, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+    color: variables.$primary-text-color-dark;
+    font-weight: 500;
+    font-size: 44px;
+    line-height: 48px;
+    letter-spacing: -1.35px;
+}
+
+@mixin span-list() {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 26px;
+    letter-spacing: -0.22px;
+}

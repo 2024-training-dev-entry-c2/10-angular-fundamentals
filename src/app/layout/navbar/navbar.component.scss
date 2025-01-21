@@ -1,0 +1,48 @@
+@use '../../../assets/styles/abstracts/variables' as variables;
+@use '../../../assets/styles/abstracts/mixins' as mixins;
+
+.menu {
+    @include mixins.container-flex-gap(10px);
+    list-style: none;
+
+    &__item {
+        font-weight: 600;
+        font-size: 15px;
+        padding: 11px 10px;
+        background: variables.$second-text-color-light;
+        color: rgb(40, 38, 36);
+        cursor: pointer;
+
+        &__icon {
+            margin-left: 2px;
+        }
+
+    }
+
+    &__item:hover &__item__icon {
+        rotate: 180deg;
+    }
+
+    &__item:hover {
+        background: #fbfaf9;
+        border-radius: 6px;
+    }
+
+    &__item:hover &__item__sub {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__item,
+    &__icon {
+        @include mixins.container-flex-gap(3px);
+    }
+
+    &__item__sub {
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.1s, visibility 0.1s;
+    }
+
+}

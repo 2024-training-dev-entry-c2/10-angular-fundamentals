@@ -1,0 +1,20 @@
+<section>
+    <div class="card-animation">
+        <div class="card-animation__data">
+            <div class="card-animation__data__title">
+                <h1>
+                    <span> {{data().title}} </span>
+                    {{data().subtitle}}
+                </h1>
+            </div>
+            <div class="card-animation__data__container">
+                @for (item of data().videos; track $index) {
+                    <div class="card-animation__data__container__step">
+                        <video autoplay muted loop playsinline [src]="item"></video>
+                    </div>
+                }
+               
+            </div>
+        </div>
+    </div>
+</section>

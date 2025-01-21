@@ -1,0 +1,23 @@
+<section>
+    <div class="section-details">
+      <div class="section-details__head">
+        <h1 class="section-details__head__title">Details that matter.</h1>
+        <p class="section-details__head__description">We sweat the details, no matter how small.</p>
+      </div>
+
+      <div class="section-details__content">
+        <ul class="section-details__content__list">
+        @for (item of points; track $index) {
+            <li class="section-details__content__list__item">
+                <video class="section-details__content__list__item__clip" autoplay muted loop playsinline
+                  [src]="item.src"></video>
+                <div class="section-details__content__list__item__info">
+                  <span class="section-details__content__list__item__info__theme">{{item.title}}</span>
+                  <p class="section-details__content__list__item__info__detail">{{item.description}}.</p>
+                </div>
+            </li>
+        }
+        </ul>
+      </div>
+    </div>
+  </section>

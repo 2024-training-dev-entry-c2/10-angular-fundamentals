@@ -1,0 +1,35 @@
+@use '../../../../assets/styles/abstracts/mixins' as mixins;
+@use '../../../../assets/styles/abstracts/variables' as variables;
+
+.card-animation-details {
+    background: rgb(251 250 249);
+    padding: 6.5rem 0px;
+
+    &__info { 
+        @include mixins.container-size();
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 6.0625rem 5rem;
+
+        &__item {
+            @include mixins.container-flex-column(0.625rem);
+            
+            &__title {
+                color: variables.$fourth-text-color-light;
+                font-weight: 600;
+                font-size: 15px;
+                line-height: 20px;
+                letter-spacing: -0.09px;
+            }
+
+            &__description {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 26px;
+                letter-spacing: -0.22px;
+                color: variables.$primary-text-color-light;
+            }
+        
+        }
+    } 
+}

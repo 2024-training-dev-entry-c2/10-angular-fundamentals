@@ -1,0 +1,44 @@
+@use '../../../../assets/styles/abstracts/mixins' as mixins;
+@use '../../../../assets/styles/abstracts/variables' as variables;
+
+.section-explore {
+
+    &__container {
+     
+        &__item {
+            padding: 0 1.425rem 0.875rem;
+            background: rgb(251, 250, 249);
+            border-radius: 12px;
+            overflow: hidden;
+
+            &__info {
+                margin-top: 0.25rem;
+            }
+
+            &__info h5 {
+                color: variables.$primary-text-color-dark;
+                font-weight: 700;
+                font-size: 17px;
+                line-height: 26px;
+                letter-spacing: -0.22px;
+
+            }
+
+            &__info p {
+                color: rgba(71, 70, 69, 0.7);
+                font-weight: 600;
+                font-size: 15px;
+                line-height: 22px;
+                letter-spacing: -0.13px;
+                margin-top: 3px;
+    
+                span {
+                    display: block;
+                }
+            }
+
+        }
+
+    }
+
+}

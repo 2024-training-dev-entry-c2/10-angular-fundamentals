@@ -1,0 +1,70 @@
+@use '../../../assets/styles/abstracts/mixins' as mixins;
+@use '../../../assets/styles/abstracts/variables' as variables;
+
+.section-details {
+    @include mixins.container-size();
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
+    padding: 7.25rem 0px 6.75rem;
+
+    &__head {
+        @include mixins.container-flex-column(1.5rem);
+        position: sticky;
+        top: 15rem;
+        align-self: flex-start;
+
+        &__title {
+            @include mixins.default-h1;
+        }
+    
+        &__description {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 27px;
+            letter-spacing: -0.3px;
+            color: variables.$primary-text-color-light;
+        }
+
+    }
+
+    &__content {
+
+        &__list {
+            @include mixins.container-flex-column(4.46rem);
+            list-style: none;
+
+            &__item {
+                @include mixins.container-flex-column(0.75rem);
+
+                &__clip {
+                    margin-bottom: 0.75rem;
+                }
+
+                &__info {
+                    @include mixins.container-flex-column(0.4375rem);
+
+                    &__theme {
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 22px;
+                        letter-spacing: -0.13px;
+                        color: variables.$fourth-text-color-light;
+                    }
+
+                    &__detail {
+                        font-weight: 400;
+                        font-size: 20px;
+                        line-height: 27px;
+                        letter-spacing: -0.3px;
+                        color: variables.$primary-text-color-light;
+                    }
+                }
+            }
+        }
+    }
+    
+
+
+
+}

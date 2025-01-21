@@ -1,0 +1,12 @@
+<section>
+    <div class="card-animation-details">
+        <div class="card-animation-details__info">
+            @for (item of data(); track $index) {
+                <div class="card-animation-details__info__item">
+                    <h5 class="card-animation-details__info__item__title">{{item.title}}</h5>
+                    <p class="card-animation-details__info__item__description">{{item.description}}</p>
+                </div>
+            }
+        </div>
+    </div>
+</section>

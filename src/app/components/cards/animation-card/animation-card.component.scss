@@ -1,0 +1,28 @@
+@use '../../../../assets/styles/abstracts/mixins' as mixins;
+
+.card-animation {
+   
+    &__data { 
+        @include mixins.container-size();
+        padding: 4.625rem 0px 5.5625rem;
+
+        &__title h1{
+            @include mixins.default-h1();
+
+            span {
+                display: block;
+            }
+        }
+
+       &__container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            padding: 3.1875rem 0px 0px;
+
+            &__step video {
+                border-radius: 12px;
+            }
+        }
+    } 
+}
