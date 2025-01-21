@@ -4,8 +4,14 @@ import { Component } from '@angular/core';
   selector: 'app-footer-nav',
   imports: [],
   templateUrl: './footer-nav.component.html',
-  styleUrl: './footer-nav.component.scss'
+  styleUrl: './footer-nav.component.scss',
 })
 export class FooterNavComponent {
-
+  links = [
+    { text: 'Linkedin' },
+    { text: 'Instagram' },
+    { text: 'Behance' },
+    { text: 'Shop' },
+    { text: 'Insights' },
+  ];
 }

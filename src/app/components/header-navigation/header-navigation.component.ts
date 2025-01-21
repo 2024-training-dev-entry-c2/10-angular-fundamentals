@@ -7,6 +7,12 @@ import { Component, AfterViewInit } from '@angular/core';
   styleUrl: './header-navigation.component.scss',
 })
 export class HeaderNavigationComponent implements AfterViewInit {
+  links = [
+    { text: 'PROJECTS', ariaControls: 'project-section' },
+    { text: 'SERVICES', ariaExpanded: 'false' },
+    { text: 'VENTURES', ariaHaspopup: 'false' },
+    { text: 'CONTACT', ariaFlowto: 'footer' },
+  ];
   ngAfterViewInit(): void {
     let lastScrollTop = 0;
     let rotation = 0;

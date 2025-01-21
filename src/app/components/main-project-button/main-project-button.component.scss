@@ -23,28 +23,27 @@
 
     &:hover {
       background-color: variables.$color-hover;
-    }
+      &-icon {
+        animation: moveRight 0.4s forwards;
 
-    &:hover .duties__project-cta-icon {
-      animation: moveRight 0.4s forwards;
-    }
-
-    &:hover .duties__project-cta-icon-clone {
-      animation: appear 0.4s forwards;
+        &-clone {
+          animation: appear 0.4s forwards;
+        }
+      }
     }
 
     &-icon {
       margin: auto 0;
       width: 12px;
       transition: transform 0.5s;
-    }
-    &-icon-clone {
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      opacity: 0;
-      transition: transform 0.5s, opacity 0.5s;
+      &-clone {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        opacity: 0;
+        transition: transform 0.5s, opacity 0.5s;
+      }
     }
   }
 }

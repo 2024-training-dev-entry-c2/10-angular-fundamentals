@@ -22,6 +22,10 @@
     &:hover {
       color: rgb(191, 191, 191);
       z-index: 10;
+
+      &::after {
+        transform: translateX(0);
+      }
     }
 
     &::after {
@@ -36,10 +40,6 @@
       transform: translateX(-110%);
       transition: transform 0.2s ease-in-out;
       pointer-events: none;
-    }
-
-    &:hover::after {
-      transform: translateX(0);
     }
   }
 }

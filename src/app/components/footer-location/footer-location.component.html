@@ -1,8 +1,8 @@
 <section class="duties__footer-location" aria-label="Footer Location">
   <p class="duties__footer-location-title">Duties AS</p>
   <address class="duties__footer-address">
-    <p class="duties__footer-address-line">Prinsens gate 21</p>
-    <p class="duties__footer-address-line">0157 Oslo</p>
-    <p class="duties__footer-address-line">Norway</p>
+    @for (line of addressLines; track line) {
+    <p class="duties__footer-address-line">{{ line }}</p>
+    }
   </address>
 </section>

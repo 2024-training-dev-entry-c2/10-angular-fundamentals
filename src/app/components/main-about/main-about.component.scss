@@ -55,14 +55,14 @@
 
       &:hover {
         background-color: variables.$color-hover;
-      }
 
-      &:hover .duties__about-cta-icon {
-        animation: moveRight 0.4s forwards;
-      }
+        &-icon {
+          animation: moveRight 0.4s forwards;
 
-      &:hover .duties__about-cta-icon-clone {
-        animation: appear 0.4s forwards;
+          &-clone {
+            animation: appear 0.4s forwards;
+          }
+        }
       }
 
       &-icon {
@@ -70,15 +70,15 @@
         width: 12px;
         padding-bottom: 2px;
         transition: transform 0.5s;
-      }
 
-      &-icon-clone {
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        opacity: 0;
-        transition: transform 0.5s, opacity 0.5s;
+        &-clone {
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          opacity: 0;
+          transition: transform 0.5s, opacity 0.5s;
+        }
       }
 
       &-text {

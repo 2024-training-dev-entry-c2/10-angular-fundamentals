@@ -6,14 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-intro.component.scss'],
 })
 export class MainIntroComponent implements OnInit {
-  isWorkingHours: boolean = false;
+  introItems: string[] = [
+    'DEFINE YOUR STRATEGY',
+    'DESIGN YOUR IDENTITY',
+    'DEPLOY YOUR BRAND',
+  ];
+  private currentHour: number = 0;
 
   ngOnInit(): void {
-    this.checkWorkingHours();
+    this.currentHour = new Date().getHours();
   }
 
-  checkWorkingHours(): void {
-    const currentHour = new Date().getHours();
-    this.isWorkingHours = currentHour >= 8 && currentHour < 18;
+  get isWorkingHours(): boolean {
+    return this.currentHour >= 8 && this.currentHour < 18;
   }
 }

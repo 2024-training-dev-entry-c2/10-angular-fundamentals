@@ -7,26 +7,20 @@
       <div class="duties__intro-helper">
         <p class="duties__intro-subtitle">WE HELP YOU:</p>
         <ul class="duties__intro-list">
-          <li class="duties__intro-item">- DEFINE YOUR STRATEGY</li>
-          <li class="duties__intro-item">- DESIGN YOUR IDENTITY</li>
-          <li class="duties__intro-item">- DEPLOY YOUR BRAND</li>
+          @for (item of introItems; track item) {
+          <li class="duties__intro-item">- {{ item }}</li>
+          }
         </ul>
       </div>
     </div>
     <div class="duties__status">
       <div class="duties__status-wrapper">
         <p class="duties__status-title">CURRENTLY:</p>
-
-        @if (isWorkingHours) {
         <div
-          class="duties__status-indicator duties__status-indicator--on"
+          [class.duties__status-indicator]="true"
+          [class.duties__status-indicator--on]="isWorkingHours"
+          [class.duties__status-indicator--off]="!isWorkingHours"
         ></div>
-        } @else {
-        <div
-          class="duties__status-indicator duties__status-indicator--off"
-        ></div>
-        }
-
         <span class="duties__status-label">ON-DUTY</span>
       </div>
       <div class="duties__status-opening">

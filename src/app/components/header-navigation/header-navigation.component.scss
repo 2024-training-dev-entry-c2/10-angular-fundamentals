@@ -28,10 +28,10 @@
 
       &:hover svg {
         animation: spin 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
-      }
 
-      &:hover svg.stop-spin {
-        animation: spin-reverse 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+        &.stop-spin {
+          animation: spin-reverse 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+        }
       }
 
       svg {
