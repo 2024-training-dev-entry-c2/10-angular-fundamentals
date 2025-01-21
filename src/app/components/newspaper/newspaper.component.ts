@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { ClubIconComponent } from "../club-icon/club-icon.component";
 
 @Component({
   selector: 'app-newspaper',
-  imports: [],
+  imports: [ClubIconComponent],
   templateUrl: './newspaper.component.html',
   styleUrl: './newspaper.component.scss'
 })
