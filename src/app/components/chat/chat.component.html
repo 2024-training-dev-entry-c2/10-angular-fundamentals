@@ -1,0 +1,39 @@
+<section class="chat" aria-labelledby="chatTitle">
+  <p class="chat__title">Pocket cosmetologist Available 24/7</p>
+  <ul class="chat__messages">
+    <li class="chat__messages__container">
+      <img src="assets/images/profile1.png" alt="woman" />
+      <div class="chat__message chat__message" tabindex="0">
+        <svg width="40" height="40" preserveAspectRatio="xMidYMid slice">
+          <use href="assets/icons/handle.svg#icon-handle" />
+        </svg>
+        Hi! I'm Lóvi AI Assistant, here to help you with all things skin care.
+      </div>
+    </li>
+    <li class="chat__messages__container chat__messages__container--right">
+      <div
+        class="chat__message chat__message chat__message chat__message--switch"
+        tabindex="0"
+      >
+        How does your skin feel today?
+        <img src="assets/images/switch.png" alt="switch" aria-hidden="true" />
+      </div>
+      <img src="assets/images/profile2.png" alt="woman" />
+    </li>
+    <li class="chat__messages__container">
+      <img src="assets/images/profile1.png" alt="woman" />
+      <div class="chat__message chat__message" tabindex="0">
+        Great to hear that! UV Index is high today. To make sure your skin is
+        protected don't forget to use SPF before going out.
+      </div>
+    </li>
+    <li class="chat__messages__container chat__messages__container--right">
+      <div class="chat__message chat__message--right" tabindex="0">
+        How can I improve my evening routine?
+      </div>
+      <img src="assets/images/profile2.png" alt="woman" />
+    </li>
+    <app-recommendation></app-recommendation>
+    <app-options></app-options>
+  </ul>
+</section>
