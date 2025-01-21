@@ -2,9 +2,7 @@
 @use "../../ui/styles/variables.scss" as variables;
 
 .duties__project {
-  &-neural-codex,
-  &-made-machine,
-  &-figures-project {
+  &-container {
     gap: 12px;
     width: 100%;
 
@@ -16,15 +14,15 @@
     }
   }
 
-  &-neural-codex {
+  &---neural {
     @include mixins.grid-template(1.4fr 2fr 1fr);
   }
 
-  &-made-machine {
+  &---made {
     @include mixins.grid-template(1.85fr 1fr 1.3fr);
   }
 
-  &-figures-project {
+  &---figures {
     @include mixins.grid-template(1fr 2fr 1.3fr);
   }
 }

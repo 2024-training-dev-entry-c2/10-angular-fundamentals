@@ -1,6 +1,6 @@
 export const projects = [
   {
-    projectClass: 'duties__project-neural-codex',
+    projectClass: 'duties__project-container duties__project---neural',
     title: 'NEURAL CODEX',
     images: [
       {
@@ -21,7 +21,7 @@ export const projects = [
     ],
   },
   {
-    projectClass: 'duties__project-made-machine',
+    projectClass: 'duties__project-container duties__project---made',
     title: 'PEOPLE MADE MACHINES',
     images: [
       {
@@ -42,7 +42,7 @@ export const projects = [
     ],
   },
   {
-    projectClass: 'duties__project-figures-project',
+    projectClass: 'duties__project-container duties__project---figures',
     title: 'FIGURES',
     images: [
       {

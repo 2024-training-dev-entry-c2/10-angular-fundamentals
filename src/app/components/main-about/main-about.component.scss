@@ -7,7 +7,7 @@
     @include mixins.grid-template(repeat(8, 1fr));
     padding: variables.$padding-x;
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
+    @include mixins.grid-template(1fr 1fr 2fr);
     gap: 2%;
     font-family: variables.$font-family-secondary;
     padding-block: 180px;
@@ -34,58 +34,6 @@
       font-size: 2rem;
       line-height: 120%;
       @include mixins.flex-center(column, flex-start, flex-start, 20px);
-    }
-
-    &-cta {
-      @include mixins.flex-center(row, flex-start, flex-start, 10px);
-      border: 1px solid variables.$color-primary;
-      text-decoration: none;
-      color: variables.$color-background;
-      background-color: variables.$color-primary;
-      border-radius: 3px;
-      padding: 4px 12px;
-      white-space: nowrap;
-      border: none;
-      position: relative;
-
-      &-wrapper {
-        position: relative;
-        overflow: hidden;
-      }
-
-      &:hover {
-        background-color: variables.$color-hover;
-
-        &-icon {
-          animation: moveRight 0.4s forwards;
-
-          &-clone {
-            animation: appear 0.4s forwards;
-          }
-        }
-      }
-
-      &-icon {
-        margin: auto 0;
-        width: 12px;
-        padding-bottom: 2px;
-        transition: transform 0.5s;
-
-        &-clone {
-          position: absolute;
-          left: 0;
-          top: 0;
-          bottom: 0;
-          opacity: 0;
-          transition: transform 0.5s, opacity 0.5s;
-        }
-      }
-
-      &-text {
-        font-family: "PP Neue Montreal Mono Medium";
-        font-size: 1.5rem;
-        font-weight: 300;
-      }
     }
 
     &-image {
