@@ -1,35 +1,21 @@
 <li class="collections-dropdown" role="menuitem" aria-label="Collections page">
-    <a class="collections-dropdown__link" href="#">COLLECTIONS</a>
-    <div class="collections-dropdown__submenu ">
-        <ul class="collections-dropdown__list">
-            <li class="collections-dropdown__item"><a class="collections-dropdown__item--link" href="#">HARRY POTTER |
-                    VISIONNAIRE</a>
-            </li>
-            <li class="collections-dropdown__item"><a class="collections-dropdown__item--link" href="#">Lookbook N°3</a>
-            </li>
-            <li class="collections-dropdown__item"><a class="collections-dropdown__item--link" href="#">Lookbook N°4</a>
-            </li>
-            <li class="collections-dropdown__item"><a class="collections-dropdown__item--link" href="#">Lookbook N°5</a>
-            </li>
-            <li class="collections-dropdown__item"><a class="collections-dropdown__item--link" href="#">Les couleurs</a>
-            </li>
-            <li class="collections-dropdown__item"><a class="collections-dropdown__item--link" href="#">Collab Jordy
-                    VDN</a></li>
-        </ul>
+        <a class="collections-dropdown__link" href="#">COLLECTIONS</a>
+        <div class="collections-dropdown__submenu ">
+                <ul class="collections-dropdown__list">
+                        @for(item of firstColumn; track $index){<li class="collections-dropdown__item">
+                                <a class="collections-dropdown__item--link" href="#">{{item}}
+                                </a>
+                        </li>}
+                </ul>
 
-        <ul class="collections-dropdown__list">
-            <li class="collections-dropdown__item"><a class="collections-dropdown__item--link" href="#">Lookbook N°6</a>
-            </li>
-            <li class="collections-dropdown__item"><a class="collections-dropdown__item--link" href="#">Lookbook 6.1</a>
-            </li>
-            <li class="collections-dropdown__item"><a class="collections-dropdown__item--link" href="#">Lookbook N°7</a>
-            </li>
-            <li class="collections-dropdown__item"><a class="collections-dropdown__item--link" href="#">Lookbook
-                    N°7.1</a></li>
-            <li class="collections-dropdown__item"><a class="collections-dropdown__item--link" href="#">Lookbook
-                    N°7.2</a></li>
-        </ul>
-        <img class="collections-dropdown__preview" src="../../../assets/images/group_of_models_harry_otter_collab.webp"
-            alt="Respresentative picture of the selected products collection" style="max-height: 450px;">
-    </div>
+                <ul class="collections-dropdown__list">
+                        @for(item of secondColumn; track $index){<li class="collections-dropdown__item">
+                                <a class="collections-dropdown__item--link" href="#">{{item}}
+                                </a>
+                        </li>}
+                </ul>
+                <img class="collections-dropdown__preview"
+                        src="../../../assets/images/group_of_models_harry_otter_collab.webp"
+                        alt="Respresentative picture of the selected products collection" style="max-height: 450px;">
+        </div>
 </li>
