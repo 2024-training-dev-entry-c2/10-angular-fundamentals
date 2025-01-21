@@ -1,0 +1,13 @@
+<footer>
+    <ul class="footer-links">
+        <li *ngFor="let link of footerLinks">
+            <a *ngIf="!link.isDisabled" [href]="link.url">
+                <span>{{ link.icon }}</span>
+                {{ link.text }}
+            </a>
+            <span *ngIf="link.isDisabled" class="footer-links__text">
+                {{ link.text }}
+            </span>
+        </li>
+    </ul>
+</footer>

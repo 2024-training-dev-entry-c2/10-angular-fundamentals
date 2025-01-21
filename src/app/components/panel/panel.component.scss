@@ -1,0 +1,31 @@
+@use '../../ui/styles/variables.scss' as variables;
+@use '../../ui/styles/mixins.scss' as mixins;
+
+.panel-content {
+    display: flex;
+    padding: 20px 20px 0 20px;
+    width: 712px;
+    height: 470px;
+    background-color: variables.$white;
+    border-radius: 15px;
+    color: black;
+    box-shadow: 0 4px 14px 5px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    &.text-white {
+        color: white;
+    }
+}
+
+.panel-nav {
+    min-width: 245px;
+    overflow-y: scroll;
+
+    h3 {
+        @include mixins.font(20px, 800);
+    }
+}
+
+
+.panel-information {
+    padding-left: 20px;
+}
