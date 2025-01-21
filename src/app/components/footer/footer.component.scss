@@ -37,11 +37,11 @@
     #service-retours {
         display: flex;
         justify-content: start;
-        width: 250px;
+        width: 240px;
         border: 1px solid var.$primary-color;
         border-radius: 50px;
-        align-items: center;
-        padding: 10px;
+        align-items: flex-start;
+        padding-top: 3px;
         @include mix.flex-center();
 
         a {
