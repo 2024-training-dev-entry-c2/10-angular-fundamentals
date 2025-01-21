@@ -1,0 +1,16 @@
+@use '../../ui/styles/variables.scss' as variables;
+@use '../../ui/styles/mixins.scss' as mixins;
+
+.faq{
+    @include mixins.tipoContenedor1(center);
+    @include mixins.tipoContenedor1Complemento(15px, 90px);
+    &__subtitulo{
+        @include mixins.titulo();
+        padding-bottom: 25px;
+    }
+    &__contenido{
+        width: 47%;
+        background-color: variables.$colorFondo1;
+    }
+
+}

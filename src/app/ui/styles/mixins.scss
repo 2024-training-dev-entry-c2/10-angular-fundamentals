@@ -1,15 +1,44 @@
-@mixin container($justify: start) {
+@mixin tipoContenedor1($justify: start) {
   display: flex;
   align-items: center;
   justify-content: $justify;
 }
 
-
-@mixin container-gap($gap: 0) {
-  @include container;
-  gap: $gap;
+@mixin tipoContenedor1Complemento($gap,$padding) {
+    flex-direction: column;
+    gap: $gap;
+    padding: $padding;
 }
 
-@function px-to-rem($px, $base: 16) {
-  @return $px / $base * 1rem;
+@mixin rellenoContenedor($fondo,$colorLetra,$padding,$bordeRadius){
+    background-color:$fondo;
+    color: $colorLetra;
+    padding: $padding;
+    text-decoration: none;
+    border-radius:$bordeRadius;
+}
+
+@mixin titulo(){
+    text-align: center;
+    letter-spacing: -0.5;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 1em;
+}
+
+@mixin textoGrandeGris(){
+    line-height: 140%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    color:#817982;
+}
+
+@mixin fotoPequeRedonda(){
+    width: 42px; 
+    height: 42px;
+    object-fit: cover; 
+    border-radius: 50%; 
+    overflow: hidden; 
+    border: 2px solid #ddd; 
 }

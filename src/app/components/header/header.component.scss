@@ -1,33 +1,37 @@
 @use '../../ui/styles/variables.scss' as variables;
 @use '../../ui/styles/mixins.scss' as mixins;
 
-.header {
-  @include mixins.container(space-between);
-  padding: 25px;
-  width: 1368px;
-  position: fixed;
-  top: 0;
-  left: 50%;
-  translate: -50%;
 
-  &__actions {
-    @include mixins.container-gap(30px);
-  }
-  
-  &__link {
-    color: #000;
-    text-decoration: none;
-    font-weight: 600;
-  }
-  
-  &__button {
-    color: #FFF;
-    background-color: #000;
+.header {
+  &__opciones {
+    @include mixins.tipoContenedor1(space-between);
     padding: 10px;
-    border-radius: 5px;
-    font-size: 17px;
     font-weight: 500;
-    border: none;
-    cursor: pointer;
+    font-size: 17px;
+    list-style: none;
+
+    &__logo {
+      @include mixins.tipoContenedor1(space-between);
+      gap: 10px;
+  
+      &-figura {
+        @include mixins.rellenoContenedor(black, white, 8px 5px 8px 4px, 5px);
+        font-size: 12.7px;
+        font-weight: 650;
+      }
+  
+      &-texto {
+        font-size: 14px; 
+        font-weight: 500;
+      }
+    }
+  
+    &__signin {
+      @include mixins.rellenoContenedor(white, black, 10px 22px 10px 22px, 40px);
+      box-shadow: 0.3px 0px 2px rgba(0, 0, 0, 0.5);
+    }
+
   }
+
 }
+

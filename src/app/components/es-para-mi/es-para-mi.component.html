@@ -1,0 +1,25 @@
+<section class="esParaMi" aria-labelledby="Is 10X for me?" aria-describedby="Description about 10X">
+    <h2>Is 10X for me?</h2>
+    <h3>This community <br>is
+    </h3>
+    <div class="esParaMi__contenido">
+        <div class="esParaMi__contenido-parte" aria-labelledby="content">
+            @for (item of items; track $index) {
+                <p class="servicios__contenido-servicio">{{item}}</p>
+                @if($index !== items.length - 1){
+                    <hr>
+                }
+            }
+        </div>
+
+        <div class="esParaMi__contenido-parte" aria-labelledby="content">
+            @for (item2 of items2; track $index) {
+                <p class="servicios__contenido-servicio">{{item2}}</p>
+                @if($index !== items2.length - 1){
+                    <hr>
+                }
+            }
+        </div>
+    </div>
+    <app-join> </app-join>
+</section>

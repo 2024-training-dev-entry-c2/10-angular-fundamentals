@@ -1,0 +1,66 @@
+@use '../../ui/styles/variables.scss' as variables;
+@use '../../ui/styles/mixins.scss' as mixins;
+
+.footer {
+    padding: 40px;
+
+    &__contenedorSuperior {
+        @include mixins.tipoContenedor1(space-between);
+        &-titulo{
+            color: black;
+            font-size: 32px;
+            font-weight: 600;
+        }
+
+        &-articulo{
+            padding-top: 30px;
+            display: flex;
+            gap: 20px;
+            a{
+                @include mixins.rellenoContenedor(black, white, 12px 30px 12px 30px, 40px);
+                font-weight: 500
+            }
+            input{
+                padding: 12px 50px 12px 50px;
+                border-radius: 40px;
+                border-color: variables.$colorFuente2;
+                background-color: #fafafa;
+                @include mixins.textoGrandeGris();
+                text-align: left;
+                font-size: 18px;
+            }   
+
+        }
+    }
+
+    &__enlaces {
+        display: flex;
+        gap: 120px;
+
+        li {
+            list-style: none;
+
+            a {
+                text-decoration: none;
+                @include mixins.textoGrandeGris();
+
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+
+        h6 {
+            font-size: 16px;
+            font-weight: 500
+        }
+    }
+
+    &__contenedorInferior{
+        @include mixins.tipoContenedor1(space-between);
+        @include mixins.textoGrandeGris();
+        padding-top: 125px;
+        text-transform: uppercase;
+        color: variables.$colorFuente2;
+    }
+}

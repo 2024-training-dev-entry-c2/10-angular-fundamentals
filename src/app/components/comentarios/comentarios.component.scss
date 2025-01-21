@@ -1,0 +1,20 @@
+@use '../../ui/styles/variables.scss' as variables;
+@use '../../ui/styles/mixins.scss' as mixins;
+
+.comentarios {
+    @include mixins.tipoContenedor1(center);
+    @include mixins.tipoContenedor1Complemento(50px, 100px);
+
+    &__complemento {
+        @include mixins.titulo();
+    }
+
+    &__testimonios {
+        display: grid;
+        grid-template-columns: repeat(3, 350px);
+        grid-auto-rows: min-content;
+        grid-auto-flow: row dense;
+        gap: 15px;
+    }
+
+}

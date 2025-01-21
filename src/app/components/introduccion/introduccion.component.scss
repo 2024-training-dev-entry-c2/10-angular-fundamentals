@@ -1,0 +1,39 @@
+@use '../../ui/styles/mixins.scss' as mixins;
+@use '../../ui/styles/variables.scss' as variables;
+
+.introduccion {
+    @include mixins.tipoContenedor1(center);
+    @include mixins.tipoContenedor1Complemento(100px, 100px);
+
+    &__contenedor {
+        @include mixins.tipoContenedor1(center);
+        gap: 23px;
+        flex-direction: column;
+    }
+
+    &__imagen-producto {
+        width: 190px;
+    }
+
+    h1 {
+        @include mixins.titulo();
+    }
+
+    &__contenido {
+        @include mixins.textoGrandeGris();
+    }
+
+    &__empresas {
+        h5 {
+            @include mixins.textoGrandeGris();
+            font-size: 15.2px;
+            color: variables.$colorFuente3;
+            padding-bottom: 20px;
+        }
+
+        // &__iconos {
+        //     display: flex;
+        //     gap: 41px;
+        // }
+    }
+}

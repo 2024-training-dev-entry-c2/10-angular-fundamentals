@@ -1,0 +1,41 @@
+<footer class="footer">
+    <div class="footer__contenedorSuperior">
+      <article aria-labelledby="Subscribe">
+        <h3 class="footer__contenedorSuperior-titulo">Subscribe to the best looking* <br> design newsletter out there.</h3>
+        <div class="footer__contenedorSuperior-articulo">
+          <div>
+            <input type="text" placeholder="Enter your email" />
+          </div>
+          <a role="button" href="#">Subscribe</a>
+        </div>
+        <app-join></app-join>
+      </article>
+
+      <div class="footer__enlaces" >
+        <article aria-labelledby="about 10x design">
+          <h6>10X Design</h6>
+          <ul>
+            @for (item of items; track $index) {
+                <li><a role="button" href="#">{{item}}</a></li>
+            }
+          </ul>
+        </article>
+
+        <article aria-labelledby="Social">
+          <h6>Connect</h6>
+          <ul>
+            @for (item2 of items2; track $index) {
+                <li><a role="button" href="#">{{item2}}</a></li>
+            }
+          </ul>
+        </article>
+      </div>
+    </div>
+
+    <div class="footer__contenedorInferior">
+      <div>
+        <p>10X Design is founded <a>Fons Mans</a> · © 10xDesigners BV 2024</p>
+      </div>
+      <p>*According to us</p>
+    </div>
+  </footer>

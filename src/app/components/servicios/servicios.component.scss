@@ -1,0 +1,23 @@
+@use '../../ui/styles/variables.scss' as variables;
+@use '../../ui/styles/mixins.scss' as mixins;
+
+.servicios {
+    @include mixins.tipoContenedor1(center);
+    @include mixins.tipoContenedor1Complemento(15px, 150px);
+    background-color: variables.$colorFondo1;
+
+    &__contenido {
+        list-style: none;
+        @include mixins.titulo();
+
+        &-titulo {
+            padding-bottom: 10px;
+        }
+    }
+
+    &__join {
+        @include mixins.rellenoContenedor(white, black, 10px 22px 10px 22px, 40px);
+        box-shadow: 0.3px 0px 2px rgba(0, 0, 0, 0.5);
+        font-weight: 600;
+    }
+}

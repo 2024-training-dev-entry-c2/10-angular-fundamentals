@@ -1,0 +1,5 @@
+<div class="list">
+    @for (image of images(); track $index) {
+    <img [src]="image.url" [alt]="image.alt || 'Imagen'" class="list__icono">
+    }
+</div>

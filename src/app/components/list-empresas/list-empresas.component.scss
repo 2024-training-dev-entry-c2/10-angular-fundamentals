@@ -1,0 +1,11 @@
+@use '../../ui/styles/mixins.scss' as mixins;
+@use '../../ui/styles/variables.scss' as variables;
+
+.list {
+    display: flex;
+    gap: 41px;
+    
+    &__icono {
+        width: 22px;
+    }
+}

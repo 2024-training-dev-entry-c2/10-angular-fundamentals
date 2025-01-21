@@ -1,0 +1,13 @@
+<section class="ingresar" aria-labelledby="Expand your skillset"
+    aria-describedby="Become a member of our global community today.">
+    <h3 class="ingresar__titulo">Expand your skillset</h3>
+    <h4 class="ingresar__descripcion">Become a member of our global community today.</h4>
+    <a role="button" href="#" class="ingresar__join">Join today</a>
+
+    <div class="ingresar__imagenes">
+        @for (url of urls; track $index) {
+            <img [src]="url" alt="person">
+        }
+    </div>
+
+</section>

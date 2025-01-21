@@ -1,0 +1,12 @@
+<article class="testimonio">
+    <blockquote cite="#">
+        <p>{{ mensaje() }}</p>
+    </blockquote>
+    <div class="testimonio__perfil">
+        <img class="testimonio__perfil-persona" [src]="imagen()" [alt]="'Photo of ' + nombre()" />
+        <div>
+            <p><strong>{{ nombre() }}</strong></p>
+            <p><a role="button" href="#">{{ usuario() }}</a></p>
+        </div>
+    </div>
+</article>

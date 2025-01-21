@@ -1,0 +1,30 @@
+@use '../../ui/styles/variables.scss' as variables;
+@use '../../ui/styles/mixins.scss' as mixins;
+
+.contenedorJoin {
+    @include mixins.tipoContenedor1(center);
+    gap: 15px;
+
+    &-join {
+        @include mixins.rellenoContenedor(black, white, 12px 27px 12px 27px, 40px);
+        font-weight: 600;
+
+        &:hover {
+            background-color: variables.$colorFuente3;
+        }
+    }
+
+    &-contenedorPersonas {
+        @include mixins.tipoContenedor1(center);
+
+        &-persona {
+            @include mixins.fotoPequeRedonda();
+        }
+    }
+
+    &-miembros {
+        color: variables.$colorFuente2;
+        font-size: 14.2px;
+        font-weight: 600;
+    }
+}

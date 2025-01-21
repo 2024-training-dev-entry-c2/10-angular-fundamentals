@@ -1,0 +1,80 @@
+@use '../../ui/styles/variables.scss' as variables;
+@use '../../ui/styles/mixins.scss' as mixins;
+
+.precios {
+  @include mixins.tipoContenedor1(center);
+  @include mixins.tipoContenedor1Complemento(15px, 100px);
+
+
+  &__subtitulo {
+    @include mixins.titulo();
+  }
+
+  &__planes {
+    @include mixins.tipoContenedor1(center);
+    gap: 15px;
+  }
+
+  &__plan {
+    @include mixins.rellenoContenedor(variables.$colorFondo1, black, 45px 30px 70px 30px, 20px);
+    @include mixins.textoGrandeGris();
+
+
+    &-header {
+      display: flex;
+      gap: 140px;
+      padding-bottom: 10px;
+    }
+
+    &-tiempo {
+      color: black;
+      font-size: 25px;
+      text-align: left;
+    }
+
+    &-tiempo2 {
+      color: black;
+      font-size: 25px;
+      text-align: left;
+      padding-bottom: 15px;
+    }
+
+    &-precio {
+      @include mixins.titulo();
+      font-weight: 700;
+      font-size: 55px;
+      color: black;
+      text-align: left;
+      padding-bottom: 30px;
+    }
+
+    &-promo {
+      @include mixins.rellenoContenedor(#D4FFE1, #49D676, 5px 15px 5px 15px, 40px);
+    }
+
+    &-lista {
+      padding-bottom: 20px;
+      list-style: none;
+      text-align: left;
+
+      li {
+        padding-bottom: 13px;
+      }
+    }
+
+    &-boton {
+      @include mixins.rellenoContenedor(black, white, 12px 90px 12px 90px, 40px);
+
+      &:hover {
+        background-color: variables.$colorFuente3;
+      }
+    }
+
+    &-boton2 {
+      @include mixins.rellenoContenedor(white, black, 12px 90px 12px 90px, 40px);
+      box-shadow: 0.3px 0px 2px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+}
+

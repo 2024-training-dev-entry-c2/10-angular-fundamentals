@@ -1,0 +1,38 @@
+<section class="precios" aria-labelledby="Loved by Members" aria-describedby="opions of the members">
+    <h2>Pricing</h2>
+    <h3 class="precios__subtitulo">Get access today</h3>
+  
+    <div class="precios__planes">
+      <article class="precios__plan">
+        <div>
+          <div class="precios__plan-header">
+            <p class="precios__plan-tiempo">Annual</p>
+            <p class="precios__plan-promo">Save 50%</p>
+          </div>
+          <p class="precios__plan-precio">$15/mo</p>
+        </div>
+        <hr>
+        <ul class="precios__plan-lista">
+            @for (item of annualItems; track $index) {
+                <li>+ {{item}}</li>
+            }
+        </ul>
+        <a role="button" class="precios__plan-boton" href="#">Choose yearly plan</a>
+      </article>
+  
+      <article class="precios__plan">
+        <div>
+          <p class="precios__plan-tiempo2">Quarterly</p>
+          <p class="precios__plan-precio">$30/mo</p>
+        </div>
+        <hr>
+        <ul class="precios__plan-lista">
+            @for (item of quarterlyItems; track $index) {
+                <li>+ {{item}}</li>
+            }
+        </ul>
+        <a role="button" class="precios__plan-boton2" href="#">Choose quarterly plan</a>
+      </article>
+    </div>
+  </section>
+  

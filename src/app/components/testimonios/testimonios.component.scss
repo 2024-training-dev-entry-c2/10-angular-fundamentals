@@ -1,0 +1,40 @@
+@use '../../ui/styles/variables.scss' as variables;
+@use '../../ui/styles/mixins.scss' as mixins;
+
+.testimonio {
+    background-color: variables.$colorFondo1;
+    border-radius: 13px;
+    padding: 30px;
+    align-self: start;
+    cursor: pointer;
+    // opacity: 0;
+    // transform: translateX(100px);
+    // transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+
+    blockquote {
+        @include mixins.textoGrandeGris();
+        text-align: left;
+        padding-bottom: 20px;
+
+        &:hover {
+            color: black;
+        }
+    }
+
+    &__perfil {
+        display: flex;
+        gap: 10px;
+        font-size: 12.5px;
+
+        a {
+            color: variables.$colorFuente1;
+            text-decoration: none;
+        }
+
+        &-persona{
+            @include mixins.fotoPequeRedonda();
+        }
+
+    }
+
+}

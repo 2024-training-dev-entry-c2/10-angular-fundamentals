@@ -1,0 +1,24 @@
+@use '../../ui/styles/variables.scss' as variables;
+@use '../../ui/styles/mixins.scss' as mixins;
+
+.faqItem{
+    padding: 10px;
+    &__pregunta{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 20px;
+    }
+    h5{
+        font-size: 15px;
+        font-weight: 500;
+    }
+    p{
+        @include mixins.textoGrandeGris();
+        text-align: left;
+    }
+    button{
+        border: none;
+        cursor: pointer;
+        background-color: variables.$colorFondo1;
+    }
+}

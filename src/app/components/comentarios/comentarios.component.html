@@ -1,0 +1,16 @@
+<section class="comentarios" aria-labelledby="Pricing" aria-describedby="plan Annual and Quarterly">
+    <h2 id="comentarios__Titulo">Loved by Members</h2>
+    <p class="comentarios__complemento">Don't take our word for it</p>
+
+    <div class="comentarios__testimonios">
+        @for (testimonio of testimonios; track $index) {
+            <app-testimonios 
+                [mensaje]="testimonio.mensaje" 
+                [imagen]="testimonio.imagen"
+                [nombre]="testimonio.nombre"
+                [usuario]="testimonio.usuario">
+            </app-testimonios>
+        }
+    </div>
+
+</section>

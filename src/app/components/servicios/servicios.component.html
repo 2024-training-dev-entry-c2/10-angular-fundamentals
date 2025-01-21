@@ -1,0 +1,9 @@
+<section class="servicios" aria-labelledby="What's included" aria-describedby="List about What's included" aria-labelledby="content">
+    <h2>What's included</h2>
+    <ul class="servicios__contenido">
+        @for (item of items; track $index) {
+            <li class="servicios__contenido-servicio">{{item}}</li>
+        }
+    </ul>
+    <a role="button" href="#" class="servicios__join">Join now</a>
+</section>

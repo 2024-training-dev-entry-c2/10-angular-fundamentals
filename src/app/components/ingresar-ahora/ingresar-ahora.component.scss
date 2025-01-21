@@ -1,0 +1,34 @@
+@use '../../ui/styles/mixins.scss' as mixins;
+@use '../../ui/styles/variables.scss' as variables;
+
+.ingresar{
+    @include mixins.tipoContenedor1(center);
+    @include mixins.tipoContenedor1Complemento(15px, 50px);
+    background-color: variables.$colorFondo1;
+
+    &__titulo{
+        @include mixins.titulo();
+        color: black;
+    }
+    
+    &__descripcion{
+        @include mixins.textoGrandeGris();
+    }
+
+    &__join{
+        @include mixins.rellenoContenedor(black, white, 12px 27px 12px 27px, 40px);
+        &:hover{
+            background-color: variables.$colorFuente3;
+        }
+    }
+
+    &__imagenes{
+        padding-top: 20px;
+        display: flex;
+        gap: 24px;
+        img{
+            border-radius: 20px;
+            width: 237.53px;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+@use '../../ui/styles/variables.scss' as variables;
+@use '../../ui/styles/mixins.scss' as mixins;
+
+.esParaMi {
+    @include mixins.tipoContenedor1(center);
+    @include mixins.tipoContenedor1Complemento(40px, 100px);
+
+    h3 {
+        @include mixins.titulo;
+    }
+
+    &__contenido {
+        @include mixins.tipoContenedor1(center);
+        @include mixins.textoGrandeGris();
+        text-align: left;
+        gap: 60px;
+
+        p {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
+}
