@@ -1,0 +1,55 @@
+@use '../../ui/styles/mixins.scss' as mixins;
+
+$avatar-size: 40px;
+$font-family: 'Inter', sans-serif;
+$icon-size: 40px;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 20px 0 20px;
+    flex: 1;
+    height: auto;
+    margin-top: 80px;
+
+    &__columns {
+        display: flex;
+    }
+
+    &__column {
+        flex: 2;
+        padding: 10px;
+        border-radius: 8px;
+
+        &:nth-child(1) {
+            flex: 1.3;
+        }
+    }
+
+    &__boxes-right {
+        @include mixins.column-flexbox();
+        margin-top: 20px;
+    }
+
+    &__boxes-left {
+        @include mixins.column-flexbox();
+    }
+
+    &__boxes-middle {
+        @include mixins.column-flexbox();
+        margin-top: 20px;
+    }
+
+    &__bottom {
+        border-radius: 8px;
+        padding: 5px 10px;
+        margin-bottom: 1%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+    }
+}
