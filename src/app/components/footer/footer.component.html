@@ -4,7 +4,7 @@
         <img src="https://www.atlantistech.com/images/logo_atlantis.svg" alt="Atlantis Technology Logo">
       </a>
       <menu class="footer__menu" aria-label="Footer Navigation">
-        @for (item of footerMenuItems; track item; let i = $index) {
+        @for (item of menuItems; track item; let i = $index) {
           <li>
             <a 
               (click)="onFooterMenuItemClick(item.label)" 

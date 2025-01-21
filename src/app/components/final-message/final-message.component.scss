@@ -1,0 +1,25 @@
+@use '../../ui/styles/variables.scss' as v;
+@use '../../ui/styles/mixins.scss' as m;
+
+.main__image--finish {
+  img {
+    width: 100%;
+    height: 100%;
+    padding: 0 v.$spacing-3xl;
+  }
+}
+
+.main__message {
+  font-size: v.$font-2xl;
+  font-weight: 700;
+  @include m.section-padding(v.$spacing-2xl, 20rem, v.$spacing-2xl, 20rem);
+  text-align: center;
+}
+
+.main__learn-button {
+  &--dark {
+    @include m.dark-button;
+    margin-top: v.$spacing-xl;
+    display: inline-block;
+  }
+}

@@ -6,10 +6,10 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
-  @Input() footerMenuItems: { label: string, link: string }[] = [];
-  @Output() footerMenuItemClick = new EventEmitter<string>();
+  @Input() menuItems: { label: string, link: string }[] = [];
+  @Output() menuItemClick = new EventEmitter<string>();
 
   onFooterMenuItemClick(label: string) {
-    this.footerMenuItemClick.emit(label);
+    this.menuItemClick.emit(label);
   }
 }

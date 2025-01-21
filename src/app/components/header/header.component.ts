@@ -18,10 +18,10 @@ export class HeaderComponent {
     }
   }
 
-  @Input() headerMenuItems: { label: string, link: string }[] = []; 
-  @Output() headerMenuItemClick = new EventEmitter<string>();
+  @Input() menuItems: { label: string, link: string }[] = []; 
+  @Output() menuItemClick = new EventEmitter<string>();
 
   onMenuItemClick(label: string) {
-    this.headerMenuItemClick.emit(label);
+    this.menuItemClick.emit(label);
   }
 }

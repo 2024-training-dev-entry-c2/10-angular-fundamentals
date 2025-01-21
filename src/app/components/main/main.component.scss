@@ -1,11 +1,17 @@
-@use '../../ui/styles/variables.scss' as v;
-@use '../../ui/styles/mixins.scss' as m;
-
 .main {
   padding-top: v.$spacing-4xl;
 
   &__section {
     @include m.flex(row, flex-start, center);
+    margin-bottom: v.$spacing-4xl;
+
+    &.normal {
+      flex-direction: row;
+    }
+
+    &.reverse {
+      flex-direction: row-reverse;
+    }
   }
 
   &__section-content {
@@ -61,29 +67,6 @@
       width: 90%;
       height: auto;
       padding: 0 v.$spacing-md;
-    }
-
-    &--finish {
-      img {
-        width: 100%;
-        height: 100%;
-        padding: 0 v.$spacing-3xl;
-      }
-    }
-  }
-
-  &__message {
-    font-size: v.$font-2xl;
-    font-weight: 700;
-    @include m.section-padding(v.$spacing-2xl, 20rem, v.$spacing-2xl, 20rem);
-    text-align: center;
-  }
-
-  &__learn-button {
-    &--dark {
-      @include m.dark-button;
-      margin-top: v.$spacing-xl;
-      display: inline-block;
     }
   }
 }

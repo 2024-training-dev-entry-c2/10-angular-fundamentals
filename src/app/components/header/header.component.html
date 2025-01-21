@@ -7,7 +7,7 @@
       </a>
 
       <menu class="header__menu" role="list">
-        @for (item of headerMenuItems; track item; let i = $index) {
+        @for (item of menuItems; track item; let i = $index) {
           <li class="header__menu-item" role="listitem">
             <a class="header__menu-link" [href]="item.link" [tabindex]="i" aria-current="page">
               {{ item.label }}

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FinalMessageComponent } from '../final-message/final-message.component';
 
 export interface MainSection {
   id: string;
@@ -8,13 +9,13 @@ export interface MainSection {
   hasSpanWith?: boolean;
   imageSrc: string;
   imageAlt: string;
-  reversed?: boolean;
+  layout: 'normal' | 'reverse';
 }
 
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [],
+  imports: [FinalMessageComponent],
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss'],
 })
@@ -35,7 +36,7 @@ export class MainComponent {
       ],
       imageSrc: './images/section1.svg',
       imageAlt: 'Illustration of a mountain climb symbolizing progress and challenges.',
-      reversed: false,
+      layout: 'normal',
     },
     {
       id: 'section2-title',
@@ -51,7 +52,7 @@ export class MainComponent {
       imageSrc: './images/section2.svg',
       imageAlt: 'Illustration of teamwork and collaboration.',
       hasSpanWith: true,
-      reversed: true,
+      layout: 'reverse',
     },
     {
       id: 'section3-title',
@@ -63,7 +64,7 @@ export class MainComponent {
       ],
       imageSrc: './images/section3.svg',
       imageAlt: 'Illustration of a cooking metaphor for teamwork and solutions.',
-      reversed: false,
+      layout: 'normal',
     },
     {
       id: 'section4-title',
@@ -78,9 +79,10 @@ export class MainComponent {
       imageSrc: './images/section4.svg',
       imageAlt: 'Illustration of a symphony representing harmony in teamwork.',
       hasSpanWith: true,
-      reversed: true,
+      layout: 'reverse',
     },
   ];
+  
 
   finalMessage = {
     title: 'Dedicated to Projects of Consequence. Especially yours.',

@@ -10,15 +10,7 @@ import { FooterComponent } from './components/footer/footer.component';
   imports: [HeaderComponent, MainComponent, FooterComponent],
 })
 export class AppComponent {
-  footerMenuItems = [
-    { label: 'SOFTWARE ENGINEERING', link: '#' },
-    { label: 'APPROACH', link: '#' },
-    { label: 'PROJECTS', link: '#' },
-    { label: 'ABOUT US', link: '#' },
-    { label: 'CAREERS', link: '#' }
-  ];
-
-  headerMenuItems = [
+  menuItems = [
     { label: 'SOFTWARE ENGINEERING', link: '#' },
     { label: 'APPROACH', link: '#' },
     { label: 'PROJECTS', link: '#' },
