@@ -1,0 +1,28 @@
+<main class="main">
+  @for (section of mainSections; track section.id) {
+    <section class="main__section {{ section.layout }}">
+      <div class="main__section-content">
+        <h2 class="main__subtitle" [id]="section.id">{{ section.title }}</h2>
+        @if (section.hasSpanWith) {
+          <span>With...</span>
+        }
+        <menu class="main__list" [attr.aria-labelledby]="section.id">
+          @for (item of section.listItems; track item) {
+            <li>
+              <img src="/images/check.svg" alt="Check mark icon">{{ item }}
+            </li>
+          }
+        </menu>
+        @if (section.paragraphs) {
+          @for (paragraph of section.paragraphs; track paragraph) {
+            <p class="main__paragraph">{{ paragraph }}</p>
+          }
+        }
+      </div>
+      <div class="main__image">
+        <img [src]="section.imageSrc" [alt]="section.imageAlt">
+      </div>
+    </section>
+  }
+  <app-final-message [finalMessage]="finalMessage"></app-final-message>
+</main>
