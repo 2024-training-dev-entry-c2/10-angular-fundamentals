@@ -1,9 +1,11 @@
 import { Component, AfterViewInit, ElementRef, Renderer2 } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ProductImageComponent } from '../product-image/product-image.component';
+import { ProductVideoComponent } from '../product-video/product-video.component';
 
 @Component({
   selector: 'app-product',
-  imports: [CommonModule],
+  imports: [CommonModule, ProductImageComponent, ProductVideoComponent],
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.scss'],
 })
