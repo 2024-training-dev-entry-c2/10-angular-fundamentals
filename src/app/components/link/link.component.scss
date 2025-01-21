@@ -1,0 +1,17 @@
+@use '@ui/styles/variables.scss' as variables;
+
+.link {
+  color: variables.$primary-gray;
+  font-weight: 600;
+  font-size: .9rem;
+  text-decoration: none;
+  padding: .75rem 2rem;
+  border: 2px solid rgba(variables.$primary-gray, 0.1);
+  border-radius: 3rem;
+  margin-inline: .5rem;
+
+  &:hover {
+      border: 2px solid #000;
+      transition: .3s ease-in all;
+  }
+}

@@ -1,0 +1,52 @@
+<section class="features">
+  <app-features-header [header]="cardsHeader"/>
+  <div class="features__wrapper">
+    <article  class="features__card">
+      <p class="features__card__text">Clean the bathroom<span class="features__card__cursor"></span></p>
+    </article>
+    <article class="features__card">
+      <div class="features__grid">
+        <div class="features__grid-item"></div>
+        <div class="features__grid-item"></div>
+        <div class="features__grid-item"></div>
+        <div class="features__grid-item"></div>
+        <div class="features__grid-item"></div>
+        <div class="features__grid-item"></div>
+        <div class="features__grid-item"></div>
+        <div class="features__grid-item"></div>
+        <div class="features__grid-item"></div>
+        <div class="features__grid-item"></div>
+        <div class="features__grid-item"></div>
+        <div class="features__grid-item"></div>
+        <div class="features__grid-item"></div>
+        <div class="features__grid-item"></div>
+        <div class="features__grid-item"></div>
+        <div class="features__grid-item"></div>
+      </div>
+    </article>
+    <article  class="features__card">
+      <picture>
+        <img src="check-icon.svg" alt="check icon" srcset="">
+      </picture>
+    </article>
+    <p  class="features__footer">Create tasks with a single step and a clear goal</p>
+    <p  class="features__footer">Pick a few tasks each day and snooze the rest</p>
+    <p  class="features__footer">Complete your daily tasks for big progress over time</p>
+  </div>
+  <app-divider/>
+  <app-features-header [header]="gesturesHeader"/>
+  <app-features-images [images]="gesturesImages" [isBasic]="true" />
+  <app-features-header [header]="taskCreationHeader"/>
+  <app-features-images [images]="imagesTaskCreation" [isStairs]="true"/>
+  <app-features-header [header]="sharingHeader"/>
+  <app-features-images [images]="sharingImages" [isSingle]="true"/>
+  <app-features-header [header]="customizationHeader"/>
+  <app-features-images [images]="customizationImages" [isSingle]="true"/>
+  <app-features-header [header]="appleWatchHeader"/>
+  <app-features-images [images]="carrouselImages" [isCarrousel]="true"/>
+  <app-features-header [header]="privacyHeader" />
+  <app-features-images [images]="privacyImages" [isComparator]="true"/>
+  <app-features-summary/>
+</section>
+<app-downloads/>
+<app-footer/>

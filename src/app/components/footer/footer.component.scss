@@ -1,0 +1,15 @@
+@use '@ui/styles/variables.scss' as variables;
+
+.footer {
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: 1;
+  gap: 1.5rem;
+  text-align: center;
+  padding-block: 3rem;
+
+  & h4 {
+      color: variables.$primary-gray;
+      margin-bottom: 1rem;
+  }
+}

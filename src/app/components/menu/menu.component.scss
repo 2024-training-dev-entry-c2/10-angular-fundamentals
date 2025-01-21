@@ -1,24 +1,51 @@
-@use '../../ui/styles/variables.scss' as variables;
-@use '../../ui/styles/mixins.scss' as mixins;
+@use '@ui/styles/variables.scss' as variables;
+@use '@ui/styles/mixins.scss' as mixins;
 
-.menu {
-  @include mixins.container-gap(40px);
-  list-style: none;
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  &__footer{
+    text-align: center
+  }
 
   &__item {
-    font-weight: 600;
+      text-transform: capitalize;
+      font-weight: 500;
+      font-size: 13px;
+      display: inline-flex;
+
+      &--footer {
+          font-size: 1rem;
+      }
   }
-  
-  &__item, &__icon {
-    @include mixins.container-gap(3px);
-  }
-  
-  &__icon {
-    color: variables.$gray;
-  }
-  
+
   &__link {
-    color: #000;
-    text-decoration: none;
+      color: variables.$primary-gray;
+      list-style: none;
+      text-decoration: none;
+      padding: .75rem 1.25rem;
+      border-radius: 2rem;
+
+      &:hover {
+          color: variables.$primary-black;
+          background-color: variables.$hover-gray;
+          transition: .25s ease-in all;
+      }
+
+      &--footer {
+          color: variables.$primary-black;
+          list-style: none;
+          text-decoration: none;
+          padding: .75rem 1.25rem;
+      }
+
   }
+
+  &__link--active {
+      font-weight: bold;
+      color: variables.$primary-black;
+  }
+
 }

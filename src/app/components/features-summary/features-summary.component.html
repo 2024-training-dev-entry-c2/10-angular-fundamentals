@@ -1,0 +1,22 @@
+<section class="features__summary">
+  <article class="features__summary__item">
+    <header class="features__summary__header">
+      <h2 class="features__summary__subtitle">Big on features. Deceptively simple.</h2>
+      <app-link [link]="link"></app-link>
+    </header>
+  </article>
+  <article class="features__summary__item">
+    <menu class="features__summary__menu">
+      @for (item of dataSummary; track $index) {
+        <li class="features__summary__menu__item">
+            <img [src]="item.source" [alt]="item.imageDescription" srcset="">
+          <section>
+            <h4>{{item.title}}</h4>
+            <p>{{item.description}}</p>
+          </section>
+        </li>
+      }
+    </menu>
+  </article>
+</section>
+<app-divider/>

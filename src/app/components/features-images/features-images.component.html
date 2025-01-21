@@ -1,0 +1,15 @@
+
+  <div class="features__images__wrapper" [ngClass]="{
+    'features__images__wrapper--comparator': isComparator,
+    'features__images__wrapper--single': isSingle,
+    'features__images__wrapper--carrousel' :isCarrousel,
+    'features__images__wrapper--stairs': isStairs
+  }">
+    @for (item of images; track $index) {
+      <picture [ngClass]="{'features__images__item':isBasic}">
+        <img [src]="item.source" [alt]="item.alt" srcset="">
+      </picture>
+    }
+  </div>
+  <app-divider/>
+

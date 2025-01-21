@@ -1,0 +1,54 @@
+@use '@ui/styles/variables.scss' as variables;
+@use '@ui/styles/mixins.scss' as mixins;
+
+.hero {
+  width: 100%;
+  @include mixins.container(flex, column, center);
+  text-align: center;
+  margin-bottom: 1rem;
+
+  &__content {
+      width: 100%;
+      padding: 3rem 2rem;
+      @include mixins.container(flex, column, center,1.25rem);
+      align-items: center;
+      line-height: 78px;
+      overflow: hidden;
+  }
+
+  &__title {
+      width: 60%;
+      font-size: 4.2rem;
+      font-weight: 600;
+      text-align: center;
+      text-wrap: pretty;
+  }
+
+  &__text {
+      font-size: 1.25rem;
+      color: variables.$primary-gray;
+  }
+
+  &__button {
+      color: #fff;
+      font-weight: 700;
+      font-size: .75rem;
+      text-transform: capitalize;
+      background-color: variables.$primary-blue;
+      padding: 1.25rem 3rem;
+      border-radius: 3rem;
+      border: none;
+      margin-bottom: 5.5rem;
+      cursor: pointer;
+
+      &:hover {
+          scale: 1.1;
+          transition: .25s cubic-bezier(0.075, 0.82, 0.165, 1) all;
+      }
+  }
+
+  &__image {
+      width: 100%;
+
+  }
+}

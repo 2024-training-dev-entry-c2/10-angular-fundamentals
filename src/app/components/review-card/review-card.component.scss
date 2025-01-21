@@ -1,0 +1,30 @@
+@use '@ui/styles/variables.scss' as variables;
+@use '@ui/styles/mixins.scss' as mixins;
+
+.review {
+  &__card {
+      width: 90%;
+      height: 200px;
+      @include mixins.container(flex, column);
+      gap: 1.5rem;
+      overflow: hidden;
+  }
+
+  &__text {
+      color: variables.$primary-gray;
+      font-size: 1rem;
+      line-height: 1.75rem;
+  }
+
+  &__wrapper {
+      grid-column: span 3;
+      width: 100%;
+      padding: 2rem;
+  }
+
+  &__award {
+      width: 22.5rem;
+      margin-inline: 0 auto;
+  }
+
+}

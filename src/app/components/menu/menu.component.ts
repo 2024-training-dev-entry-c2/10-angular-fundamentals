@@ -1,25 +1,55 @@
-import { Component } from '@angular/core';
-import { SubMenuComponent } from '../sub-menu/sub-menu.component';
+import { booleanAttribute, Component, Input} from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MenuItem } from '@interfaces/menu.item.interface';
 
 @Component({
   selector: 'app-menu',
-  imports: [SubMenuComponent, CommonModule],
+  imports: [CommonModule],
+  standalone: true,
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.scss'
 })
 export class MenuComponent {
-  public subMenuItems = {
-    1: ['Design', 'Collaboration', 'Prototyping', 'Developer Handoff', 'All features'],
-    2: ['Sketch in 2024', 'Smart Animate', 'Easy Library Swaps'],
-    3: ['Blog', 'Resources', 'Extension & Plugins'],
-    4: ['Sketch 101', 'Sketch 102'],
-    5: ['Help Center', 'Documentation', 'Contact Us', 'Community Forum']
-  };
 
-  public isVisible: boolean = true;
+  @Input({transform: booleanAttribute}) isFooterMenu: boolean = false;
 
-  handleClick(item: string): void {
-    console.log(item);
-  }
+  menuItems: MenuItem[] = [
+    {
+      title: 'overview',
+      url: 'https://getdooapp.com/',
+      aria: 'Go to overview section',
+      classes: 'nav__link nav__link--active nav__link--hover',
+      showInFooter: true
+    },
+    {
+      title: 'features',
+      url: 'https://getdooapp.com/features',
+      aria: 'Go to features section',
+      classes: 'nav__link nav__link--hover',
+      showInFooter: true
+    },
+    {
+      title: 'support',
+      url: 'https://getdooapp.com/support',
+      aria: 'Go to support section',
+      classes: 'nav__link nav__link--hover',
+      showInFooter: true
+    },
+    {
+      title: 'contact',
+      url: 'https://getdooapp.com/contact',
+      aria: 'Go to contact section',
+      classes: 'nav__link nav__link--hover',
+      showInFooter: true
+    },
+    {
+      title: 'download',
+      url: 'https://apps.apple.com/us/app/id1515371154',
+      aria: 'Download for IOS',
+      classes: 'nav__link nav__link--hover',
+      showInFooter: false
+    },
+
+  ];
+
 }

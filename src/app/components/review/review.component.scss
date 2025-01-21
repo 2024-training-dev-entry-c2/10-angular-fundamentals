@@ -1,0 +1,11 @@
+.review {
+  width: 100%;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr, 2fr;
+  gap: 2rem;
+  text-align: center;
+  padding: 2rem 8rem;
+  overflow: hidden;
+}

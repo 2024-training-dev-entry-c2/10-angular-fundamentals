@@ -1,0 +1,14 @@
+@if(!reviews.isAward){
+    <article class="review__card" aria-label="Card with a review of Doo">
+      <picture>
+        <img [src]="reviews.src" [alt]="reviews.alt">
+      </picture>
+      <p class="review__text">{{reviews.description}}</p>
+    </article>
+  }@else{
+    <div class="review__wrapper">
+      <picture>
+        <img class="review__award" [src]="reviews.src" [alt]="reviews.alt" srcset="">
+      </picture>
+    </div>
+  }

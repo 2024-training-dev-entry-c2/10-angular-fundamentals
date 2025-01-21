@@ -1,0 +1,5 @@
+<section class="review">
+  @for (item of dataReviews; track $index) {
+    <app-review-card [reviews]="item"/>
+  }
+</section>
