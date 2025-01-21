@@ -1,6 +1,7 @@
 <section aria-label="Main navigation bar">
     <nav class="navbar" role="navigation">
-        <a class="navbar__logo-container" [class.scrolled]="isScrolled" aria-label="Main VISSIONNAIRE logo that redirect to the home page" href="#">
+        <a class="navbar__logo-container" [class.scrolled]="isScrolled"
+            aria-label="Main VISSIONNAIRE logo that redirect to the home page" href="#">
             <app-navbar-logotype [class.hidden]="isScrolled"></app-navbar-logotype>
             <app-navbar-isotype [class.hidden]="!isScrolled"></app-navbar-isotype>
         </a>
@@ -8,56 +9,8 @@
             <li role="menuitem" aria-label="New products gallery of novelties">
                 <a href="#">NOUVEAUTÉS</a>
             </li>
-            <li id="shop-submenu" role="menuitem" aria-label="Main shop page">
-                <a href="#">SHOP</a>
-                <div id="shop-dropdown" class="navbar__dropdown">
-                    <ul>
-                        <li><a href="#">soldes</a></li>
-                        <li><a href="#">tout voir</a></li>
-                        <li><a href="#">Nouveautés</a></li>
-                        <li><a href="#">HARRY POTTER | VISIONNAIRE</a></li>
-                        <li><a href="#">VESTES</a></li>
-                        <li><a href="#">SWEAT</a></li>
-                    </ul>
-
-                    <ul>
-                        <li><a href="#">T-shirt</a></li>
-                        <li><a href="#">ACCESSOIRES</a></li>
-                        <li><a href="#">Pantalons</a></li>
-                        <li><a href="#">CHEMISES</a></li>
-                        <li><a href="#">SHORT</a></li>
-                        <li><a href="#">CASQUETTES & BOB</a></li>
-                        <li><a href="#"><img src="../../../assets/images/promos_gif.webp"
-                                    alt="Promo animated advertise"></a></li>
-
-                    </ul>
-                    <img src="../../../assets/images/submenu_shop_default.webp"
-                        alt="Respresentative picture of the selected cathegory brand's product">
-                </div>
-            </li>
-            <li id="collection-submenu" role="menuitem" aria-label="Collections page">
-                <a href="#">COLLECTIONS</a>
-                <div id="collection-dropdown" class="navbar__dropdown">
-                    <ul>
-                        <li><a href="#">HARRY POTTER | VISIONNAIRE</a></li>
-                        <li><a href="#">Lookbook N°3</a></li>
-                        <li><a href="#">Lookbook N°4</a></li>
-                        <li><a href="#">Lookbook N°5</a></li>
-                        <li><a href="#">Les couleurs</a></li>
-                        <li><a href="#">Collab Jordy VDN</a></li>
-                    </ul>
-
-                    <ul>
-                        <li><a href="#">Lookbook N°6</a></li>
-                        <li><a href="#">Lookbook 6.1</a></li>
-                        <li><a href="#">Lookbook N°7</a></li>
-                        <li><a href="#">Lookbook N°7.1</a></li>
-                        <li><a href="#">Lookbook N°7.2</a></li>
-                    </ul>
-                    <img src="../../../assets/images/group_of_models_harry_otter_collab.webp"
-                        alt="Respresentative picture of the selected products collection" style="max-height: 450px;">
-                </div>
-            </li>
+            <app-shop-dropdown></app-shop-dropdown>
+            <app-collections-dropdown></app-collections-dropdown>
             <li role="menuitem" aria-label="Promotions page">
                 <a href="#">PROMOS</a>
             </li>
