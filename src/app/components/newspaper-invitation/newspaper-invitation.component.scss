@@ -1,0 +1,51 @@
+@use '../../ui/styles/mixins.scss' as mix;
+@use '../../ui/styles/variables.scss' as var;
+
+.newspaper__club-invitation {
+    font-size: 45px;
+    display: block;
+    letter-spacing: 0.7px;
+    text-align: left;
+    display: flex;
+    width: 50%;
+    font-weight: 500;
+
+    &__form {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 5px;
+    }
+
+    &__input {
+        width: 45vw;
+        border: none;
+        border-bottom: 1px solid var.$primary-color;
+        outline: none;
+        flex: 1;
+        font-size: 16px;
+        color: var.$primary-color;
+        font-weight: 500;
+        opacity: 1;
+        padding-top: 40px;
+        padding-bottom: 10px;
+
+        &::placeholder {
+            color: var.$primary-color;
+            font-weight: 600;
+            opacity: 1;
+        }
+    }
+
+    &__button {
+        @include mix.button-reset;
+        padding-bottom: 10px;
+        padding-left: 2px;
+        padding-top: 40px;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-left: 20px;
+        border-bottom: 1px solid var.$primary-color;
+    }
+}
