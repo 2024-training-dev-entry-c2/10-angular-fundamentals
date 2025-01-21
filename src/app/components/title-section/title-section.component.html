@@ -1,0 +1,38 @@
+<section class="container__title__section">
+    @if (isFullWidth()) {
+    <div class="section__title__comunities">
+        <div style="display: ruby-text">
+            <div class="container__comunities__text__icon">
+                <img src="/assets/svg/inBeta.svg" alt="">
+                <span>Communities</span>
+            </div>
+            <img src="/assets/images/01_Beta.webp" alt="Beta Text" />
+        </div>
+        <h2>
+            Join token-gated
+
+            <br />
+            communities
+        </h2>
+        <p>
+            Imagine a community group chat platform designed to work with
+            crypto from the ground up.
+        </p>
+    </div>
+
+    } @else {
+    <div class="section__title">
+        <div class="container__title__text__icon" [style.border-color]="borderColor()" [style.color]="iconColor()">
+            <img [src]="svgIcon()" aria-hidden="true" focusable="false" />
+            <span class=>{{ iconTitle() }}</span>
+        </div>
+        <h2>
+            {{mainTitle()}}
+        </h2>
+        <p>
+            {{subTitle()}}
+        </p>
+    </div>
+    }
+
+</section>
