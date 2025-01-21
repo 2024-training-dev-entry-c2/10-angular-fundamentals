@@ -32,8 +32,5 @@ export class HeaderNavigationMenuComponent implements AfterViewInit {
 
       lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
     });
-
-    const navLinks =
-      document.querySelectorAll<HTMLAnchorElement>('.duties__nav-link');
   }
 }
