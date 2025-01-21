@@ -27,12 +27,16 @@
         opacity: 0;
         position: absolute;
         top: 50px;
-        width: 59.7vw;
+        width: 60vw;
         background-color: var.$secondary-color;
         display: flex;
         justify-content: space-between;
         transition: visibility 0.3s,
         opacity 0.3s;
+
+        &.scrolled {
+            width: 65vw;
+        }
     }
 
     &__list {

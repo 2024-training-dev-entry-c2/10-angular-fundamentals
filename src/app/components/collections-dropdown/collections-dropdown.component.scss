@@ -22,11 +22,14 @@
         opacity: 0;
         position: absolute;
         top: 50px;
-        width: 40vw;
+        width: 40.5vw;
         background-color: var.$secondary-color;
         display: flex;
         justify-content: space-between;
         transition: visibility 0.3s, opacity 0.3s;
+        &.scrolled {
+            width: 50vw;
+        }
     }
 
     &__list {

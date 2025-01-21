@@ -9,8 +9,8 @@
             <li role="menuitem" aria-label="New products gallery of novelties">
                 <a href="#">NOUVEAUTÉS</a>
             </li>
-            <app-shop-dropdown></app-shop-dropdown>
-            <app-collections-dropdown></app-collections-dropdown>
+            <app-shop-dropdown [class.scrolled]="isScrolled"></app-shop-dropdown>
+            <app-collections-dropdown [class.scrolled]="isScrolled"></app-collections-dropdown>
             <li role="menuitem" aria-label="Promotions page">
                 <a href="#">PROMOS</a>
             </li>
