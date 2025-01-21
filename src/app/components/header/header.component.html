@@ -1,14 +1,30 @@
 <header class="header">
-  <nav>
-    <app-menu />
-  </nav>
-  <div class="header__actions">
-    <a class="header__link" href="#">Sign In</a>
-    <button class="header__button">
-      <span>Get started</span>
-      <i aria-hidden="true">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="main-nav__link__icon"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m16 11-4 4-4-4M12 13.5v-9M4 20h16"></path></g></svg>
+    <nav class="header__nav">
+      <i class="header__logo">
+        <app-header-logo-svg/>
       </i>
-    </button>
-  </div>
-</header>
+      <div class="header__div">
+        <a
+          role="link"
+          href="#"
+          class="header__title"
+          aria-label="redirect to main page"
+          >GUSTÉ.DESIGN</a
+        >
+      </div>
+      <menu class="menu">
+        <li>
+          <app-header-store-svg/>
+          <span>STORE</span>
+        </li>
+        <li>
+          <app-header-projects-svg/>
+          <span>PROJECTS</span>
+        </li>
+        <li>
+          <app-header-contact-svg/>
+          <span>CONTACT</span>
+        </li>
+      </menu>
+    </nav>
+  </header>

@@ -1,0 +1,11 @@
+<section class="instagram">
+    <h3>INSTAGRAM</h3>
+
+    <ul>
+      @for (item of imageUrls; track $index) {
+        <li>
+          <img [src]="item" alt="photo of a painting made by Guste published on instagram">
+        </li>
+      }
+    </ul>
+  </section>

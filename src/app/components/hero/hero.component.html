@@ -1,0 +1,41 @@
+<section class="hero">
+  <h1 class="hero__title">Graphic design and illustration services.</h1>
+  <span>{{ msgButtonConect }}</span>
+  <menu class="menu-colors">
+    <li>
+      @if (resetColor) {
+      <button aria-label="return-color">
+        <app-return-color-svg />
+      </button>
+      }
+    </li>
+
+    <li>
+      <button (click)="resetColorClick()" aria-label="reset-colors">
+        <app-reset-color-svg />
+      </button>
+    </li>
+    @for (item of colours; track $index) {
+    <li>
+      <button
+        (click)="handleClick()"
+        #colorBtn
+        [id]="'color' + ($index + 1)"
+        [attr.aria-label]="item"
+      ></button>
+    </li>
+    }
+  </menu>
+  <app-head-printable/>
+  <div class="description-div">
+    <p>
+      Want to elevate your identity? <br />
+      Upgrade your dream vision with <br />
+      personality-filled designs.
+    </p>
+    <app-connect-button
+      (mensajeEnviado)="getMessage($event)"
+      [titleButton]="buttonCircleName"
+    />
+  </div>
+</section>

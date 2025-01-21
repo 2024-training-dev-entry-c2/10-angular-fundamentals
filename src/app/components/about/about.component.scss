@@ -1,0 +1,30 @@
+@use '../../ui/styles/mixins.scss' as mixins;
+@use '../../ui/styles/variables.scss' as variables;
+
+.about {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+
+  &__img {
+    outline: 2px solid variables.$black;
+    width: 50%;
+  }
+  &__div {
+    @include mixins.container(center);
+    @include mixins.container-gap(20px);
+    flex-direction: column;
+    padding: 4em;
+    outline: 2px solid variables.$black;
+    width: 50%;
+
+    h3{
+        font-weight: 400;
+        font-size: 16px;
+    }
+    h4{
+        font-weight: 300;
+        font-size: 24px;
+    }
+  }
+}

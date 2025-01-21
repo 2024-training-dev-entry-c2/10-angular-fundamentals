@@ -1,0 +1,8 @@
+@use '../../ui/styles/variables.scss' as variables;
+
+.brands{
+    outline: 2px solid variables.$black;
+    img{
+        width: 100%;
+    }
+}
