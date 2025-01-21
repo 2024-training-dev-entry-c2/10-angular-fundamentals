@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
-import { ClubIconComponent } from "../club-icon/club-icon.component";
+import { NewspaperInvitationComponent } from '../newspaper-invitation/newspaper-invitation.component';
 
 @Component({
   selector: 'app-newspaper',
-  imports: [ClubIconComponent],
+  imports: [NewspaperInvitationComponent],
   templateUrl: './newspaper.component.html',
-  styleUrl: './newspaper.component.scss'
+  styleUrl: './newspaper.component.scss',
 })
-export class NewspaperComponent {
-
-}
+export class NewspaperComponent {}
