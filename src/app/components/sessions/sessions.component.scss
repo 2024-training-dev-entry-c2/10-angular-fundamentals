@@ -1,0 +1,67 @@
+@import '../ui/syless/variables.scss';
+
+.main__content__sessions {
+  width: 100%;
+  padding: 3%;
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    color: $color-text;
+
+    th,
+    td {
+      padding: $spacing-unit;
+      border-bottom: 1px solid $color-border;
+    }
+
+    th {
+      font-weight: bold;
+      text-transform: uppercase;
+      color: $color-accent-darkness;
+    }
+  }
+
+  &__title {
+    font-size: medium;
+  }
+
+  &__row {
+    &:hover {
+      background-color: $color-accent-darkness;
+    }
+  }
+
+  &__speakers {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-small;
+
+    &__speaker {
+      display: flex;
+      align-items: center;
+      gap: $spacing-small;
+
+      &__icon {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+      }
+      
+    }
+  }
+
+  &__video {
+    &__thumbnail {
+      width: 100px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

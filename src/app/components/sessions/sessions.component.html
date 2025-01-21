@@ -1,0 +1,53 @@
+<section class="main__content__sessions" aria-labelledby="main-content-sessions-title">
+    <table class="main__content__sessions__table">
+      <thead>
+
+        <tr class="main__content__sessions__header">
+          <th class="main__content__sessions__title">Session Title</th>
+          <th class="main__content__sessions__speakers">Speakers</th>
+          <th class="main__content__sessions__video">Video</th>
+        </tr>
+
+      </thead>
+      <tbody>
+        @for (session of sessions; track session.title) {
+          <tr class="main__content__session__row">
+            <!-- Session Title -->
+            <td class="main__content__session__title">
+              {{ session.title }}
+            </td>
+  
+            <!-- Speakers -->
+            <td class="main__content__session__speakers">
+              @for (speaker of session.speakers; track speaker.name) {
+                <div class="main__content__session__speaker">
+                  <img
+                    [src]="speaker.logo"
+                    [alt]="speaker.name + ' Logo'"
+                    class="main__content__session__speaker__icon"
+                  />
+                  <img
+                    [src]="speaker.image"
+                    [alt]="speaker.name"
+                    class="main__content__session__speaker__icon"
+                  />
+                  {{ speaker.name }}
+                </div>
+              }
+            </td>
+  
+            <!-- Video Thumbnail -->
+            <td class="main__content__session__video">
+              <img
+                [src]="session.videoThumbnail"
+                [alt]="'Video thumbnail for ' + session.title"
+                class="main__content__session__video__thumbnail"
+                (click)="onVideoClick(session.title)"
+              />
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </section>
+  

@@ -1,0 +1,101 @@
+@import '../ui/syless/variables.scss';
+
+.main__content__session {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-unit;
+  padding: 3%;
+
+  // Detalles de la sesión (columna izquierda)
+  &__details {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+    padding-right: $spacing-unit;
+  }
+
+  // Encabezado principal
+  &__heading {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: $spacing-unit;
+    display: flex;
+    align-items: baseline;
+
+    &__number {
+      font-size: 1rem;
+      font-weight: normal;
+      margin-left: $spacing-unit;
+      color: $color-accent;
+    }
+  }
+
+  // Lista de elementos
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-left: 2px solid $color-text;
+
+    &__item {
+      margin: 5px 0;
+      padding-left: $spacing-unit;
+      font-size: 1rem;
+    }
+  }
+
+  // Información clave de la sesión (keynote)
+  &__keynote {
+    margin-top: $spacing-unit;
+
+    &__title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: $spacing-unit;
+    }
+
+    &__description {
+      font-size: 0.9rem;
+      margin-bottom: $spacing-unit;
+      border-top: 1px dashed $color-border;
+      padding-top: $spacing-unit;
+    }
+  }
+
+  &__button {
+    background: transparent;
+    border: 1px solid $color-text;
+    color: $color-text;
+    padding: $spacing-unit $spacing-unit;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $color-text;
+      color: $color-background;
+    }
+  }
+
+  // Imagen de la sesión (columna derecha)
+  &__image {
+    flex: 1;
+    max-width: 45%;
+    border-radius: 8px;
+    overflow: hidden;
+
+    &__wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    &__picture {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+}

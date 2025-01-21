@@ -1,0 +1,11 @@
+<section class="main-content__speakers">
+  <app-speakers-header-component
+    [description]="description"
+    [count]="speakersData.length"
+  ></app-speakers-header-component>
+
+  <div class="main-content__speakers__content">
+    <app-speakers-list-component [speakers]="speakersNames"></app-speakers-list-component>
+    <app-speakers-gallery-component [speakers]="speakersData"></app-speakers-gallery-component>
+  </div>
+</section>

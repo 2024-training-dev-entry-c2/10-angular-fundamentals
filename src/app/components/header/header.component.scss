@@ -1,33 +1,33 @@
-@use '../../ui/styles/variables.scss' as variables;
-@use '../../ui/styles/mixins.scss' as mixins;
+// Archivo: header.component.scss
+
+@import '../ui/syless/mixins.scss';
+@import '../ui/syless/variables.scss';
 
 .header {
-  @include mixins.container(space-between);
-  padding: 25px;
-  width: 1368px;
-  position: fixed;
-  top: 0;
-  left: 50%;
-  translate: -50%;
+  padding: $spacing-unit 2rem;
+  @include flex-center(space-between, center); // Usando el mixin para flexbox
+  border-bottom: 1px solid $color-border;
 
-  &__actions {
-    @include mixins.container-gap(30px);
+  &__date {
+    @include font-mono(0.9rem); // Usando el mixin para fuente mono
+    color: $color-accent;
   }
-  
-  &__link {
-    color: #000;
-    text-decoration: none;
-    font-weight: 600;
-  }
-  
-  &__button {
-    color: #FFF;
-    background-color: #000;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 17px;
-    font-weight: 500;
-    border: none;
-    cursor: pointer;
+
+  &__nav {
+    @include flex-center(flex-start, center); // Usando el mixin para flexbox
+    gap: $spacing-unit;
+
+    &__link {
+      text-decoration: none;
+      color: $color-text;
+      font-weight: bold;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      @include transition(color); // Usando el mixin para transiciones
+
+      &:hover {
+        color: $color-accent;
+      }
+    }
   }
 }

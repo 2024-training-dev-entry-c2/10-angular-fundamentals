@@ -1,0 +1,23 @@
+// Archivo: main-content.component.scss
+
+@import '../ui/syless/variables.scss';
+@import '../ui/syless/mixins.scss';
+
+.main__content {
+  @include flex-container(column, center, center); 
+  padding: 0 $main-content-padding; 
+
+  &__wrapper {
+    position: relative;
+    background-color: transparent;
+    border: 1px solid $color-border;
+    border-top: none;
+    @include centered-container($main-content-max-width); 
+  }
+
+  &__section {
+    @include flex-container(column, flex-start, stretch, $main-content-gap); 
+    @include centered-container($main-content-max-width); 
+  }
+
+}
