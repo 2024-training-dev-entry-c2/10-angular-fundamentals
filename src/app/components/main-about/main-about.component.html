@@ -4,26 +4,7 @@
     @for (text of aboutTexts; track text) {
     <p class="duties__about-text">{{ text }}</p>
     }
-    <a href="#" class="duties__about-cta">
-      <div class="duties__about-cta-wrapper">
-        <svg
-          class="duties__about-cta-icon"
-          viewBox="0 0 8 8"
-          fill="var(--token-d78b08d4-654b-4fe1-9fc3-71529c9fe307, rgb(241, 240, 238))"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M0.390625 4.80817V3.49217H6.03263L4.59062 1.63017L5.44463 0.972168L7.86663 4.13617L5.44463 7.32817L4.59062 6.67017L6.03263 4.80817H0.390625Z"
-            fill="var(--token-d78b08d4-654b-4fe1-9fc3-71529c9fe307, rgb(241, 240, 238))"
-          ></path>
-        </svg>
-      </div>
-      <span
-        class="duties__about-cta-text scramble-text"
-        data-text="VIEW SERVICES"
-        >VIEW SERVICES</span
-      >
-    </a>
+    <app-main-about-cta></app-main-about-cta>
   </div>
   <div class="duties__about-image-wrapper" aria-label="Duties team at work">
     <img
