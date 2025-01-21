@@ -1,27 +1,8 @@
 @use '../../ui/styles/variables.scss' as var;
 @use '../../ui/styles/mixins.scss' as mix;
 
-#scroll-logo {
-    z-index: 1000;
-    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
-}
-
-#main-logo,
-#scroll-logo {
-    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
-    opacity: 1;
-    visibility: visible;
-}
-
-#main-logo.hidden,
-#scroll-logo.hidden {
-    opacity: 0;
-    visibility: hidden;
-}
-
 .hidden {
     opacity: 0;
-    visibility: hidden;
     display: none;
 }
 
@@ -65,20 +46,6 @@
     //     }
     // }
 
-    &__logo {
-        padding-left: 20px;
-        padding-left: 20px;
-        transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
-        opacity: 1;
-        visibility: visible;
-
-        &.hidden {
-            opacity: 0;
-            visibility: hidden;
-            display: none;
-        }
-    }
-
     &__menu {
         display: flex;
         gap: 20px;
@@ -104,87 +71,6 @@
                 text-align: left;
             }
         }
-
-        .dropdown-container {
-            position: relative;
-
-            &:hover .navbar__dropdown {
-                visibility: visible;
-                opacity: 1;
-            }
-        }
-    }
-
-    &__dropdown {
-        visibility: hidden;
-        opacity: 0;
-        // transition: opacity 0.3s ease, visibility 0.3s ease;
-        padding: 15px;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: var.$secondary-color;
-        border: 1px solid var.$gray-color;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        z-index: 10;
-
-        ul {
-            padding: 1rem;
-            margin: 0;
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            // line-height: 18px;
-
-            li {
-                margin-bottom: 2rem;
-
-                a {
-                    text-decoration: none;
-                    font-size: 1rem;
-                    color: black;
-
-                    &:hover {
-                        color: gray;
-                    }
-                }
-
-                img {
-                    max-height: 1.3rem;
-                }
-            }
-        }
-    }
-
-    #shop-dropdown {
-        position: absolute;
-        top: 100%;
-        left: 40%;
-        width: 60%;
-    }
-
-    #shop-submenu:hover .navbar__dropdown {
-        visibility: visible;
-        opacity: 1;
-        display: flex;
-        /* Asegúrate de que se muestre correctamente */
-        justify-content: space-between;
-        font-size: 15px;
-    }
-
-    #collection-dropdown {
-        position: absolute;
-        top: 100%;
-        left: 61%;
-        width: 39%;
-    }
-
-    #collection-submenu:hover .navbar__dropdown {
-        visibility: visible;
-        opacity: 1;
-        display: flex;
-        justify-content: space-between;
-        font-size: 15px;
     }
 
     &__cart {
