@@ -1,10 +1,12 @@
 import { Component, AfterViewInit } from '@angular/core';
+import { HeaderNavigationMenuComponent } from '../header-navigation-menu/header-navigation-menu.component';
 
 @Component({
   selector: 'app-header-navigation',
-  imports: [],
   templateUrl: './header-navigation.component.html',
-  styleUrl: './header-navigation.component.scss',
+  styleUrls: ['./header-navigation.component.scss'],
+  standalone: true,
+  imports: [HeaderNavigationMenuComponent],
 })
 export class HeaderNavigationComponent implements AfterViewInit {
   links = [
@@ -13,6 +15,7 @@ export class HeaderNavigationComponent implements AfterViewInit {
     { text: 'VENTURES', ariaHaspopup: 'false' },
     { text: 'CONTACT', ariaFlowto: 'footer' },
   ];
+
   ngAfterViewInit(): void {
     let lastScrollTop = 0;
     let rotation = 0;
@@ -38,34 +41,5 @@ export class HeaderNavigationComponent implements AfterViewInit {
 
     const navLinks =
       document.querySelectorAll<HTMLAnchorElement>('.duties__nav-link');
-
-    navLinks.forEach((link) => {
-      let originalTransform: string;
-
-      link.addEventListener('mouseover', () => {
-        const svgs = link.querySelectorAll<SVGElement>('svg');
-        svgs.forEach((svg) => {
-          originalTransform = svg.style.transform;
-          svg.classList.remove('stop-spin');
-          svg.style.animation =
-            'spin 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards';
-        });
-      });
-
-      link.addEventListener('mouseout', () => {
-        const svgs = link.querySelectorAll<SVGElement>('svg');
-        svgs.forEach((svg) => {
-          svg.classList.add('stop-spin');
-          svg.style.animation =
-            'spin-reverse 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards';
-        });
-      });
-
-      link.querySelectorAll<SVGElement>('svg').forEach((svg) => {
-        svg.addEventListener('animationend', () => {
-          svg.style.transform = originalTransform;
-        });
-      });
-    });
   }
 }

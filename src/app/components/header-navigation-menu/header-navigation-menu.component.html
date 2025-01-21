@@ -1,0 +1,17 @@
+<menu class="duties__menu" title="Main menu options">
+  @for (link of links; track $index) {
+  <li class="duties__menu-item">
+    <a
+      [tabindex]="$index + 1"
+      href="#"
+      class="duties__menu-link scramble-text"
+      [attr.data-text]="link.text"
+      [attr.aria-controls]="link.ariaControls"
+      [attr.aria-expanded]="link.ariaExpanded"
+      [attr.aria-haspopup]="link.ariaHaspopup"
+      [attr.aria-flowto]="link.ariaFlowto"
+      >{{ link.text }}</a
+    >
+  </li>
+  }
+</menu>

@@ -6,7 +6,7 @@
 >
   <div class="duties__nav-container" aria-live="polite">
     <a href="#" aria-label="Duties home" class="duties__nav-link">
-      @for (i of [0, 1]; track i) {
+      @for (item of [1,2]; track $index) {
       <svg
         viewBox="0 0 24 24"
         fill="var(--token-a253b60a-3016-4045-8750-eb07a8b9bcd0, rgb(37, 37, 37))"
@@ -21,22 +21,6 @@
       </svg>
       }
     </a>
-    <menu class="duties__menu" title="Main menu options">
-      @for (link of links; track link; let i = $index) {
-      <li class="duties__menu-item">
-        <a
-          [tabindex]="i + 1"
-          href="#"
-          class="duties__menu-link scramble-text"
-          [attr.data-text]="link.text"
-          [attr.aria-controls]="link.ariaControls"
-          [attr.aria-expanded]="link.ariaExpanded"
-          [attr.aria-haspopup]="link.ariaHaspopup"
-          [attr.aria-flowto]="link.ariaFlowto"
-          >{{ link.text }}</a
-        >
-      </li>
-      }
-    </menu>
+    <app-header-navigation-menu [links]="links"></app-header-navigation-menu>
   </div>
 </nav>
