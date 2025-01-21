@@ -1,0 +1,24 @@
+<section class="features" role="region" aria-label="Características">
+  <h4 class="features__title">
+    Everything you need <br /> to do your best work.
+  </h4>
+  <div class="features__container" role="group" aria-label="lista de características">
+    @for (feature of features; track feature.name) {
+      <div class="features__card">
+        @if (feature.video) {
+          <video class="features__card-media features__card-media--video" aria-label="Video de características">
+            <source [src]="feature.video" type="video/mp4">
+          </video>
+        } @else {
+          <figure class="features__card features__card--media">
+            <img class="features__card features__card--image" [src]="feature.image" [alt]="'imagen de ' + feature.name.toLowerCase()">
+          </figure>
+        }
+        <a href="#" class="features__card features__card--link" [attr.aria-label]="feature.ariaLabel">
+          <span class="features__card features__card--name">{{ feature.name }} →</span>
+          <span class="features__card features__card--description" [innerHTML]="feature.description"></span>
+        </a>
+      </div>
+    }
+  </div>
+</section>

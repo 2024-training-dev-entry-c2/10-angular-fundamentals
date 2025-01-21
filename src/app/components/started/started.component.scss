@@ -1,0 +1,58 @@
+@use '../../styles/mixins.scss' as mixins;
+@use '../../styles/variables.scss' as variables;
+
+.started {
+  @include mixins.flex-style(row, wrap);
+  margin-top: 200px;
+  justify-content: space-between;
+  width: variables.$size-vh;
+  margin: auto;
+
+  &__title {
+    @include mixins.text-style(61px, 700, normal, 65px, -.02em);
+    @include mixins.size(100%, auto);
+    color: variables.$black-light;
+    margin-bottom: 50px;
+  }
+
+  &__cards {
+    @include mixins.size(45%, auto);
+    @include mixins.flex-style(column, nowrap, 10px);
+    background-color: variables.$color-card-started;
+    border-radius: 12px;
+    padding: 35px 0 0 40px;
+
+    & h6 {
+      @include mixins.text-style(45px, 600, normal, 50px, -.02em);
+      color: variables.$black-light;
+      margin-bottom: 10px;
+    }
+
+    .started__buttons {
+      @include mixins.flex-style(row, nowrap, 10px);
+      margin-bottom: 45px;
+
+      .startted__button {
+        @include mixins.text-style(16px, 600, normal, 23px);
+        @include mixins.radius-cursor(8px, pointer);
+        padding: 10px 25px 12px 25px;
+        border: none;
+        background-color: variables.$primary-color;
+      }
+
+      .startted__button--free {
+        background-color: variables.$blue;
+        color: variables.$primary-color;
+      }
+
+      .startted__button--free:hover {
+        background-color: variables.$hover-blue;
+      }
+
+    }
+
+    .startted__button:hover {
+      background-color: variables.$hover-white;
+    }
+  }
+}

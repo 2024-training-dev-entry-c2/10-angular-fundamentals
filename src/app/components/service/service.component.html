@@ -1,0 +1,34 @@
+<section class="services">
+  <picture
+    class="services__container"
+    role="group"
+    aria-label="Imagenes de servicios"
+  >
+    @for (image of imagenes; track image.src) {
+    <img
+      [src]="image.src"
+      [alt]="image.alt"
+      [class]="'services__image ' + image.class"
+      [class.services__image--active]="activeService === image.type"
+    />
+    }
+  </picture>
+
+  <div class="services__buttons" role="group" aria-label="Botones de servicios">
+    @for (service of services; track service.id) {
+    <button
+      class="services__button"
+      [class.services__button--active]="activeService === service.type"
+      [id]="service.id"
+      (click)="setActiveService(service.type)"
+    >
+      <img
+        [src]="service.icon"
+        [alt]="'icono de ' + service.name"
+        class="services__button-icon"
+      />
+      <span class="services__button-text">{{ service.name }}</span>
+    </button>
+    }
+  </div>
+</section>

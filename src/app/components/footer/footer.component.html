@@ -1,0 +1,58 @@
+<footer class="footer" role="region" aria-label="Pie de pagina">
+  <div class="footer__column" aria-level="3">
+    <img src="../../../public/svg/notion.svg" alt="Notion Logo" class="footer__logo-notion" />
+
+    <nav class="footer__socials" role="group" aria-label="Redes sociales">
+      @for (social of socialLinks; track social.alt) {
+        <a href="{{social.url}}">
+          <i><img src="{{social.image}}" alt="{{social.alt}}" class="footer__logo"></i>
+        </a>
+      }
+    </nav>
+
+    <select class="footer__language" aria-label="Idioma">
+      <option value="english" aria-label="Inglés">English</option>
+    </select>
+
+    <a href="#" class="footer__link">Do Not Sell or Share My Info</a>
+    <a href="#" class="footer__link">Cookie settings</a>
+    <p class="footer__copyright">© 2025 Notion Labs, Inc.</p>
+  </div>
+
+  <div class="footer__column">
+    <h4>Company</h4>
+    <menu aria-label="Menú de opciones" role="menu">
+      @for (link of companyLinks; track link.text) {
+        <li><a href="{{link.url}}">{{link.text}}</a></li>
+      }
+    </menu>
+  </div>
+
+  <div class="footer__column">
+    <h4 aria-label="Sección de descarga">Download</h4>
+    <menu aria-label="Menú de opciones" role="menu">
+      @for (link of downloadLinks; track link.text) {
+        <li><a href="{{link.url}}">{{link.text}}</a></li>
+      }
+    </menu>
+  </div>
+
+  <div class="footer__column">
+    <h4>Resources</h4>
+    <menu aria-label="Menú de opciones" role="menu">
+      @for (link of resourceLinks; track link.text) {
+        <li><a href="{{link.url}}">{{link.text}}</a></li>
+      }
+    </menu>
+  </div>
+
+  <div class="footer__column">
+    <h4>Notion for</h4>
+    <menu aria-label="Menú de opciones" role="menu">
+      @for (link of notionForLinks; track link.text) {
+        <li><a href="{{link.url}}">{{link.text}}</a></li>
+      }
+    </menu>
+    <a href="#" class="footer__explore">Explore more →</a>
+  </div>
+</footer>

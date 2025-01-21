@@ -1,0 +1,73 @@
+@use '../../styles/mixins.scss' as mixins;
+@use '../../styles/variables.scss' as variables;
+
+.services {
+  @include mixins.flex-style(column, nowrap, 20px);
+  margin-top: 35px;
+  width: variables.$size-vh;
+  margin: 50px auto;
+
+  &__container {
+    @include mixins.size(100%, auto);
+    position: relative;
+    display: block;
+    border-radius: 12px;
+  }
+
+  &__image {
+    @include mixins.size(100%, auto);
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 12px;
+    border: 1px solid variables.$color-border-image;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+
+    &--active {
+      opacity: 1;
+      z-index: 1;
+    }
+  }
+
+  &__buttons {
+    @include mixins.position(relative, 50rem, auto, auto, auto);
+    @include mixins.flex-style(row, nowrap, 8px);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 5;
+
+  }
+
+  &__button {
+    @include mixins.text-style(16px, 550, normal, 23px, -.02em);
+    @include mixins.flex-style(row, nowrap, 4px);
+    align-items: center;
+    padding: 8px 16px;
+    border: 1px solid variables.$color-border-image;
+    border-radius: 8px;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background-color: variables.$hover-header;
+    }
+
+    &--active {
+      background-color: variables.$hover-header;
+      border-color: variables.$primary-color;
+    }
+  }
+
+  &__button-icon {
+    @include mixins.size(22px, 22px);
+    object-fit: contain;
+  }
+
+  &__button-text {
+    margin-left: 4px;
+  }
+}

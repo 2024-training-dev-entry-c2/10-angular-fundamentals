@@ -1,0 +1,85 @@
+@use '../styles/mixins.scss' as mixins;
+@use '../styles/variables.scss' as variables;
+@use '../styles/herencia.scss';
+
+.banner {
+  @include mixins.flex-style(row);
+  @extend %centers;
+  padding: 90px 0px 20px 0px;
+  width: variables.$size-vh;
+  margin-left: 130px;
+
+  &__information {
+    @include mixins.flex-style(column, nowrap, 18px);
+  }
+
+  &__title {
+    @include mixins.text-style(77px, 650, normal, 95%, -.01em);
+    color: variables.$black-light;
+    text-wrap: balance;
+  }
+
+  &__subtitle {
+    @include mixins.text-style(24px, 500, normal, 30px, -.02em);
+    @include mixins.size(70%);
+  }
+
+  &__buttons {
+    @include mixins.flex-style(row, nowrap, 8px);
+  }
+
+  &__button {
+    @include mixins.text-style(16px, 600, normal, 23px, -.02em);
+    @include mixins.radius-cursor(8px, pointer);
+    padding: 10px 20px 12px;
+    border: none;
+
+    &--primary {
+      background-color: variables.$blue;
+      color: variables.$primary-color;
+
+      &:hover {
+        background-color: variables.$hover-blue;
+      }
+    }
+
+    &--secondary {
+      background-color: variables.$button-cream;
+      color: variables.$blue;
+
+      &:hover {
+        background-color: variables.$demo-hover;
+      }
+    }
+  }
+
+  &__teams {
+    @include mixins.text-style(15px, 600, normal, 22px, -.02em);
+    color: variables.$span-degraded;
+    margin-top: 20px;
+  }
+
+  &__logos {
+    @include mixins.flex-style(row, nowrap, 40px);
+  }
+
+  &__logo {
+    max-height: 25px;
+    object-fit: contain;
+
+    &--figma {
+      @include mixins.size(auto, 90px);
+    }
+  }
+
+  &__video-container {
+    @include mixins.size(640px, 41vh);
+    @include mixins.flex-style(row);
+    align-items: flex-end;
+  }
+
+  &__video {
+    margin-left: auto;
+    max-width: 640px;
+  }
+}

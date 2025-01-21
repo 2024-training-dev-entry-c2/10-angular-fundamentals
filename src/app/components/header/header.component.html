@@ -1,14 +1,54 @@
 <header class="header">
-  <nav>
-    <app-menu />
+  <nav class="header__nav" role="navigation" aria-label="menu navegacion">
+    <menu class="header__menu" aria-level="0" tabindex="1">
+      @for (option of menuItems; track option.label) {
+        <li class="header__menu-item"
+            [class.header__menu-item--has-dropdown]="option.hasDropdown"
+            [attr.aria-haspopup]="option.hasDropdown"
+            [attr.aria-expanded]="option.hasDropdown ? 'false' : null"
+            tabindex="0">
+          @if (option.href) {
+            <a class="header__menu-link" [href]="option.href" [attr.aria-label]="option.label">
+              @if (option.icon) {
+                <i class="header__menu-icon" aria-hidden="true">
+                  <img [src]="option.icon" [alt]="option.iconAlt" class="header__logo">
+                </i>
+              }
+            </a>
+          } @else {
+            <span class="header__menu-text" [attr.aria-label]="option.label">
+              {{ option.label }}
+            </span>
+            @if (option.icon) {
+              <i class="header__menu-icon" aria-hidden="true">
+                <img [src]="option.icon" [alt]="option.iconAlt">
+              </i>
+            }
+          }
+        </li>
+      }
+
+      <div class="header__menu-separator">
+        <menu class="header__submenu" aria-label="Menú de opciones">
+          @for (option of menuSeparator; track option.label; let secondary = $index) {
+            <li class="header__submenu-item" [attr.aria-label]="" tabindex="0">
+              {{ option.label }}
+            </li>
+            @if (secondary == 0) {
+              <li class="header__submenu-separator"></li>
+            }
+          }
+        </menu>
+      </div>
+    </menu>
   </nav>
-  <div class="header__actions">
-    <a class="header__link" href="#">Sign In</a>
-    <button class="header__button">
-      <span>Get started</span>
-      <i aria-hidden="true">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="main-nav__link__icon"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m16 11-4 4-4-4M12 13.5v-9M4 20h16"></path></g></svg>
-      </i>
-    </button>
+  <app-sub-menu [menuItems]="menuItems"></app-sub-menu>
+  <!-- Aquíiii -->
+  <app-banner></app-banner>
+
+  <div class="header__dropdown">
+    @for (item of dropdownItems; track item) {
+      <li class="header__dropdown-item">{{ item }}</li>
+    }
   </div>
 </header>

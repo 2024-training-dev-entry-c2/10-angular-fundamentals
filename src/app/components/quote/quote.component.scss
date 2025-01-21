@@ -1,0 +1,35 @@
+@use '../../styles/mixins.scss' as mixins;
+@use '../../styles/variables.scss' as variables;
+
+ .quote {
+   @include mixins.flex-style(column);
+   background-color: variables.$color-cards;
+   padding: 60px;
+   max-width: fit-content;
+   margin: auto;
+   transform: rotate(-3deg);
+   position: relative;
+   margin: auto;
+   bottom: 94rem;
+
+   &__image {
+     @include mixins.position(absolute, auto, auto, 80%, 45%);
+     @include mixins.size(65px, auto);
+     object-fit: contain;
+   }
+
+   &__reviews {
+     @include mixins.text-style(43px, 500, normal, 50px, -.02em);
+     color: variables.$black-light;
+     font-family: lyon-text, lyon-display, serif;
+     padding: 35px;
+   }
+
+   &__image--forbes {
+     @include mixins.size(70px, auto);
+     @include mixins.position(absolute, auto, auto, 20%, 45%);
+     object-fit: contain;
+     transform: rotate(-1deg);
+   }
+
+ }

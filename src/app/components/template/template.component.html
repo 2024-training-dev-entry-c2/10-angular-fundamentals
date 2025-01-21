@@ -1,0 +1,26 @@
+<section class="template" role="group" aria-label="Plantillas">
+  <h1 class="template__title" aria-label="Plantillas">Start with a template.<br /> Build anything.</h1>
+  <a href="#" class="template__link" aria-label="Explorar todas las plantillas">Browse all templates →</a>
+  <div class="template__container">
+    <div class="template__principal">
+      <i aria-hidden="true">
+        <img src="../../../../public/icon/book.svg" alt="icono libro abierto" class="template__principal-icon">
+      </i>
+      <strong class="template__principal-title">Company Wiki →</strong>
+      <figure class="template__principal-figure">
+        <img src="../../../public/images/wiki-template.webp" alt="Wiki template" class="template__principal-image">
+      </figure>
+    </div>
+
+    <div class="template__content" role="group" aria-label="Contenido de la plantilla">
+      @for (card of cards; track card.title) {
+        <div class="template__card">
+          <i aria-hidden="true">
+            <img [src]="card.icon" [alt]="card.alt" class="template__card-icon">
+          </i>
+          <strong class="template__card-title">{{ card.title }} →</strong>
+        </div>
+      }
+    </div>
+  </div>
+</section>

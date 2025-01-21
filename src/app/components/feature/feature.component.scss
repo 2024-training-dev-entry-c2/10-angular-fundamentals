@@ -1,0 +1,61 @@
+@use '../../styles/mixins.scss' as mixins;
+@use '../../styles/variables.scss' as variables;
+
+.features {
+  @include mixins.flex-style(column, nowrap, 40px);
+  margin-top: 42rem;
+  width: variables.$size-vh;
+  margin-left: 20rem;
+  &__title {
+    @include mixins.text-style(61px, 700, normal, 65px, -.02em);
+    color: variables.$black-light;
+  }
+
+  &__container {
+    @include mixins.size(100%, auto);
+    @include mixins.flex-style(row, wrap, 10px);
+    justify-content: space-between;
+  }
+
+  &__card {
+    @include mixins.size(20%, auto);
+    @include mixins.flex-style(column, nowrap, 10px);
+    text-decoration: none;
+    &-media {
+      @include mixins.size(90px, auto);
+
+
+    }
+
+    &--image {
+      @include mixins.size(100%, auto);
+    }
+
+    &--video{
+      @include mixins.size(90px, auto);
+    }
+
+    &--link {
+      @include mixins.text-style(18px, 600, normal, 24px, -.02em);
+      @include mixins.flex-style(column, nowrap, 5px);
+      text-decoration: none;
+      color: variables.$color-footer-copyright;
+      margin-bottom: 15px;
+      width: 100%;
+    }
+
+    &--name {
+      @include mixins.text-style(26px, 700, normal, 29px, -.02em);
+      color: variables.$black-light;
+      width: 100%
+    }
+
+    &--description {
+      @include mixins.text-style(23px, 700, normal, 29px, -.02em);
+        color: variables.$span-degraded;
+        width: 100%;
+        text-decoration: none;
+
+      }
+  }
+}

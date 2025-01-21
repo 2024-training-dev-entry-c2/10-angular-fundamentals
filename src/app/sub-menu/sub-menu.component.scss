@@ -1,0 +1,71 @@
+@use '../../app/styles/mixins.scss' as mixins;
+@use '../../app/styles/variables.scss' as variables;
+
+.sub-menu{
+  display: none;
+}
+.menu-alternativo {
+  @include mixins.flex-style(row, nowrap, 10px);
+  @include mixins.size(38rem, auto);
+  position: absolute;
+  top: 40px;
+  left: 8%;
+  z-index: 5000;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  background-color: variables.$primary-color;
+  visibility: hidden;
+
+  .alternativo {
+    @include mixins.flex-style(row, wrap, 8px);
+    @include mixins.size(50%, auto);
+    border-right: 1px solid variables.$color-border;
+    cursor: pointer;
+
+    &__image {
+      @include mixins.size(52px, auto);
+    }
+
+    & span {
+      @include mixins.size(100%, auto);
+      @include mixins.text-style(16px, 500, normal, 30px, -.02em);
+      color: variables.$black-light;
+
+      & strong {
+        @include mixins.text-style(12px, 500, normal, 23px);
+        color: variables.$color-subtitle;
+        background-color: variables.$color-cards;
+        padding: 3px 6px;
+        border-radius: 5px;
+      }
+    }
+
+    & small {
+      @include mixins.text-style(14px, 500, normal);
+      color: variables.$color-subtitle;
+      @include mixins.size(100%, auto);
+      margin-bottom: 10px;
+
+    }
+  }
+
+  .opciones-alternas {
+    @include mixins.flex-style(row, wrap);
+    width: 50%;
+    padding-left: 5px;
+
+    &__title {
+      @include mixins.size(100%, auto);
+      @include mixins.text-style(16px, 500, normal);
+      color: variables.$black-light;
+    }
+
+    &__subtitle {
+      @include mixins.text-style(14px, 500, normal);
+      color: variables.$color-subtitle;
+      @include mixins.size(100%, auto);
+      margin-bottom: 25px;
+    }
+
+  }
+}

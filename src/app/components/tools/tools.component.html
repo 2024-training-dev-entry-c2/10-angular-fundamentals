@@ -1,0 +1,80 @@
+@for (section of sections(); track section.generalTools.title; let index =
+$index) {
+
+<section
+  class="tools"
+  [class.tools--inicial]="index === 0"
+  [class.tools--ultimo]="index === 3"
+  role="region"
+  aria-label="Herramientas"
+>
+  <div class="tools__general">
+    <h1 class="tools__general tools__general-title">
+      {{ section.generalTools.title }}
+    </h1>
+    <span class="tools__general-subtitle">
+      {{ section.generalTools.subtitle }}
+    </span>
+    <a
+      [href]="section.generalTools.link.href"
+      class="tools__general tools__general-link"
+      [attr.aria-label]="section.generalTools.link.ariaLabel"
+    >
+      {{ section.generalTools.link.text }}→
+    </a>
+  </div>
+
+  <div
+    class="tools__interactive"
+    role="group"
+    aria-label="Herramientas interactivas"
+  >
+    @for (item of section.interactive.items; track item.title) {
+    <div class="tools__interactive tools__interactive-card">
+      <video
+        class="tools__interactive tools__interactive-video"
+        autoplay
+        muted
+        loop
+      >
+        <source [src]="item.video" type="video/mp4" />
+      </video>
+      <h4 class="tools__interactive tools__interactive-title">
+        {{ item.title }}
+      </h4>
+      <p class="tools__interactive tools__interactive-description">
+        {{ item.description }}
+      </p>
+    </div>
+    }
+  </div>
+
+  <div
+    class="tools__multimedia"
+    role="group"
+    aria-label="Multimedia de herramientas"
+  >
+    <video>
+      <source [src]="section.multimedia.video" type="video/mp4" />
+    </video>
+  </div>
+
+  @if (section.competitors) {
+  <div
+    class="tools__competitors"
+    role="group"
+    aria-label="Marcas con herramientas similares"
+  >
+    <h4 class="tools__competitors tools__competitors-title">Replaces</h4>
+    @for (logo of section.competitors.logos; track logo.name) {
+    <div class="tools__competitors tools__competitors-item">
+      <img [src]="logo.src" [alt]="logo.alt" class="tools__competitors-logo" />
+      <span class="tools__competitors tools__competitors-name">{{
+        logo.name
+      }}</span>
+    </div>
+    }
+  </div>
+  }
+</section>
+}

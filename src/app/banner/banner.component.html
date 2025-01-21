@@ -1,0 +1,28 @@
+<section class="banner" role="banner">
+  <div class="banner__information">
+    <h1 class="banner__title">The happier workspace</h1>
+    <h2 class="banner__subtitle">
+      Write. Plan. Collaborate. With a little help from AI.
+    </h2>
+    <div class="banner__buttons" role="group" aria-label="Botones de información">
+      <button class="banner__button banner__button--primary" aria-label="Obtener Notion gratis">
+        Get Notion free
+      </button>
+      <button class="banner__button banner__button--secondary" aria-label="Solicitar una demostración">
+        Request a demo
+      </button>
+    </div>
+    <span class="banner__teams">Trusted by teams at</span>
+    <div class="banner__logos" role="group" aria-label="Logos de equipos">
+      @for (icon of iconsHeader; track icon.alt) {
+        <img [src]="icon.src" [alt]="icon.alt" [class]="icon.class" />
+      }
+    </div>
+  </div>
+
+  <div class="banner__video-container">
+    <video class="banner__video" autoplay muted loop>
+      <source src="../../../public/videos/hero-banner.mp4" type="video/mp4" />
+    </video>
+  </div>
+</section>
