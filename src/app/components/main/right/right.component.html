@@ -1,0 +1,8 @@
+<section>
+  <div class="right">
+    @for (article of articles; track $index) {
+      <app-article [svg]="article.svg" [color]="article.color" [classModifier]="article.classModifier" [titleModifier]="article.titleModifier" [modifier]="article.modifier" [title]="article.title" [pictures]="article.pictures"></app-article>
+    }
+    <app-informative-article (onClick)="propagateClick($event)"></app-informative-article>
+  </div>
+</section>

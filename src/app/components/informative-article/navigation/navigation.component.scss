@@ -1,0 +1,46 @@
+@use '../../../ui/styles/mixins.scss' as mixin;
+@use '../../../ui/styles/variables.scss' as variables;
+
+.article {
+  &__navigation {
+    @include mixin.flex(column, center, center, 15px);
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 0.5s ease;
+    text-decoration: none;
+    cursor: pointer;
+  
+    span {
+      @include mixin.radius(80px, 40px, 50px);
+      background-color: variables.$gray-90;
+      color: variables.$white;
+      padding: 10px;
+      text-align: center;
+    }
+  
+    &:hover {
+      background-color: variables.$gray-110;
+    }
+  }
+  
+  &__image {
+    width: 55px;
+  
+    &--brave {
+      width: 48px;
+    }
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .article__navigation {
+    span {
+      background-color: variables.$white;
+      color: variables.$black;
+    }
+
+    &:hover {
+      background-color: variables.$gray-40;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@use '../../../ui/styles/mixins.scss' as mixin;
+@use '../../../ui/styles/variables.scss' as variables;
+
+.article__action {
+  @include mixin.flex(row, center, center, 5px);
+  background-color: variables.$white;
+  padding: 9px 15px;
+  border-radius: 20px;
+  transition: background-color 0.5s ease;
+  text-decoration: none;
+  cursor: pointer;
+  
+  i {
+    svg {
+      width: 18px;
+      height: 18px;
+      color: variables.$black;
+    }
+  }
+
+  span {
+    color: black;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  &:hover {
+    background-color: variables.$gray-40;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .article__action {
+    background-color: variables.$gray-80;
+    span, use {
+      color: variables.$white;
+    }
+
+    &:hover {
+      background-color: variables.$gray-70;
+    }
+  }
+}

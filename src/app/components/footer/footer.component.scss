@@ -1,0 +1,52 @@
+@use '../../ui/styles/mixins.scss' as mixin;
+@use '../../ui/styles/variables.scss' as variables;
+
+.footer {
+  @include mixin.fixed(20px, 2);
+  bottom: 0;
+  left: 0;
+  margin-bottom: 10px;
+  max-width: 50%;
+
+  &__list {
+    @include mixin.flex(row, flex-start, stretch, 15px);
+    list-style: none;
+  }
+
+  &__item {
+    font-size: 16px;
+  }
+
+  &__icon {
+    @include mixin.radius(17px, 17px, 0);
+  }
+
+  a {
+    @include mixin.flex(row, flex-start, center, 0);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  a,
+  use {
+    color: variables.$gray-60;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: variables.$gray-40;
+    }
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .footer {
+    a {
+      color: variables.$gray-50;
+    }
+
+    a:hover,
+    use:hover {
+      color: variables.$gray-70;
+    }
+  }
+}

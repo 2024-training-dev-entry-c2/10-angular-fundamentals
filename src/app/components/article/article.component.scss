@@ -1,0 +1,133 @@
+@use '../../ui/styles/mixins.scss' as mixin;
+@use '../../ui/styles/variables.scss' as variables;
+
+.article {
+  @include mixin.flex(column, flex-start, center, 0);
+  @include mixin.radius(100%, auto, 40px);
+  background-color: variables.$gray-100;
+  position: relative;
+
+  &--arrow {
+    @include mixin.flex(column-reverse, center, center, 0);
+  }
+
+  &__icon {
+    @include mixin.flex(row, center, center, 0);
+    @include mixin.radius(48px, 48px, 50px);
+    margin-top: 40px;
+
+    svg {
+      @include mixin.radius(50%, auto, 0);
+    }
+
+    &--blue {
+      background-color: variables.$blue;
+    }
+
+    &--orange {
+      background-color: variables.$orange;
+    }
+
+    &--green {
+      background-color: variables.$green;
+    }
+
+    &--red {
+      background-color: variables.$red;
+    }
+
+    &--purple {
+      background-color: variables.$purple;
+    }
+
+    &--mustard {
+      background-color: variables.$mustard;
+    }
+
+    &--arrow {
+      @include mixin.radius(80px, 40px, 100px 100px 0 0);
+      background-color: variables.$gray-90;
+      color: variables.$white;
+      margin-top: 0;
+
+      svg {
+        width: 20px;
+        margin-top: 3px;
+      }
+    }
+  }
+
+  &__title {
+    background-color: variables.$gray-100;
+    margin: 0 180px;
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+
+    &--mini {
+      font-size: 13px;
+      color: variables.$gray-50;
+      text-align: center;
+      padding: 30px;
+      line-height: 1.4;
+    }
+  }
+
+  &__pictures {
+    @include mixin.flex(column, center, center, 0px);
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    &--three {
+      flex-direction: row;
+      width: 95%;
+      margin-top: 40px;
+      margin-bottom: 90px;
+      margin-left: 65px;
+    }
+
+    &--circle {
+      position: relative;
+      margin-top: 40px;
+      margin-bottom: 60px;
+    }
+  }
+
+  &__circle {
+    @include mixin.radius(370px, 370px, 50%);
+    @include mixin.image(370px, 10%);
+    background-color: variables.$red-light;
+    position: absolute;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .article {
+    background-color: variables.$gray-10;
+
+    &__icon {
+      use {
+        color: variables.$white;
+      }
+
+      &--arrow {
+        background-color: variables.$white;
+
+        svg use {
+          color: variables.$gray-70;
+        }
+      }
+    }
+
+    &__title {
+      background: none;
+      color: variables.$black;
+
+      &--mini {
+        color: variables.$gray-70;
+      }
+    }
+  }
+}

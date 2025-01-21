@@ -1,0 +1,80 @@
+@use '../../ui/styles/mixins.scss' as mixin;
+@use '../../ui/styles/variables.scss' as variables;
+
+picture {
+  @include mixin.flex(row, center, center, 0);
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.article {
+  &__bg {
+    @include mixin.image(100%, 40%);
+  }
+
+  &__device {
+    @include mixin.image(38%, -65%);
+    margin-left: 31%;
+  }
+
+  &__coin-left {
+    @include mixin.image(28%, 22%);
+    position: absolute;
+    left: 20px;
+  }
+
+  &__device-blue {
+    @include mixin.image(60%, 0);
+    margin: 40px auto 0px;
+
+  }
+
+  &__coin-right {
+    @include mixin.image(20%, -45%);
+    position: absolute;
+    right: 45px;
+  }
+
+  &__activity img {
+    @include mixin.flex(row, center, center, 0);
+    @include mixin.image(70%, 32px);
+  }
+
+  &__device-1,
+  &__device-2,
+  &__device-3 {
+    @include mixin.image(90%, 0);
+  }
+
+  &__device-mask {
+    @include mixin.image(35%, -69% !important);
+    left: 32.5%;
+    position: absolute;
+
+    img {
+      z-index: 1;
+    }
+  }
+
+  &__stake {
+    @include mixin.image(100%, 22px);
+  }
+
+  &__browser {
+    @include mixin.image(90%, 40px);
+
+    img {
+      @include mixin.flex(row, flex-start, center, 0);
+      border-bottom-left-radius: 40px;
+    }
+  }
+
+  &__device-gray {
+    @include mixin.image(35%, -80%);
+    position: absolute;
+    margin-left: -250px;
+  }
+}

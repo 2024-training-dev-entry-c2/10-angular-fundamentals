@@ -1,0 +1,17 @@
+<article class="article article--{{classModifier()}}">
+  <div class="article__icon article__icon--{{color()}}">
+    <svg>
+      <use [attr.href]="'svg/icons.svg#' + svg()"></use>
+    </svg>
+  </div>
+  <span class="article__title article__title--{{titleModifier()}}" [innerHTML]="title()"></span>
+  <div class="article__pictures article__pictures--{{modifier()}}">
+    @if (color() == 'red') {
+      <div class="article__circle"></div>
+      <app-video/>
+    }
+    @for (picture of pictures(); track $index) {
+      <app-picture [name]="picture.name" [dark]="picture.dark" [light]="picture.light" [alt]="picture.alt"/>
+    }
+  </div>
+</article>

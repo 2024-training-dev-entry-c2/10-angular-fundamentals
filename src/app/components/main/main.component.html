@@ -1,0 +1,5 @@
+<main>
+  <app-modal [open]="isOpen" (clickClose)="openModal($event)"></app-modal>
+  <app-left (onClick)="openModal($event)"></app-left>
+  <app-right (onClick)="openModal($event)"></app-right>
+</main>

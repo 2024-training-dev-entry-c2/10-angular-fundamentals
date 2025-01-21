@@ -1,0 +1,20 @@
+<article class="article">
+  <span class="article__title article__title--highlight">Get Glow Now</span>
+  <h4>Desktop</h4>
+  <h5>Turn your browser into an <br> easy-to-use Solana wallet.</h5>
+
+  <div class="article__navigations">
+    @for (navigation of navigations; track $index) {
+      <app-navigation [url]="navigation.url" [image]="navigation.image" [alt]="navigation.alt" [title]="navigation.title" [modifier]="navigation.modifier"></app-navigation>
+    }
+  </div>
+
+  <h4>Mobile</h4>
+  <h5>Use Glow and your favorite <br> web3 apps on the go.</h5>
+  
+  <div class="article__actions">
+    @for (action of actions; track $index) {
+      <app-action [svg]="action.svg" [title]="action.title" (onClick)="propagateClick($event)"></app-action>
+    }
+  </div>
+</article>

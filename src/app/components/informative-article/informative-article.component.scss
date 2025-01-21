@@ -1,0 +1,57 @@
+@use '../../ui/styles/mixins.scss' as mixin;
+@use '../../ui/styles/variables.scss' as variables;
+
+.article {
+  @include mixin.flex(column, flex-start, center, 0);
+  @include mixin.radius(100%, auto, 40px);
+  background-color: variables.$gray-100;
+  position: relative;
+  margin-bottom: 30px;
+
+  &__title--highlight {
+    margin-top: 55px;
+    background: variables.$gradient-color;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  h4 {
+    margin-top: 30px;
+    font-size: 23px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  h5 {
+    font-size: 16px;
+    font-weight: normal;
+    margin: 20px;
+    text-align: center;
+  }
+
+  &__navigations {
+    @include mixin.flex(row, center, center, 0);
+  }
+
+  &__actions {
+    @include mixin.flex(row, center, center, 20px);
+    margin-bottom: 60px;
+    margin-top: 10px;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .article {
+    background-color: variables.$gray-10;
+
+    &__title {
+      color: variables.$black;
+
+      &--mini {
+        color: variables.$gray-70;
+      }
+    }
+  }
+}

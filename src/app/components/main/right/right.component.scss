@@ -1,0 +1,11 @@
+@use '../../../ui/styles/variables.scss' as variables;
+@use '../../../ui/styles/mixins.scss' as mixin;
+
+.right {
+  @include mixin.flex(column, flex-start, stretch, 25px);
+  position: absolute;
+  max-width: 50vw;
+  left: 50%;
+  padding-right: 225px;
+  margin: 25px 0;
+}

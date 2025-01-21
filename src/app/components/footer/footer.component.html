@@ -1,0 +1,16 @@
+<footer class="footer" role="contentinfo">
+  <ul class="footer__list">
+    @for (item of items; track $index) {
+      <li class="footer__item">
+        <a [href]="item.link" target="_blank" aria-hidden="true">
+          @if ($index == 5) {
+            <svg class="footer__icon">
+              <use href="svg/twitter.svg#twitter"></use>
+            </svg>
+          }
+          {{item.name}}
+        </a>
+      </li>
+    }
+  </ul>
+</footer>

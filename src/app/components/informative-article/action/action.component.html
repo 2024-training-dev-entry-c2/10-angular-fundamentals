@@ -1,0 +1,8 @@
+<a class="article__action modal__open" aria-label="'Download Glow wallet for' + svg()" role="button" (click)="openModal()">
+  <i aria-hidden="true">
+    <svg>
+      <use [attr.href]="'svg/icons.svg#' + svg()"></use>
+    </svg>
+  </i>
+  <span>{{ title() }}</span>
+</a>

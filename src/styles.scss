@@ -1,4 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@use './app/ui/styles/mixins.scss' as mixin;
+@use './app/ui/styles/variables.scss' as variables;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+  font-family: "Roobert";
+  src: url("./app/ui/fonts/roobert/Roobert-Regular.otf") format("woff2"),;
+  font-weight: 500; 
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roobert";
+  src: url("./app/ui/fonts/roobert/Roobert-Medium.otf") format("woff2");
+  font-weight: 600; 
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roobert";
+  src: url("./app/ui/fonts/roobert/Roobert-SemiBold.otf") format("woff2");
+  font-weight: 700; 
+  font-style: normal;
+}
 
 * {
   margin: 0;
@@ -7,5 +30,12 @@
 }
 
 html {
-  font-family: "Poppins", serif;
+  font-family: "Roobert", Noto Sans, Noto Sans JP, Noto Sans KR, Noto Sans SC, Noto Sans TC;
+  @include mixin.theme(variables.$gray-90, variables.$white);
+}
+
+@media (prefers-color-scheme: light) {
+  html {
+    @include mixin.theme(variables.$white, variables.$black);
+  }
 }
