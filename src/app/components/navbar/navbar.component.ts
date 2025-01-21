@@ -1,13 +1,19 @@
-import { Component } from '@angular/core';
-import { NavbarLogotypeComponent } from "../navbar-logotype/navbar-logotype.component";
-import { NavbarIsotypeComponent } from "../navbar-isotype/navbar-isotype.component";
+import { Component, HostListener } from '@angular/core';
+import { NavbarLogotypeComponent } from '../navbar-logotype/navbar-logotype.component';
+import { NavbarIsotypeComponent } from '../navbar-isotype/navbar-isotype.component';
 
 @Component({
   selector: 'app-navbar',
   imports: [NavbarLogotypeComponent, NavbarIsotypeComponent],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss'
+  styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
+  isScrolled: boolean = false; 
 
+  @HostListener('window:scroll', [])
+  onWindowScroll(): void {
+    const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+    this.isScrolled = scrollPosition > 50;
+  }
 }

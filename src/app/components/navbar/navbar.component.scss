@@ -19,6 +19,12 @@
     visibility: hidden;
 }
 
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+}
+
 .navbar {
     position: fixed;
     top: 18px;
@@ -38,8 +44,26 @@
         border-right: var.$primary-color 1px solid;
         flex: 1;
         padding-left: 15px;
-        padding-right: 30px;
+        padding-right: 15px;
+
+        // &.scrolled {
+        //     animation: containerWidth 0.5s cubic-bezier(0.23, 1, 0.320, 1) forwards;
+        // }
+
+        // &:not(.scrolled) {
+        //     animation: containerWidth 0.5s cubic-bezier(0.23, 1, 0.320, 1) reverse forwards;
+        // }TODO: Make animation Work!!
     }
+
+    // @keyframes containerWidth {
+    //     from {
+    //         width: 204px;
+    //     }
+
+    //     to {
+    //         width: 72px;
+    //     }
+    // }
 
     &__logo {
         padding-left: 20px;
