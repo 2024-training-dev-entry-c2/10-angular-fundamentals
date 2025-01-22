@@ -1,0 +1,9 @@
+<div class="feature-list">
+    <div class="info-section">
+        <div class="info-grid">
+            <app-feature-element *ngFor="let feature of featureList" [primaryText]="feature.primaryText"
+                [secondaryText]="feature.secondaryText">
+            </app-feature-element>
+        </div>
+    </div>
+</div>

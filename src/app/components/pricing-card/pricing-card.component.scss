@@ -1,0 +1,63 @@
+@use '../../ui/styles/variables.scss' as variables;
+@use '../../ui/styles/mixins.scss' as mixins;
+
+.pricing-card {
+    @include mixins.container(space-between);
+
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    width: 20rem;
+    margin-bottom: 1.5rem;
+    flex-direction: column;
+    height: 24rem;
+
+    &__highlight {
+        color: #718096;
+        margin-bottom: 1rem;
+    }
+
+    &__subscription {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+
+    &__minutes {
+        font-size: 1.50rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+
+        .info-icon {
+            margin-left: 0.25rem;
+        }
+    }
+
+    .price-container {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        margin-bottom: 1rem;
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .price-details {
+            color: #718096;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    button {
+        background-color: #000000;
+        color: #ffffff;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 1rem;
+        cursor: pointer;
+        margin-bottom: 1rem;
+    }
+}

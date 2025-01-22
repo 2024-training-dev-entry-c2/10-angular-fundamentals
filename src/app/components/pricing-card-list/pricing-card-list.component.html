@@ -1,0 +1,13 @@
+<section class="pricing-section">
+    <h1 class="title">Get started today</h1>
+    <div class="toggle-buttons">
+        <button class="active">Yearly</button>
+        <button>Monthly</button>
+    </div>
+    <div class="pricing-cards">
+        <app-pricing-card *ngFor="let card of pricingCards" [highlight]="card.highlight"
+            [subscription]="card.subscription" [minutes]="card.minutes" [price]="card.price"
+            [priceDetails]="card.priceDetails" [buttonText]="card.buttonText" [bestUsers]="card.bestUsers">
+        </app-pricing-card>
+    </div>
+</section>

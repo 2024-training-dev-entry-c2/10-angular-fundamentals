@@ -1,0 +1,39 @@
+@use '../../ui/styles/mixins.scss' as mixins;
+@use '../../ui/styles/variables.scss' as variables;
+
+.card {
+    background-color: variables.$gray-light;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    position: sticky;
+    top: 1rem;
+    z-index: 1;
+    text-align: left;
+
+    &__title {
+        color: variables.$highlight-color;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    &__subtitle {
+        font-size: 1.875rem;
+        font-weight: 700;
+        margin-top: 0.5rem;
+    }
+
+    &__description {
+        color: #6B7280;
+        margin-top: 1rem;
+    }
+
+    img {
+        margin-top: 2rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        height: auto;
+    }
+}

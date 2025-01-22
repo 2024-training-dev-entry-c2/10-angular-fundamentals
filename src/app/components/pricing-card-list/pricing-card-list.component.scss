@@ -1,0 +1,35 @@
+.pricing-section {
+    padding: 4rem 1rem;
+    background-color: #ffffff;
+
+    .title {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+    }
+
+    .toggle-buttons {
+        display: flex;
+        margin-bottom: 2rem;
+        justify-content: center;
+
+        button {
+            background: none;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .active {
+            color: #6b46c1;
+            border-bottom: 2px solid #6b46c1;
+        }
+    }
+
+    .pricing-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

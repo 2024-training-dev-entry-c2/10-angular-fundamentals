@@ -1,0 +1,54 @@
+@use '../../ui/styles/variables.scss' as variables;
+
+main {
+    max-width: 64rem;
+    margin: 3rem auto;
+    padding: 1.5rem;
+    text-align: center;
+
+    .content-wrapper {
+        max-width: 40rem;
+        margin: 0 auto;
+
+        .video-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-image: linear-gradient(hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0.8)),
+                linear-gradient(90deg, #737eb3, #8b5d9b 39%, #c29f5c 70%, #aa772a 103%);
+            padding: 5px 20px 5px 5px;
+            border-radius: 20px;
+            cursor: pointer;
+            position: relative;
+            color: #666666;
+
+            &:hover {
+                color: variables.$gray-dark;
+            }
+
+            svg {
+                margin-right: 10px;
+                background-color: variables.$white;
+                border-radius: 50%;
+                padding: 3px;
+                width: 30px;
+                height: 30px;
+            }
+
+            span {
+                font-weight: 600;
+            }
+        }
+
+        .cta-button {
+            background-color: variables.$black;
+            color: variables.$white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 0.75rem;
+            font-size: 1.15rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+    }
+}

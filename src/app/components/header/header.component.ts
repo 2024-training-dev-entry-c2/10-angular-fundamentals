@@ -3,7 +3,7 @@ import { MenuComponent } from '../menu/menu.component';
 
 @Component({
   selector: 'app-header',
-  imports: [MenuComponent],
+  imports: [],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })

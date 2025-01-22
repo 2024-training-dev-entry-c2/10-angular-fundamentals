@@ -1,0 +1,5 @@
+<section class="card-section" aria-label="Meeting Preparation Cards">
+    <app-slide-card *ngFor="let card of cards" [title]="card.title" [subtitle]="card.subtitle"
+        [description]="card.description" [imageUrl]="card.imageUrl" [imageAlt]="card.imageAlt">
+    </app-slide-card>
+</section>
