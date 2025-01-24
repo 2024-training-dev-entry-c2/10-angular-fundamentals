@@ -1,0 +1,58 @@
+@use "../../ui/styles/mixins" as mixins;
+@use "../../ui/styles/variables" as variables;
+@use "../../ui/styles/theme";
+
+.main {
+  @include mixins.size(unset, 100vh);
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  position: relative;
+  mix-blend-mode: lighten;
+
+  &__nav {
+  @include mixins.position(0, 0, unset, unset);
+  @include mixins.size(unset, 100vh);
+  padding-right: 35px;
+}
+
+
+  &__logo-right {
+    @include mixins.position(0, 0, unset, unset);
+    @include mixins.size(50vw, 50vw);
+    pointer-events: none;
+    mix-blend-mode: overlay;
+
+    svg {
+      @include mixins.size(100%, 100%);
+      transform: translate(50%, -20%);
+      pointer-events: none;
+      path {
+        opacity: 100%;
+      }
+    }
+  }
+
+  &__page-2 {
+    background-color: variables.$bg-blue;
+    &--title-medium-small {
+      font-size: 20px;
+    }
+  }
+
+  &__page-3 {
+    background-color: variables.$bg-dark-blue;
+  }
+
+  &__page-4 {
+    background-color: variables.$bg-teal;
+  }
+
+  &__page-5 {
+    background-color: variables.$bg-default;
+    &--container {
+      @include mixins.display(unset, unset, column);
+      gap: 30px;
+    }
+  }
+}
+

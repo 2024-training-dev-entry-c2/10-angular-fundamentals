@@ -1,12 +1,26 @@
-import { Component } from '@angular/core';
-import { MenuComponent } from '../menu/menu.component';
+import { Component, input } from '@angular/core';
+
+import { MainNavbarComponent } from "../main-navbar/main-navbar.component";
 
 @Component({
   selector: 'app-header',
-  imports: [MenuComponent],
+  imports: [MainNavbarComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+  public subMenuItems = {
+    1: ['Blog', 'Docs', 'Forum', 'Support'],
+  
+
+  }
+  public addMenuClass = {
+    1: 'menu',
+    2: 'main-nav__container',
+    3: 'footer__section-nav'
+  };
+
+
+  public isMainMenu: boolean = true;
 
 }
