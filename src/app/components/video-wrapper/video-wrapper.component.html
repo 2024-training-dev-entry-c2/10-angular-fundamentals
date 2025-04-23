@@ -1,0 +1,8 @@
+<div class="section__container">
+    @for (item of items(); track $index) {
+    <div class="section__wrapper" #videoWrapper>
+        <video [src]="item.url" muted loop width="723px" aria-hidden="true" class="section__video"></video>
+        <h2>{{item.title}}</h2>
+    </div>
+    }
+</div>

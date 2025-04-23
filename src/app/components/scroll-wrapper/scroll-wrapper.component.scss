@@ -1,0 +1,12 @@
+@use '../../ui/styles/mixins.scss' as mixins;
+
+:host {
+    display: block;
+}
+
+.handle-scroll {
+    @include mixins.container(center);
+    height: 100vh;
+    flex-direction: column;
+    scroll-snap-align: start;
+}

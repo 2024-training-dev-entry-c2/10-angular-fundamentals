@@ -1,0 +1,34 @@
+@use '../../ui/styles/variables.scss' as variables;
+
+:host {
+    display: block;
+}
+
+.language {
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+    
+      &__item {
+        padding: 8px 10px;
+        border-bottom: 1px solid variables.$gray;
+    
+        &:last-child {
+          border-bottom: none;
+        }
+    
+        a {
+          text-decoration: none;
+          color: variables.$black;
+          font-size: variables.$font-size-small;
+          display: block;
+    
+          &:hover {
+            color: variables.$gray;
+          }
+        }
+      }
+}

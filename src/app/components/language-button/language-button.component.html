@@ -1,0 +1,15 @@
+<a href="#" class="language__selector" #headerLanguageSelector [attr.aria-expanded]="isLanguageMenuExpanded" aria-controls="language-menu" role="button" aria-label="Select Language" (click)="toggleLanguageMenu($event)">
+    <i class="language__icon" aria-hidden="true">
+        <img src="./images/world-icon.svg" alt="World Icon">
+    </i>
+    <i  aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" width="10" height="10">
+            <path d="M 2 4.5 L 6 8.5 L 10 4.5" fill="none"
+                stroke="var(--token-418da828-2706-4a03-8278-b089c280c66c, rgb(113, 113, 122))" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+    </i>
+</a>
+<div id="language-menu" class="language__menu" [hidden]="!isLanguageMenuExpanded" role="menu" aria-label="Language Menu">
+    <app-language-menu [items]="['English', 'French']"></app-language-menu>
+</div>

@@ -1,0 +1,8 @@
+<div>
+    <h4 class="footer__title">{{title()}}</h4>
+    @if (!isMenuImage()) {
+        <app-sub-menu [titleClass]="'footer__menu'" [items]="items()"></app-sub-menu>
+    } @else {
+        <app-sub-menu-image [items]="imageItems() || []"></app-sub-menu-image>
+    }
+  </div>

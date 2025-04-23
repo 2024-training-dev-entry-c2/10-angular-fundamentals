@@ -1,0 +1,40 @@
+@use '../../ui/styles/variables.scss' as variables;
+@use '../../ui/styles/mixins.scss' as mixins;
+
+:host {
+    display: block;
+}
+
+.hero {
+    width: 1460px;
+    padding: 20px;
+    margin: 0 auto;
+
+
+    &__content {
+        @include mixins.grid-container(1fr 1fr, 100px);
+        align-items: center;
+    }
+
+    &__title {
+        font-size: variables.$font-size-xxlarge;;
+        font-weight: 700;
+        color: variables.$black;
+    }
+
+    &__text {
+        font-size: variables.$font-size-large;
+        font-weight: 500;
+        color: variables.$gray;
+        margin-bottom: 40px;
+        text-wrap: balance;
+        line-height: 32px;
+    }
+
+    &__image {
+        width: 550px;
+    }
+
+
+}
+

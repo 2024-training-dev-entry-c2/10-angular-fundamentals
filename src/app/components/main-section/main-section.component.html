@@ -1,0 +1,14 @@
+<main role="main" aria-label="Main Content">
+  
+    <app-scroll-wrapper>
+      <app-player-section></app-player-section>
+    </app-scroll-wrapper>
+
+    <app-scroll-wrapper>
+      <app-creator-section
+        (getStarted)="handleGetStarted()"
+        (learnMore)="handleLearnMore()">
+      </app-creator-section>
+    </app-scroll-wrapper>
+  </main>
+  

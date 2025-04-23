@@ -1,0 +1,5 @@
+    <menu id="language-menu" class="language__list" #headerLanguageMenu role="menu" aria-label="Language Menu">
+        @for (item of items; track $index) {
+        <li class="language__item" role="menuitem" [value]="item"><a href="#">{{item}}</a></li>
+        }
+    </menu>

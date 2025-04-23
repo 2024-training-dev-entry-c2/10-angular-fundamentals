@@ -1,0 +1,93 @@
+@use '../../ui/styles/mixins.scss' as mixins;
+@use '../../ui/styles/variables.scss' as variables;
+
+:host {
+    display: block;
+}
+
+.container {
+    width: 1470px;
+    height: 93.5vh;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+    
+    
+    &__video {
+        width: 100%;
+        position: absolute;
+        top: -70px;
+        object-fit: cover;
+        z-index: -1;
+        -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0.3) 100%);
+        mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0.3) 100%);
+        -webkit-mask-size: cover;
+        mask-size: cover;
+        
+    }
+
+    &__content {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+        padding: 80px;
+    }
+
+    &__title {
+        font-size: variables.$font-size-xlarge;
+        font-weight: 700;
+        color: variables.$black;
+        display: flex;
+        flex-direction: column;
+        line-height: 75px;
+    }
+
+    &__subtitle {
+        font-size: variables.$font-size-large;
+        font-weight: 500;
+        color: variables.$white;
+        margin-bottom: 40px;
+        width: 50%;
+        text-wrap: pretty;
+        line-height: 32px;
+        width: 45%;
+        color: variables.$gray;
+    }
+
+    &__buttons {
+        @include mixins.container-gap(10px);
+    }
+
+    &__button {
+        border-radius: 10px;
+        font-size: variables.$font-size-medium;
+        font-weight: 500;
+        text-decoration: none;
+
+          &--black {
+            padding: 12px 20px;
+            background-color: variables.$black;
+            color: variables.$white;
+      
+            &:hover {
+              background-color: variables.$hover-black;
+              transition: 0.3s;
+            }
+          }
+
+        &--no-color {
+            padding: 12px 20px;
+            background-color: transparent;
+            color: variables.$gray;
+            border: 1px solid variables.$gray;
+
+            &:hover {
+                color: variables.$black;
+                border: 1px solid variables.$black;
+                transition: 0.3s;
+              }
+        }
+
+    }
+}	

@@ -1,0 +1,13 @@
+@if (items.length >= 5) {
+<menu class="footer__social">
+    @for (item of items; track $index) {
+    <li><a href="#"><img [src]="item.url" [alt]="item.alt" class="footer__button--image"></a></li>
+    }
+</menu>
+} @else {
+<menu class="footer__menu footer__menu--buttons">
+    @for (item of items; track $index) {
+    <li><a href="#"><img [src]="item.url" [alt]="item.alt" class="footer__button"></a></li>
+    }
+</menu>
+}

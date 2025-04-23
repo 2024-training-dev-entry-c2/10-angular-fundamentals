@@ -1,0 +1,39 @@
+@use '../../ui/styles/variables.scss' as variables;
+@use '../../ui/styles/mixins.scss' as mixins;
+
+:host {
+    display: block;
+}
+
+.header{
+    &__actions {
+        @include mixins.container-gap(20px);
+        position: relative;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: variables.$gray;
+        font-size: variables.$font-size-small;
+        font-weight: 500;
+
+        &:hover {
+            color: variables.$black;
+        }
+    }
+
+    &__button {
+        background-color: variables.$white;
+        color: variables.$black;
+        padding: 6px 16px;
+        border-radius: 5px;
+        font-size: variables.$font-size-small;
+        font-weight: 500;
+        text-decoration: none;
+
+        &:hover {
+            background-color: variables.$hover-gray;
+            transition: 0.3s;
+        }
+    } 
+}

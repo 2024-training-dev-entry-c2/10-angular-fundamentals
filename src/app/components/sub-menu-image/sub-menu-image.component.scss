@@ -1,0 +1,65 @@
+@use '../../ui/styles/variables.scss' as variables;
+@use '../../ui/styles/mixins.scss' as mixins;
+
+.footer {
+    &__menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        li {
+            line-height: 14px;
+            a {
+                color: variables.$light-gray;
+                text-decoration: none;
+                font-size: variables.$font-size-small;
+                
+
+                &:hover {
+                    color: variables.$gray;
+                }
+            }
+        }
+
+        &--buttons {
+            gap: 2px;
+        }
+    }
+    
+    &__button {
+        width: 140px;
+
+        &--image {
+            width: 25px;
+            color: variables.$light-gray;
+
+            &:hover {
+                transition: 0.3s;
+                transform: scale(1.1);
+            }
+        }
+    }
+
+
+    &__social {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        grid-template-rows: repeat(2, auto);  
+
+        li {
+            display: flex;
+            align-items: center;
+            font-size: variables.$font-size-small;
+            color: variables.$light-gray;
+            cursor: pointer;
+
+            &:hover {
+                color: variables.$gray;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,18 @@
+@use '../../ui/styles/variables.scss' as variables;
+@use '../../ui/styles/mixins.scss' as mixins;
+
+.download {
+    &__buttons {
+        @include mixins.container-gap(10px);
+    }
+    
+    &__img {
+        width: 180px;
+
+        &:hover {
+            transition: 0.3s;
+            box-shadow: 0 0 30px 0 rgba(255, 255, 255, 0.1);
+        }
+    }
+
+}

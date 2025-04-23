@@ -1,0 +1,22 @@
+@use '../../ui/styles/variables.scss' as variables;
+@use '../../ui/styles/mixins.scss' as mixins;
+
+.download {
+    @include mixins.container(center);
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 80px;
+
+    p {
+        font-size: 19px;
+        font-weight: 500;
+        color: variables.$white;
+        padding: 20px 0;
+
+    }
+
+    div {
+        display: flex;
+        gap: 15px;
+    }
+}

@@ -1,0 +1,36 @@
+@use '../../ui/styles/variables.scss' as variables;
+@use '../../ui/styles/mixins.scss' as mixins;
+
+.hero {
+    &__scroll {
+        @include mixins.container-gap(5px);
+        justify-content: center;
+        margin-bottom: 40px;
+
+        div {
+            @include mixins.container();
+            flex-direction: column;
+            gap: 5px;
+            justify-content: center;
+        }
+
+        small {
+            font-size: variables.$font-size-small;
+            font-weight: 500;
+            color: variables.$gray;
+        }
+    }
+}
+
+.shake-vertical {
+    animation: shake-vertical 1.0s ease-in-out infinite; 
+  }
+  
+@keyframes shake-vertical {
+    0%, 100% {
+      transform: translateY(0); 
+    }
+    50% {
+      transform: translateY(-4px); 
+    }
+}
