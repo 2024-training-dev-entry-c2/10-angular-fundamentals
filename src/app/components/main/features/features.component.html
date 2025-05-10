@@ -1,0 +1,12 @@
+<section class="feature-section">
+  @for (feature of features; track $index) {
+  <app-feature
+    [tagline]="feature.tagline"
+    [title]="feature.title"
+    [points]="feature.points"
+    [content]="feature.content"
+    [testimonial]="feature.testimonial"
+    [videos]="feature.videos"
+  ></app-feature>
+  }
+</section>

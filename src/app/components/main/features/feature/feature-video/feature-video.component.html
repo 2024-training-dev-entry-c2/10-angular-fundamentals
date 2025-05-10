@@ -1,0 +1,5 @@
+<video class="video" loop playsinline>
+  @for (video of videos(); track $index) {
+  <source [src]="video.src" />
+  }
+</video>

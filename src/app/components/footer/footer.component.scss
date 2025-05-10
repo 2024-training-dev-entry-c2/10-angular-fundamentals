@@ -1,0 +1,64 @@
+@use '../../ui/styles//variables.scss' as vr;
+@use '../../ui/styles/mixins.scss' as mx;
+
+
+.footer{
+    @include mx.flex-container(start, center, 0, column);
+    margin-top: 50px;
+  
+    &__gif{
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border: solid 5px vr.$color-white-terciary;
+      border-radius: 50%;
+    }
+  
+    &__image-top{
+      margin-top: 100px;
+      width: 100%;
+      aspect-ratio: 16 / 3.5;
+      background-image: url('../../../../public/images/footer-top.afeb3f99.png');
+      background-position: top;
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }            
+
+    &__app{
+        width: 100%;
+    }
+  
+    &__copyright{
+      @include mx.font-to-use(16);
+      width: 100%;
+      padding: 50px 0;
+      background-color: vr.$color-purple;
+      text-align: center;
+      color: vr.$color-gray-secondary;  
+    }
+  
+    &__language{
+      @include mx.flex-container(end);
+      width: 100%;
+      padding: 0 20%;
+      padding-bottom: 150px;
+      background-color: vr.$color-purple;
+  
+      &__button{
+        @include mx.font-to-use(16);
+        @include mx.flex-container(start, end, 10px);
+        @include mx.button-parameters(transparent, none, 0, vr.$color-gray-secondary);
+        padding: 0;
+        height: 21px;
+  
+        &:hover{
+          color: vr.$color-white;  
+        }
+        
+        & svg{
+          width: 15px;   
+          vertical-align: middle;
+        }
+      }
+    }
+  }

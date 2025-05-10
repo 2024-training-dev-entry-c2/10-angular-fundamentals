@@ -1,0 +1,8 @@
+<article class="card">
+    <i class="card__icon">
+        <img [src]="svg()" alt="Icon from card {{title()}}">
+    </i>
+    <h3 class="card__title">{{title()}}</h3>
+    <p class="card__description">{{description()}}</p>
+    <a class="card__link" [href]="url()?.href">{{url()?.text}} →</a>
+</article>

@@ -1,0 +1,16 @@
+@use '../../ui/styles/mixins.scss' as mx;
+@use '../../ui/styles/variables.scss' as vr;
+
+main {
+  @include mx.flex-container(start, center, 0, column);
+  background: linear-gradient(
+    vr.$color-white-secondary,
+    rgba(250, 242, 233, 0)
+  );
+
+  &__app{
+    width: 100%;
+  }
+
+  overflow-x: hidden;
+}

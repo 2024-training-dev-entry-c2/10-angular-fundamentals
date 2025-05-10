@@ -1,0 +1,7 @@
+@use '../../../ui/styles/mixins.scss' as mx;
+
+.feature-section{
+    @include mx.flex-container(start, start, 110px, column);
+    margin: 85px 210px;
+    min-width: 1346px;
+}

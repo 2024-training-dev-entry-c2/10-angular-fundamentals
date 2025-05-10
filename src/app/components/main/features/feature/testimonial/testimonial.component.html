@@ -1,0 +1,8 @@
+<blockquote class="testimonial" role="blockquote">
+    <p class="testimonial__text" [innerHTML]="text()"></p>
+    <div class="testimonial__container">
+        <img class="testimonial__image" [src]="authorImage()" alt="Portrait of {{author()}}">
+        <p class="testimonial__author">{{author()}}, {{place()}} <a [href]="url()?.src">{{url()?.text}}</a>
+        </p>
+    </div>
+</blockquote>

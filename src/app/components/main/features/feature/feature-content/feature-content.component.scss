@@ -1,0 +1,27 @@
+@use '../../../../../ui/styles/variables.scss' as vr;
+@use '../../../../../ui/styles/mixins.scss' as mx;
+
+.content {
+  @include mx.flex-container(start, start, 30px, column);
+
+  &__text {
+    @include mx.font-to-use(18);
+    @include mx.text-properties(pretty, 1.8);
+  }
+
+  &__point {
+    @include mx.font-to-use(18);
+    @include mx.flex-container(start, center, 10px);
+    @include mx.text-properties(normal, 2.8);
+
+    & span {
+      @include mx.flex-container(center, center);
+      width: 40px;
+      height: 40px;
+      background-color: vr.$color-white;
+      border: solid 1px vr.$color-white-secondary;
+      border-radius: 50%;
+      box-shadow: vr.$shadow-primary;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+@use '../../../ui/styles//variables.scss' as vr;
+@use '../../../ui/styles/mixins.scss' as mx;
+
+.footer__options {
+  @include mx.flex-container(center, start, 120px);
+  padding-top: 50px;
+  padding-right: 50px;
+  background-color: vr.$color-purple;
+  width: 100%;
+
+  &__title {
+    @include mx.font-to-use(14, 600);
+    color: vr.$color-gray-secondary;
+  }
+
+  &__logo {
+    height: 35px;
+  }
+}
+
+.footer__menu {
+  @include mx.font-to-use(14);
+  @include mx.text-properties(normal, 2.5);
+  margin-top: 20px;
+  list-style: none;
+
+  &__link {
+    text-decoration: none;
+    color: vr.$color-white;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

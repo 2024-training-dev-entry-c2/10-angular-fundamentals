@@ -1,0 +1,9 @@
+
+.cards {
+  margin: 85px 210px;
+  min-width: 1346px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  color: #3c3838;
+}

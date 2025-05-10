@@ -1,0 +1,7 @@
+@use '../../../../../ui/styles/variables.scss' as vr;
+
+.video {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 2px 30px 40px vr.$color-primary-shadow;
+}

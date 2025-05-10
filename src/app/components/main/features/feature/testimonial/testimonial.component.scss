@@ -1,0 +1,40 @@
+@use '../../../../../ui/styles/variables.scss' as vr;
+@use '../../../../../ui/styles/mixins.scss' as mx;
+
+.testimonial{
+    @include mx.flex-container(start, start, 8px, column);
+    background-color: vr.$color-white;
+    padding: 25px 40px 25px 28px;
+    border: solid 1px vr.$color-white-secondary;
+    border-radius: 10px;
+    box-shadow: -1px 10px 10px vr.$color-primary-shadow;
+    color: vr.$color-black-secondary;
+  
+    &__container{
+      @include mx.flex-container(start, center, 10px);
+    }
+  
+    &__text{
+      @include mx.font-to-use(18);
+      @include mx.text-properties(pretty, 1.8);
+    }
+  
+    &__image{
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 3px 4px vr.$color-primary-shadow;
+    }
+  
+    &__author{
+      & a{
+        color: vr.$color-black-secondary;
+        text-decoration: none;
+  
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }

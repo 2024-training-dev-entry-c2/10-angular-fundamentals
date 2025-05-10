@@ -1,0 +1,47 @@
+@use '../../../../ui/styles/mixins.scss' as mx;
+@use '../../../../ui/styles/variables.scss' as vr;
+
+.card {
+  @include mx.flex-container(start, start, 15px, column);
+  font-family: vr.$font-primary;
+  grid-row: 1;
+
+  &__icon {
+    @include mx.flex-container(start, center);
+    padding-left: 15px;
+    & img {
+      height: 30px;
+    }
+  }
+
+  &__title {
+    @include mx.font-to-use(16, 500, vr.$font-secundary);
+    padding-left: 15px;
+    border-left: solid 2px vr.$color-white-quaternary;
+  }
+
+  &__description {
+    @include mx.font-to-use(14);
+    @include mx.text-properties(balance);
+    padding-left: 15px;
+  }
+
+  &__link {
+    @include mx.font-to-use(14, 600);
+    text-decoration: none;
+    padding-left: 15px;
+    color: #2b0aff;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.fa-secondary {
+  color: vr.$color-white-quaternary;
+}
+
+.fa-primary {
+  color: #aa9dff;
+}

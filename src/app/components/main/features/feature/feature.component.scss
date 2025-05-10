@@ -1,0 +1,11 @@
+@use '../../../../ui/styles/variables.scss' as vr;
+@use '../../../../ui/styles/mixins.scss' as mx;
+
+.article {
+  @include mx.flex-container(space-between, center, 24px, row, wrap);
+
+  &__column {
+    @include mx.flex-container(center, start, 24px, column);
+    width: 45%;
+  }
+}

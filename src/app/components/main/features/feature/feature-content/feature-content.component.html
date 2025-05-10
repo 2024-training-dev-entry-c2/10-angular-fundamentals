@@ -1,0 +1,19 @@
+<div class="content">
+  <div>
+    @if (points()){ @for (point of points(); track $index) {
+    <div class="content__point">
+      <span role="img">{{ point.icon }}</span>
+      <p [innerHTML]="point.text"></p>
+    </div>
+    } } @else{
+    <p class="content__text" [innerHTML]="content()"></p>
+    }
+  </div>
+
+  <app-testimonial
+    [text]="testimonial()?.text"
+    [author]="testimonial()?.author"
+    [authorImage]="testimonial()?.image"
+    [place]="testimonial()?.place"
+  ></app-testimonial>
+</div>

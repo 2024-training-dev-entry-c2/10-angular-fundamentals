@@ -1,0 +1,14 @@
+<section class="footer__options">
+    <img class="footer__options__logo" src="images/gamma-logo-white.9613e68b.svg" alt="Gamma Logotype">
+
+    @for (option of options; track $index) {
+        <div>
+            <span class="footer__options__title">{{option.title}}</span>
+            <ul role="menu" class="footer__menu">
+                @for (item of option.columnItems; track $index) {
+                    <li><a class="footer__menu__link" [href]="item?.url">{{item.text}}</a></li>
+                }
+            </ul>
+        </div>
+    }
+</section>

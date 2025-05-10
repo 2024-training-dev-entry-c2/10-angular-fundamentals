@@ -1,0 +1,10 @@
+<section class="cards">
+    @for (card of cards; track $index) {
+        <app-card
+            [svg]="card.svg"
+            [title]="card.title"
+            [description]="card.description"
+            [url]="card.url"
+        ></app-card>
+    }    
+</section>        

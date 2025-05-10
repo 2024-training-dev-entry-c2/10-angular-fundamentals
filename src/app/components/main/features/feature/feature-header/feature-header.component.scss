@@ -1,0 +1,17 @@
+@use '../../../../../ui/styles/variables.scss' as vr;
+@use '../../../../../ui/styles/mixins.scss' as mx;
+
+.header {
+    @include mx.flex-container(start, start, 24px, column);
+
+  &__tagline {
+    @include mx.font-to-use(20, 400);
+    color: #8f8b8b;
+  }
+
+  &__title {
+    @include mx.font-to-use(44, 600, vr.$font-secundary);
+    @include mx.text-properties(normal, 1.1);
+    color: vr.$color-black-secondary;
+  }
+}

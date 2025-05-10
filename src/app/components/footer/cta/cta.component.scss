@@ -1,0 +1,49 @@
+@use '../../../ui/styles//variables.scss' as vr;
+@use '../../../ui/styles/mixins.scss' as mx;
+
+.footer__cta {
+  @include mx.flex-container(start, center, 30px, column);
+  width: 100%;
+  padding-top: 150px;
+  background-color: vr.$color-purple;
+  text-align: center;
+
+  &__title {
+    @include mx.font-to-use(56, 600, vr.$font-secundary);
+    @include mx.text-properties(pretty);
+    width: 60%;
+    min-width: 750px;
+    background: vr.$linear-gradient-multicolor-light;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__comment {
+    @include mx.font-to-use(20, 600);
+    color: #ada3bb;
+  }
+
+  &__button {
+    @include mx.font-to-use(18, 700);
+    @include mx.button-parameters(
+      vr.$linear-gradient-multicolor,
+      none,
+      8px,
+      vr.$color-white,
+      vr.$shadow-primary
+    );
+    padding: 16px 35px;
+    background-size: 350%;
+    text-shadow: 1px 1px 2px vr.$color-text-shadow;
+    transition: background-size 0.2s ease-in-out;
+
+    &:hover {
+      filter: brightness(110%);
+      background-size: 100%;
+    }
+  }
+
+  &__image {
+    width: 45%;
+  }
+}

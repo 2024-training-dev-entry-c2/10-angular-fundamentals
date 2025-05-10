@@ -1,1 +1,22 @@
-$gray: #00000052;
+@use './fonts.scss';
+
+$font-primary: 'Eudoxus Sans';
+$font-secundary: 'P22 Mackinac Pro';
+
+$color-header: #ffffffee;
+$color-gray-primary: #333333;
+$color-gray-secondary: #ffffff97;
+$color-white:#fff;
+$color-white-secondary: #faf2e9;
+$color-white-terciary: #ffeef3;
+$color-white-quaternary: #dcd6fb;
+$color-black: #000;
+$color-black-secondary: #272525;
+$color-purple: #1d0042;
+$color-primary-shadow: #00000018;
+$color-text-shadow: #0000008f;
+
+$linear-gradient-multicolor: linear-gradient(79deg, #2b0aff, #ff5b8a 49%, #ff5b8a 55%, #fba64b 77%, #f99b52);
+$linear-gradient-multicolor-light: linear-gradient(79deg, #bb74e9, #f790cb 49%, #fbb4b6 77%, #fed5a6);
+
+$shadow-primary: 1px 5px 4px $color-primary-shadow;

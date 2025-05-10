@@ -1,0 +1,18 @@
+<article  class="article" [attr.aria-label]="'Article describing features and testimonial of ' + title()">
+  <div class="article__column">
+    <app-feature-header
+      [title]="title()"
+      [tagline]="tagline()"
+    ></app-feature-header>
+    <app-feature-content
+      [content]="content()"
+      [points]="points()"
+      [testimonial]="testimonial()"
+    ></app-feature-content>
+  </div>
+  <figure class="article__column">
+    <app-feature-video
+      [videos]="videos()"
+    ></app-feature-video>
+  </figure>
+</article>
