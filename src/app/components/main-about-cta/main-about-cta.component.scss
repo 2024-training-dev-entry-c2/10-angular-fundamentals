@@ -1,0 +1,54 @@
+@use "../../ui/styles/mixins.scss" as mixins;
+@use "../../ui/styles/variables.scss" as variables;
+
+.duties__about-cta {
+  @include mixins.flex-center(row, flex-start, flex-start, 10px);
+  border: 1px solid variables.$color-primary;
+  text-decoration: none;
+  color: variables.$color-background;
+  background-color: variables.$color-primary;
+  border-radius: 3px;
+  padding: 4px 12px;
+  white-space: nowrap;
+  border: none;
+  position: relative;
+
+  &-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &:hover {
+    background-color: variables.$color-hover;
+
+    &-icon {
+      animation: moveRight 0.4s forwards;
+
+      &-clone {
+        animation: appear 0.4s forwards;
+      }
+    }
+  }
+
+  &-icon {
+    margin: auto 0;
+    width: 12px;
+    padding-bottom: 2px;
+    transition: transform 0.5s;
+
+    &-clone {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      opacity: 0;
+      transition: transform 0.5s, opacity 0.5s;
+    }
+  }
+
+  &-text {
+    font-family: "PP Neue Montreal Mono Medium";
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+}

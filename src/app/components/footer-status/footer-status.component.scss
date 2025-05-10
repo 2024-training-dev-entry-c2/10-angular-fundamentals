@@ -1,0 +1,26 @@
+@use "../../ui/styles/mixins.scss" as mixins;
+@use "../../ui/styles/variables.scss" as variables;
+
+.duties__footer {
+  &-header {
+    @include mixins.flex-center(row, flex-start, flex-start, 6px);
+  }
+
+  &-title {
+    font-size: 1.6rem;
+  }
+
+  &-status {
+    @include mixins.flex-center(row, flex-start, flex-start, 4px);
+
+    &-indicator {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: rgb(9, 205, 9);
+      animation: opacity 2s infinite;
+      display: inline-block;
+      margin-top: 4px;
+    }
+  }
+}

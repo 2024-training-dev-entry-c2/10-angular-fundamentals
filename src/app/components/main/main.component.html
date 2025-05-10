@@ -1,0 +1,13 @@
+<main role="main" aria-label="Main" lang="en">
+  <app-main-intro></app-main-intro>
+  @for (project of projects; track project) {
+  <app-main-project
+    [projectClass]="project.projectClass"
+    [title]="project.title"
+    [images]="project.images"
+    (projectClicked)="handleProjectClick($event)"
+  ></app-main-project>
+  <app-main-separator></app-main-separator>
+  }
+  <app-main-about></app-main-about>
+</main>

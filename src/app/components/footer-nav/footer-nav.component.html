@@ -1,0 +1,14 @@
+<nav class="duties__footer-nav" aria-label="Social media and additional links">
+  <ul class="duties__footer-nav-list">
+    @for (link of links; track link) {
+    <li class="duties__footer-nav-item">
+      <a
+        href="#"
+        class="duties__footer-nav-link scramble-text"
+        [attr.data-text]="link.text"
+        >{{ link.text }}</a
+      >
+    </li>
+    }
+  </ul>
+</nav>

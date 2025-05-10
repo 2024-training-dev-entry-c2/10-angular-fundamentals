@@ -1,0 +1,44 @@
+@use "../../ui/styles/variables.scss" as variables;
+
+.duties {
+  &__nav {
+    z-index: 10;
+    font-family: "PP Neue Montreal Mono Medium";
+    position: fixed;
+    bottom: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-container {
+      cursor: pointer;
+      padding: 14px 20px;
+      width: 33%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: variables.$color-nav;
+      backdrop-filter: blur(32px);
+      border-radius: 1.6rem;
+    }
+
+    &-link {
+      text-decoration: none;
+
+      &:hover svg {
+        animation: spin 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+
+        &.stop-spin {
+          animation: spin-reverse 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+        }
+      }
+
+      svg {
+        margin-right: 2px;
+        width: 24px;
+        transition: transform 0.2s ease-in-out;
+      }
+    }
+  }
+}

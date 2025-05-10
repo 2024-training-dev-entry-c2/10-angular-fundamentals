@@ -1,15 +1,43 @@
-@mixin container($justify: start) {
+@use "./variables.scss" as variables;
+
+@mixin flex-center($direction: row, $justify: center, $align: center, $gap: 0) {
   display: flex;
-  align-items: center;
+  flex-direction: $direction;
   justify-content: $justify;
-}
-
-
-@mixin container-gap($gap: 0) {
-  @include container;
+  align-items: $align;
   gap: $gap;
 }
 
-@function px-to-rem($px, $base: 16) {
-  @return $px / $base * 1rem;
+@mixin grid-template($columns: 1fr, $rows: auto) {
+  display: grid;
+  grid-template-columns: $columns;
+  grid-template-rows: $rows;
+  padding-inline: variables.$padding-x;
+}
+
+@mixin responsive-font-size($min-size, $max-size) {
+  font-size: clamp($min-size, 1vw + $min-size, $max-size);
+}
+
+@mixin cta-base(
+  $direction: row,
+  $bg-color: variables.$color-primary,
+  $text-color: variables.$color-background,
+  $padding: 7px 10px,
+  $radius: 3px
+) {
+  @include flex-center($direction, flex-start, flex-start, 10px);
+  background-color: $bg-color;
+  color: $text-color;
+  text-decoration: none;
+  padding: $padding;
+  border-radius: $radius;
+  border: none;
+  position: relative;
+  font-size: 1.6rem;
+  height: fit-content;
+
+  &:hover {
+    background-color: variables.$color-hover;
+  }
 }

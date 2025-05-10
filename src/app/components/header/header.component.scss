@@ -1,33 +1,20 @@
-@use '../../ui/styles/variables.scss' as variables;
-@use '../../ui/styles/mixins.scss' as mixins;
+@use "../../ui/styles/variables.scss" as variables;
 
-.header {
-  @include mixins.container(space-between);
-  padding: 25px;
-  width: 1368px;
-  position: fixed;
-  top: 0;
-  left: 50%;
-  translate: -50%;
-
-  &__actions {
-    @include mixins.container-gap(30px);
+.duties {
+  &__header {
+    padding: variables.$padding-x;
   }
-  
-  &__link {
+
+  &__title {
+    font-family: variables.$font-family-primary;
+    font-size: clamp(75px, 33.3333px + 11.1111vw, 220px);
+    letter-spacing: -0.0675em;
+    line-height: 80%;
     color: #000;
-    text-decoration: none;
-    font-weight: 600;
-  }
-  
-  &__button {
-    color: #FFF;
-    background-color: #000;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 17px;
-    font-weight: 500;
-    border: none;
-    cursor: pointer;
+
+    &-separator {
+      height: clamp(280px, 245.517px + 9.1954vw, 400px);
+      user-select: none;
+    }
   }
 }

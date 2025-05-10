@@ -1,0 +1,32 @@
+<section class="duties__intro" aria-label="Duties Intro " lang="en">
+  <div class="duties__intro-content">
+    <div class="duties__intro-content-wrapper">
+      <p class="duties__intro-title">
+        DUTIES IS A DESIGN STUDIO <br />AND VENTURE PARTNER
+      </p>
+      <div class="duties__intro-helper">
+        <p class="duties__intro-subtitle">WE HELP YOU:</p>
+        <ul class="duties__intro-list">
+          @for (item of introItems; track item) {
+          <li class="duties__intro-item">- {{ item }}</li>
+          }
+        </ul>
+      </div>
+    </div>
+    <div class="duties__status">
+      <div class="duties__status-wrapper">
+        <p class="duties__status-title">CURRENTLY:</p>
+        <div
+          [class.duties__status-indicator]="true"
+          [class.duties__status-indicator--on]="isWorkingHours"
+          [class.duties__status-indicator--off]="!isWorkingHours"
+        ></div>
+        <span class="duties__status-label">ON-DUTY</span>
+      </div>
+      <div class="duties__status-opening">
+        <time datetime="01:51" class="duties_status-time">01:51, </time>
+        <address class="duties__status-location">NORWAY</address>
+      </div>
+    </div>
+  </div>
+</section>

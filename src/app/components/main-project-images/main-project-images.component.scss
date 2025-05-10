@@ -1,0 +1,28 @@
+@use "../../ui/styles/mixins.scss" as mixins;
+@use "../../ui/styles/variables.scss" as variables;
+
+.duties__project {
+  &-container {
+    gap: 12px;
+    width: 100%;
+
+    > img {
+      width: 100%;
+      border-radius: variables.$border-radius;
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+
+  &---neural {
+    @include mixins.grid-template(1.4fr 2fr 1fr);
+  }
+
+  &---made {
+    @include mixins.grid-template(1.85fr 1fr 1.3fr);
+  }
+
+  &---figures {
+    @include mixins.grid-template(1fr 2fr 1.3fr);
+  }
+}
