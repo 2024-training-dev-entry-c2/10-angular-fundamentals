@@ -1,0 +1,174 @@
+@use "../../ui/styles/mixins.scss" as mixins;
+@use "../../ui/styles/variables.scss" as variables;
+
+footer {
+  background-color: variables.$black;
+  color: variables.$white;
+  padding: 40px 20px;
+
+  .footer-links {
+    padding-top: 30px;
+    padding-bottom: 100px;
+    display: flex;
+    margin-bottom: 40px;
+
+    &__container {
+      display: flex;
+      gap: 50px;
+      width: 50%;
+      margin-left: 5%;
+      > div {
+        flex: 1;
+      }
+    }
+
+    &__title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: variables.$footer-text;
+    }
+
+    &__link {
+      text-decoration: none;
+      list-style: none;
+      line-height: 2rem;
+      font-size: 1.2rem;
+      color: variables.$footer-text;
+    }
+
+    &__menu {
+      list-style: none;
+      padding: 0;
+
+      &__item {
+        margin-bottom: 8px;
+
+        &__link {
+          color: variables.$white;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-email__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    padding-left: 80px;
+
+    h3 {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .footer-email__input-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 500px;
+      color: variables.$white;
+
+      .footer-email__input {
+        height: 3.75rem;
+        padding: 0.875rem;
+        width: 100%;
+        border: 0.8px solid #aaaaaa;
+        border-radius: 0.9375rem;
+        background-color: rgba(0, 0, 0, 0) !important;
+
+        > span {
+          font-family: "Press Start 2P", sans-serif;
+        }
+
+        &::placeholder {
+          color: variables.$white;
+        }
+      }
+
+      .footer-email__icon {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.5rem;
+        color: variables.$white;
+        pointer-events: none;
+      }
+    }
+  }
+
+  .footer-legal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid variables.$gray-dark;
+    padding-top: 20px;
+    padding-bottom: 30px;
+
+    &__icon-city {
+      display: flex;
+      gap: 20px;
+      width: 50%;
+      justify-content: space-around;
+      padding: 0 140px;
+    }
+
+    &__link {
+      color: variables.$white;
+      text-decoration: none;
+    }
+
+    &__menu {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      padding: 0;
+      width: 50%;
+      justify-content: space-around;
+
+      &__item {
+        &__link {
+          color: variables.$white;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    &__icon {
+      display: flex;
+      gap: 15px;
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &__city {
+      p {
+        margin: 0;
+        color: variables.$white;
+      }
+    }
+  }
+}
+
+.footer-email__input {
+  height: 3.75rem;
+  padding: 0.875rem;
+  width: 100%;
+  border: 0.8px solid #aaaaaa;
+  border-radius: 0.9375rem;
+  background-color: rgba(0, 0, 0, 0) !important;
+}

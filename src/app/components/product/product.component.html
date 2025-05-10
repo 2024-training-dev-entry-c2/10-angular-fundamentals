@@ -1,0 +1,30 @@
+<section class="product">
+  <div class="product__container" *ngFor="let product of products">
+    <div class="product__image">
+      <a [href]="product.link" class="product__image-link">
+        <app-product-image
+          *ngIf="product.mediaType === 'image'"
+          [mediaUrl]="product.mediaUrl"
+          [altText]="product.name"
+        ></app-product-image>
+        <app-product-video
+          *ngIf="product.mediaType === 'video'"
+          [mediaUrl]="product.mediaUrl"
+        ></app-product-video>
+      </a>
+    </div>
+    <div class="product__info">
+      <h2 class="product__info-title">
+        {{ product.name }}
+      </h2>
+      <p class="product__info-content">
+        {{ product.description }}
+      </p>
+      <div class="product__button-container">
+        <a [href]="product.link" class="product__button">
+          {{ product.buttonText }}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
