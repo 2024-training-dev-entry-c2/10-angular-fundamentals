@@ -1,0 +1,19 @@
+@use '../../ui/styles/variables.scss' as variables;
+@use '../../ui/styles/mixins.scss' as mixins;
+
+
+
+/*************************main product*************************/
+.main-product {
+    background-color: variables.$primary-color;
+    padding: 20px;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    margin-top: -345px;
+    padding: 30px 180px;
+}
+
+
+
+
