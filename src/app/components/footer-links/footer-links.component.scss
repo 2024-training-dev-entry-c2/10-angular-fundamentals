@@ -1,0 +1,14 @@
+@use "../../ui/styles/variables.scss" as variables;
+@use "../../ui/styles/mixins.scss" as mixins;
+
+.footer__links {
+  @include mixins.container-column(start);
+  @include mixins.font(12px, 500);
+  width: 200px;
+  font-family: "Segoe UI";
+  letter-spacing: 2px;
+
+  a {
+    color: variables.$color-font;
+  }
+}

@@ -1,0 +1,5 @@
+@use "../../ui/styles/variables.scss" as variables;
+
+.main {
+  background-color: variables.$color-background;
+}

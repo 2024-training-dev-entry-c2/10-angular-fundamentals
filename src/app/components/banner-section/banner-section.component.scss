@@ -1,0 +1,31 @@
+@use "../../ui/styles/mixins.scss" as mixins;
+
+.banner {
+  @include mixins.container-column();
+  padding-bottom: 200px;
+  padding-top: 200px;
+
+  &__container {
+    width: 90%;
+
+    @media (min-width: 992px) {
+      width: 80%;
+    }
+  }
+
+  &__title {
+    @include mixins.font(42px);
+    width: 100%;
+    padding-bottom: 200px;
+
+    @media (min-width: 992px) {
+      width: 60%;
+      font-size: 60px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+}

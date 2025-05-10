@@ -1,0 +1,23 @@
+<li>
+    <article class="accordion__item">
+        <button (click)="toggleAccordion(item.id)" aria-expanded="false" class="accordion__title">
+            <span>{{item.title}}</span>
+            <div>
+                @if(visible){
+                <img aria-hidden="true" class="accordion__icon accordion__icon--minus" src="assets/images/minus.svg"
+                    alt="Contract" />
+                }@else{
+                <img aria-hidden="true" class="accordion__icon accordion__icon--plus" src="assets/images/plus.svg"
+                    alt="Expand" />
+                }
+
+            </div>
+        </button>
+        @if(visible) {
+        <div class="accordion__content">
+            <p>{{item.content}}</p>
+        </div>
+        }
+
+    </article>
+</li>

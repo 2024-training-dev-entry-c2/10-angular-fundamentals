@@ -1,0 +1,7 @@
+<div class="accordion" aria-label="Netiquette guidelines">
+    <ul class="accordion__list">
+        @for(item of accordionItems; track $index) {
+        <app-acordion-item (onClick)="handleClick($event)" [item]="item"></app-acordion-item>
+        }
+    </ul>
+</div>

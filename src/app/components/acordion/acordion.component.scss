@@ -1,0 +1,16 @@
+@use "../../ui/styles/variables.scss" as variables;
+@use "../../ui/styles/mixins.scss" as mixins;
+
+.accordion {
+  @include mixins.container();
+  padding-top: 46px;
+  padding-bottom: 100px;
+
+  &__list {
+    width: 94%;
+
+    @media (min-width: 992px) {
+      width: 70%;
+    }
+  }
+}

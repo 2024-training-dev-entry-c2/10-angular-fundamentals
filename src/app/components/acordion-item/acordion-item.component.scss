@@ -1,0 +1,48 @@
+@use "../../ui/styles/variables.scss" as variables;
+@use "../../ui/styles/mixins.scss" as mixins;
+
+.accordion {
+  &__item {
+    border-top: 1px solid variables.$color-font;
+  }
+
+  &__title {
+    @include mixins.container(space-between);
+    @include mixins.font(36px);
+    color: variables.$color-font;
+    background-color: variables.$color-background;
+    width: 100%;
+    padding: 20px 0;
+    text-align: left;
+    cursor: pointer;
+    align-items: start;
+
+    @media (min-width: 992px) {
+      font-size: 66px;
+      width: 95.7%;
+    }
+  }
+
+  &__icon {
+    width: 30px;
+    height: 30px;
+    transition: opacity 0.3s ease;
+
+    @media (min-width: 992px) {
+      margin-top: 24px;
+    }
+  }
+
+  &__content {
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0 15px;
+
+    p {
+      margin: 15px 0;
+      font-size: 32px;
+      line-height: 1.5;
+      color: variables.$color-font;
+    }
+  }
+}

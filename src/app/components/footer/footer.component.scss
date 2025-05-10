@@ -1,0 +1,23 @@
+@use "../../ui/styles/variables.scss" as variables;
+@use "../../ui/styles/mixins.scss" as mixins;
+
+.footer {
+  background-color: variables.$color-background;
+  padding-top: 210px;
+
+  &__container {
+    @include mixins.container(end);
+    flex-wrap: wrap;
+    width: 92%;
+
+    @media (min-width: 992px) {
+      margin-bottom: 196px;
+      width: 81.5%;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+}
