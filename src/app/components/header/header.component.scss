@@ -1,33 +1,108 @@
-@use '../../ui/styles/variables.scss' as variables;
-@use '../../ui/styles/mixins.scss' as mixins;
+@use '../../styles/variables' as vars;
+@use '../../styles/mixin' as mix;
 
-.header {
-  @include mixins.container(space-between);
-  padding: 25px;
-  width: 1368px;
-  position: fixed;
-  top: 0;
-  left: 50%;
-  translate: -50%;
+.navbar {
+    background-color: vars.$color-blur;
+    backdrop-filter: blur(20px);
+    width: 100%;
+    top: 0px;
+    position: fixed;
+    z-index: 100;
+    padding-top: vars.$spacing-medium;
+    padding-bottom: vars.$spacing-medium;
+    transition: transform 0.3s ease-in-out;
+    &.hidden {
+      transform: translateY(-100%);
+    }
+  
+    &__container {
+      @include mix.flex-center();
+      width: 100%;
+      padding: 0 vars.$spacing-large;
+      max-width: 100%;
+      gap: vars.$size-medium;
+      z-index: 10;
+      transition: transform 0.3s ease-in-out;
+    }
+  
+    &__logo {
+      flex-grow: 0;
+      width: auto;
+      @include mix.flex-center();
+      z-index: 1000;
+    }
+  
+    &__link {
+      @include mix.typography(vars.$font-size-small, vars.$font-weight-light, 145%, hsl(0, 0%, 90%));
+      letter-spacing: 0.00625;
+      text-decoration: none;
+      cursor: pointer;
+      & svg {
+        color: hsl(0, 0%, 90%);
+        display: block;
+      }
+    }
+  
+    &__section {
+      @include mix.flex-center();
+      flex-grow: 1;
+      z-index: 100;
+    }
+    &__menu {
+      @include mix.flex(row, flex-start, center, 1.25rem);
+      padding-left: vars.$size-small;
+      &-list {
+        display: flex;
+        list-style: none;
+        gap: 1.2rem;
+      }
+    }
+  
+    &__menu-item,
+    &__actions-item {
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+      position: relative;
+      white-space: nowrap;
+      border-radius: vars.$border-radius-small;
+      color: vars.$color-menu-link;
+      display: block;
+    }
+    &__menu-link,
+    &__actions-link {
+      @include mix.typography(0.875em, vars.$font-weight-medium, 1.45, vars.$color-menu-link);
+      text-decoration: none;
+      border: none;
+      background-color: transparent;
+    }
+  
+    &__menu-link:hover {
+      color: #ddd;
+    }
+  
+    &__actions {
+      @include mix.flex(row, flex-start, center, 1.25);
+      gap: 1.25;
 
-  &__actions {
-    @include mixins.container-gap(30px);
-  }
+    }
+    &__actions-list {
+      @include mix.flex(row, flex-start, center, 1.25rem);
+      list-style: none;
+    }
+    &__actions--separator {
+      font-size: 14px;
+      color: vars.$color-actions-separator;
+    }
+    &__actions-link:hover {
+      color: vars.$color-text;
+    }
   
-  &__link {
-    color: #000;
-    text-decoration: none;
-    font-weight: 600;
+    &__button {
+      @include mix.button-style(#333, #333);
+      @include mix.typography(vars.$font-size-small, 600, 1.45rem, vars.$color-text);
+      transition: background-color 0.2s ease-in-out;
+    }
   }
-  
-  &__button {
-    color: #FFF;
-    background-color: #000;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 17px;
-    font-weight: 500;
-    border: none;
-    cursor: pointer;
-  }
-}
+
+
+    

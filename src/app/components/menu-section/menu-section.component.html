@@ -1,0 +1,33 @@
+<div class="navbar__section">
+    <nav class="navbar__menu" role="navigation">
+        <ul class="navbar__menu-list">
+            @for (item of menuItems; track $index) {
+            <li class="navbar__menu-item">
+                @if(item.hasSubMenu){
+                <button class="navbar__menu-link" (mouseenter)="toggleSubMenu(true)"
+                    (mouseleave)="toggleSubMenu(false)">
+                    {{ item.name }}
+                </button> }
+                @else {
+                <a class="navbar__menu-link" href="{{ item.link }}">
+                    {{ item.name }}
+                </a>
+                }
+            </li>
+            }
+        </ul>
+    </nav>
+</div>
+
+@if (isSubMenuProductsVisible){
+<app-sub-menu (mouseenter)="toggleSubMenu(true)" (mouseleave)="toggleSubMenu(false)" [title]="submenus[0].title"
+    [cards]="submenus[0].cards" [links]="submenus[0].links">
+</app-sub-menu>
+}
+
+@if(isSubMenuResourcerVisible){
+<app-sub-menu (mouseenter)="toggleSubMenuResourcer(true)" (mouseleave)="toggleSubMenuResourcer(false)"
+    [title]="submenus[1].title" [cards]="submenus[1].cards" [links]="submenus[1].links"
+    [classCard]="submenus[1].classCard">
+</app-sub-menu>
+}

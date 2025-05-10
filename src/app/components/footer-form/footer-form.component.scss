@@ -1,0 +1,68 @@
+
+@use "../../styles/variables" as vars;
+@use "../../styles/mixin" as mix;
+
+
+.footer{
+    padding-top: vars.$spacing-small;
+    padding-bottom: vars.$size-medium;
+    padding-right: vars.$spacing-small;
+    padding-left: vars.$spacing-small;
+    &__section {
+      @include mix.container(0 vars.$size-small, 92.5rem);
+    }
+    &__container {
+      padding:vars.$spacing-large;
+      padding-top:vars.$spacing-large;
+      padding-bottom: vars.$size-small;
+      border-radius: vars.$border-radius-medium;
+      background: #1a1a1a;
+    }
+    &__nav {
+      @include mix.flex(row, space-between, flex-start,vars.$spacing-large);
+    }
+    &__form {
+      width: 448px;
+    }
+    &__form h2 {
+      @include mix.typography(1.75rem, vars.$font-weight-light, 2.18rem, inherit);
+      text-align: left;
+    }
+
+    &__form p {
+      @include mix.typography(1.125rem, vars.$font-weight-light, normal, vars.$color-gray-light);
+      text-align: left;
+      margin-top: vars.$size-small;
+      margin-bottom: vars.$size-small;
+    }
+    &__form form {
+      flex-direction: row;
+      align-items: start;
+    }
+  
+    &__input {
+      @include mix.typography(1.02rem, vars.$font-weight-medium, normal, vars.$color-text-light);
+      @include mix.size(100%, 40px);
+      text-align: start;
+      margin-bottom: vars.$spacing-small;
+      max-width: 80%;
+      border-radius: vars.$border-radius-small;
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+      border: none;
+      background: hsl(0, 0%, 14%);
+      margin-bottom: vars.$size-small;
+      padding: 0 vars.$size-small;
+    }
+  
+    &__button {
+      @include mix.button-style(vars.$color-text, hsl(0, 0%, 95%), vars.$colot-text-dark);
+      align-items: center;
+      justify-content: center;
+      outline: 2px solid transparent;
+      border-radius: vars.$border-radius-small;
+      height: 2.5rem;
+      font-size: vars.$font-size-small;
+      padding: 0 vars.$size-small;
+    }
+}

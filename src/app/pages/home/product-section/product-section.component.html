@@ -1,0 +1,55 @@
+<section class="product">
+    <header class="product__header">
+        <p class="product__subtitle">EMBEDDED FINANCE</p>
+        <h2 class="product__title">Meet our products</h2>
+    </header>
+    <div class="product__container">
+        <div class="product__list">
+            <!--! Product 1 -->
+            <article class="{{classOpenCapital}} product__item--capital" (mouseenter)="toggleproductCapital(true)"
+                (mouseleave)="toggleproductCapital(false)">
+
+                <div class="product__content">
+                    <svg class="product__icon" viewBox="0 0 40 41" focusable="false"
+                        style="width: 41px; height: 40px;">
+                        <title>Arrow icon</title>
+                        <path fill="none" d="M17.3333 16.7119H24.1667V23.5452M16 24.8786L24 16.8786"
+                            stroke="currentColor" stroke-width="1.5"></path>
+                    </svg>
+                    <h3 class="product__name">Capital</h3>
+                    <p class="product__description">Give your customers streamlined access to capital without
+                        ever leaving your platform.</p>
+                    <p class="product__description-hide">Pipe makes working capital a seamless, native
+                        experience for
+                        your customers.</p>
+
+                    <a href="#" class="product__link" aria-label="Learn more about Capital">Learn more</a>
+                </div>
+                <img src="images/product-selector-capital-desktop.webp" alt="Capital offering showcasing simplified access to financing osptions for customer"
+                    class="product__image" alt=" Capital Offering with simplified access for customers">
+            </article>
+            <!-- Product 2 -->
+            <article class="{{classOpenBusinnessCard}} product__item--business-card" (mouseenter)="toggleproductBusinnessCard(true)"
+                (mouseleave)="toggleproductBusinnessCard(false)">
+
+                <div class="product__content product__card--highlight">
+                    <svg class=" product__icon product__icon--highlight" viewBox="0 0 40 41" focusable="false"
+                        style="width: 41px; height: 40px;" aria-hidden="true">
+                        <path fill="none" d="M17.3333 16.7119H24.1667V23.5452M16 24.8786L24 16.8786"
+                            stroke="currentColor" stroke-width="1.5"></path>
+                    </svg>
+
+                    <h3 class="product__name">Business Card</h3>
+                    <p class="product__description">Give your customers access to Pipe's frictionless card
+                        issuing, embedded natively inside your platform.</p>
+                    <p class="product__description-hide">Launch a branded business card offering to help your
+                        customers access working capital and optimize spend management.</p>
+
+                    <a href="#" class="product__link" aria-label="Learn more about Business Card">Learn more</a>
+                </div>
+                <img src="./images/product-selector-card-desktop.webp" alt="Business card offering with frictionless card issuing for customers"
+                    class="product__image">
+            </article>
+        </div>
+    </div>
+</section>

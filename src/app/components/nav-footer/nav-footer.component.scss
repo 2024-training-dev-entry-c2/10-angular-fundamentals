@@ -1,0 +1,39 @@
+@use "../../styles/variables" as vars;
+@use "../../styles/mixin" as mix;
+
+.footer__menu {
+  @include mix.flex(row, flex-start, stretch, vars.$size-small);
+  width: 28%;
+  // flex-wrap: wrap;
+  &-item {
+    width: auto;
+    flex: 1;
+    min-width: 8rem;
+    margin-bottom: vars.$spacing-large;
+  }
+  &-item  h2 {
+    @include mix.text-style(
+      vars.$font-secondary,
+      vars.$font-size-very-small,
+      vars.$font-weight-medium,
+      vars.$color-gray-light
+    );
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+  }
+
+  &-item  a {
+    @include mix.button-style(inherit, inherit, hsl(0, 0%, 80%));
+    @include mix.typography(
+      vars.$font-size-small,
+      inherit,
+      145%,
+      vars.$color-menu-link
+    );
+    padding: 0;
+    text-decoration: none;
+    outline: 2px solid transparent;
+    margin-bottom: 0.38rem;
+    display: block;
+  }
+}

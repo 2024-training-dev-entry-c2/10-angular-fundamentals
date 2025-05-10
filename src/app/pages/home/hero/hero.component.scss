@@ -1,0 +1,154 @@
+@use '../../../styles/variables' as vars;
+@use '../../../styles/mixin' as mix;
+
+
+.hero {
+    @include mix.size(100%, 100%);
+    padding-top: 11rem;
+    position: relative;
+    justify-content: center;
+    overflow: hidden;
+    &__data {
+      @include mix.flex(row, flex-start, flex-end, 12rem);
+      padding-top: 0px;
+    }
+  
+    &__title {
+      position: relative;
+      z-index: 1;
+      width: auto;
+      max-width: 1512px;
+      text-wrap: balance;
+      padding-top: vars.$spacing-large;
+      padding-bottom: vars.$spacing-large;
+      padding-inline-start: vars.$spacing-large;
+      &-description {
+        @include mix.text-style( vars.$font-primary, 3.5rem,  vars.$font-weight-medium, #e6e6e6);
+        letter-spacing: -0.0425em;
+        line-height: 1.1;
+        margin-top:  vars.$size-small;
+        max-width: 838px;
+        text-align: left;
+        margin-left: calc(0.125rem);
+      }
+    }
+  
+    &__label {
+      @include mix.text-style(
+         vars.$font-secondary,
+         vars.$font-size-very-small,
+         vars.$font-weight-medium,
+        hsla(0, 0%, 90%, 0.6)
+      );
+      margin-bottom: 0px;
+      text-align: left;
+      line-height: 1.2;
+      letter-spacing: 0.0625em;
+      text-transform: uppercase;
+    }
+  
+    &__detail--first {
+      text-align: left;
+      display: inline;
+    }
+    &__detail--second {
+      display: block;
+    }
+    &__text-container {
+      @include mix.flex(column, end, left, 20px);
+      padding-bottom: vars.$spacing-large;
+      & p {
+        @include mix.typography( vars.$size-small, 350, 140%, inherit);
+        padding-right:  vars.$size-small;
+        text-align: left;
+        margin-top: vars.$spacing-large;
+        max-width: 472px;
+      }
+      & button {
+        @include mix.text-style( vars.$font-primary,  vars.$font-size-small,  vars.$font-weight-medium,  vars.$colot-text-dark);
+        @include mix.button-style( vars.$color-text, hsl(0, 0%, 90%),  vars.$colot-text-dark);
+        @include mix.size(200px, 2.5rem);
+        padding-inline-start: 3rem;
+        padding-inline-end: 3rem;
+        line-height: 1.45;
+        border-radius:  vars.$border-radius-small;
+      }
+    }
+  
+    /*! content to corusel*/
+    &__content {
+      margin-bottom:  vars.$size-medium;
+      overflow: hidden;
+    }
+  
+    &__carousel-loop {
+      @include mix.flex(row, center, center);
+      max-width: 100%;
+      padding: 0;
+      overflow: hidden;
+      position: relative;
+      &::after {
+        right: 0;
+        top: 0;
+        transform: rotateZ(180deg);
+      }
+    
+      &::before {
+        left: 0;
+        top: 0;
+      }
+      
+    }
+  
+  
+    &__separator {
+      opacity: 0.4;
+      border: 0;
+      border-style: solid;
+      border-bottom-width: 0.01rem;
+      width: 100%;
+      right: 100px;
+      color: hsla(0, 0, 14%, 1);
+      display: block;
+    }
+    &__features {
+      grid-gap:  vars.$size-medium;
+      padding-top:  vars.$spacing-medium;
+      padding-bottom:  vars.$spacing-medium;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      display: grid;
+      max-width: 72rem;
+      -webkit-padding-start:  vars.$size-small;
+      &-item {
+        @include mix.flex-center(row, start);
+        border-right: 0;
+        border-top: 0;
+        border-left: 0;
+        width: auto;
+        align-content: start;
+        gap: 0.75rem;
+        & p {
+          @include mix.text-style( vars.$font-primary,  vars.$font-size-small,  vars.$font-weight-light, #fafafc);
+          @include mix.typography( vars.$font-size-small,  vars.$font-weight-light, 1.2, inherit);
+          white-space: nowrap;
+        }
+      }
+    }
+    &__background {
+      background-color: #101c56;
+      padding-top: 0.125rem;
+      padding-bottom: 0.333rem;
+      border-radius: 0.38rem;
+      padding-left: 8px;
+      padding-right: 8px;
+      margin-bottom: 0px;
+      & svg {
+        @include mix.size( vars.$size-small,  vars.$spacing-medium);
+        display: inline-block;
+        line-height: 1em;
+        flex-shrink: 0;
+        color: hsla(230, 68%, 70%, 1);
+        vertical-align: middle;
+      }
+    }
+  }

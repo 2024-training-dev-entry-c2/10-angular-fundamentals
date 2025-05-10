@@ -1,0 +1,14 @@
+
+<article [class]="classOpen" class="product__item" (mouseenter)="toggleProduct(true)" (mouseleave)="toggleProduct(false)">
+    <div class="product__content">
+      <svg class="product__icon" viewBox="0 0 40 41" focusable="false" style="width: 41px; height: 40px;">
+        <title>Arrow icon</title>
+        <path fill="none" d="M17.3333 16.7119H24.1667V23.5452M16 24.8786L24 16.8786" stroke="currentColor" stroke-width="1.5"></path>
+      </svg>
+      <h3 class="product__name">{{ productName }}</h3>
+      <p class="product__description">{{ productDescription }}</p>
+      <p class="product__description-hide">{{ productDescriptionHide }}</p>
+      <a href="#" class="product__link" aria-label="Learn more about " >Learn more</a>
+    </div>
+    <img [src]="productImage" alt="{{ productName }}" class="product__image">
+  </article>

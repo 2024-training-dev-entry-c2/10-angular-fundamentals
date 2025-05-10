@@ -1,0 +1,140 @@
+@use '../../../styles/variables' as vars;
+@use '../../../styles/mixin' as mix;
+.partners {
+    @include mix.flex-center(column, center);
+    @include mix.border-shadow(10px, 0 4px 8px rgba(0, 0, 0, 0.1));
+    padding-top: 6rem;
+    padding-bottom: 7.5rem;
+    background: #fafafa;
+    text-align: center;
+    width: 100%;
+    &__header {
+      width: 100%;
+      max-width: max-content;
+      padding: 0 16px;
+      text-align: center;
+      margin-bottom: vars.$size-medium;
+      & p {
+        @include mix.text-style(vars.$font-primary, 1.25rem, vars.$font-weight-light, vars.$colot-text-dark);
+        margin-top:vars.$spacing-large;
+        line-height: 1.25;
+        text-align: center;
+        padding: 0 10rem;
+      }
+    }
+  
+    &__header-description {
+      @include mix.flex-center(row, center);
+      text-align: center;
+    }
+  
+    &__data {
+      @include mix.flex(column, center, center, vars.$size-small);
+      @include mix.container(0, 45rem);
+      line-height: 100%;
+      text-align: center;
+      & p {
+        @include mix.text-style(vars.$font-secondary, vars.$font-size-very-small, vars.$font-weight-medium, #1a1a1a99);
+        line-height: 1.2;
+        letter-spacing: 0.0625em;
+        text-transform: uppercase;
+      }
+  
+      & h2 {
+        @include mix.text-style(vars.$font-primary, 3rem, vars.$font-weight-light, vars.$colot-text-dark);
+        line-height: 1.1;
+        font-style: normal;
+        letter-spacing: -0.00666em;
+      }
+    }
+  
+    &__testimonial {
+      @include mix.flex-center(column, center);
+      @include mix.container( 2rem 1rem 0 1rem, inherit);
+      width: 100%;
+      text-align: center;
+      &-author {
+        @include mix.flex(row, center, stretch);
+        margin-top: 48px;
+      }
+  
+      &-data {
+        @include mix.flex(row, space-between, flex-end);
+        & a {
+          font-size: vars.$font-size-small;
+          padding: vars.$size-small 0.8rem;
+          background-color: #5c72e0;
+          color: vars.$color-text;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+      }
+    }
+  
+    &__logos {
+      width: 100%;
+      max-width: 950px;
+      display: flex;
+      overflow: hidden;
+      margin: 0 156px;
+      padding: 0 16px;
+    }
+  
+    &__logos-wrapper{
+      @include mix.flex-center();
+      width: 100%;
+      & img {
+        width: 141px;
+      }
+    }
+  
+    &__container {
+      @include mix.flex(row, center, center);
+      @include mix.size(60rem, auto);
+      padding: vars.$spacing-small;
+      position: relative;
+      background-color: #3d57da;
+      border-radius: vars.$font-size-small;
+    }
+  
+    &__picture {
+      word-wrap: break-word;
+  
+      max-width: 406px;
+      & img {
+        object-fit: contain;
+        border-radius: 0.63rem;
+        width: 398px;
+      }
+    }
+  
+    &__information {
+      @include mix.flex(column, space-between, stretch, 0);
+      @include mix.size(100%, 100%);
+      padding: vars.$spacing-medium;
+      & svg {
+        width: 30px;
+      }
+      & blockquote {
+        @include mix.text-style(vars.$font-primary, vars.$spacing-medium, vars.$font-weight-light, vars.$color-text);
+        line-height: 1.25;
+        letter-spacing: -0.00666em;
+        text-align: left;
+      }
+    }
+  
+    &__name {
+      font-size: vars.$font-size-small;
+      color: vars.$color-text;
+      margin-bottom: 10px;
+      line-height: 0.5;
+      text-align: left;
+    }
+    &__company {
+      font-size: vars.$font-size-small;
+      color: hsla(0, 0%, 90%, 0.6);
+      line-height: 1;
+    }
+  }
+  

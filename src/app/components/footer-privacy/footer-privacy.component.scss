@@ -1,0 +1,35 @@
+
+@use "../../styles/variables" as vars;
+@use "../../styles/mixin" as mix;
+
+.footer {
+
+    &__privacy-items {
+      @include mix.flex-center(row, center);
+      order: 0;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+
+    }
+    &__privacy-items  a {
+      @include mix.typography(0.7rem, vars.$font-weight-light, normal, #fafafcd9);
+      cursor: pointer;
+      text-decoration: none;
+    }
+    &__privacy-items  p {
+      @include mix.typography(0.7rem, 400, normal, vars.$color-gray-light);
+    }
+  
+    &__logos {
+      gap: 0.625rem;
+      margin: 0 0 0 auto;
+      order: 1;
+      display: inline-flex;
+    }
+
+    &__icon{
+        fill: var(--color-text);
+        @include mix.size(vars.$spacing-medium, vars.$spacing-medium);
+        color: vars.$color-gray-light;
+    }
+  }

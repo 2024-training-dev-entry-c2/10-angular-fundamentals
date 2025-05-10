@@ -1,0 +1,32 @@
+<div class="navbar__actions">
+    <ul class="navbar__actions-list">
+        <li class="navbar__actions-item">
+            <button class="navbar__actions-link menu__company" aria-label="Learn about our company"
+                (mouseenter)="toggleSubMenuCompany(true)" (mouseleave)="toggleSubMenuCompany(false)">Company</button>
+        </li>
+        <li class="navbar__actions-item navbar__actions--separator">|</li>
+        <li class="navbar__actions-item">
+            <button class="navbar__actions-link  menu__sing-in" (mouseenter)="toggleSubMenuSingin(true)"
+                (mouseleave)="toggleSubMenuSingin(false)" aria-label="Sign in to your account">Sign
+                in</button>
+        </li>
+        <li class="navbar__actions-item">
+            <button class="navbar__button navbar__button--demo" aria-label="Book a demo of our financial solutions">
+                Book a demo
+            </button>
+        </li>
+    </ul>
+</div>
+
+@if (isSubMenuSinginVisible){
+<app-sub-menu (mouseenter)="toggleSubMenuSingin(true)" (mouseleave)="toggleSubMenuSingin(false)"
+    [title]="submenus[0].title" [cards]="submenus[0].cards" [links]="submenus[0].links">
+</app-sub-menu>
+}
+
+@if (isSubMenuCompanyVisible){
+<app-sub-menu (mouseenter)="toggleSubMenuCompany(true)" (mouseleave)="toggleSubMenuCompany(false)"
+    [title]="submenus[1].title" [cards]="submenus[1].cards" [links]="submenus[1].links"
+    [classCard]="submenus[1].classCard">
+</app-sub-menu>
+}

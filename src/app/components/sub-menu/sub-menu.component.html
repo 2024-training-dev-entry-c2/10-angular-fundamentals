@@ -1,7 +1,32 @@
-<menu>
-  @for (item of items(); track $index) {
-    <li (click)="handleClick(item)"><a [tabindex]="$index" href="#">{{item}}</a></li>
-  }
+<nav class="navbar__submenu-products navbar__submenu" role="menu" aria-label="Product Submenu">
+    <div class="navbar__submenu-container">
+        <p>{{title}}</p>
+        <div class="navbar__submenu--items">
+            <div class="navbar__submenu-cards">
 
-  <!-- <li *ngFor="let item of items(); index as i"><a [tabindex]="i" href="#">{{item}}</a></li> -->
-</menu>
+                @for(item of cards; track $index) {
+                    <div class=" {{classCard}}">
+                        <img alt="{{item.altText}}" src="{{item.imgSrc}}" label="Advance Amount Card">
+                        <p>{{item.label}}</p>
+                    </div>
+                }
+
+            </div>
+            <hr class="submenu__separator" aria-hidden="true">
+            <div class="submenu__list">
+                <div class="submenu__option">
+                    <p>{{links.title}}</p>
+                    @for (item of links.ref; track $index) {
+                        <a href="{{item.href}}">{{item.text}}</a>
+                    }
+                </div>
+                <div class="submenu__option">
+                    <p>Support</p>
+                    <a href="">Contact</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+ </nav>

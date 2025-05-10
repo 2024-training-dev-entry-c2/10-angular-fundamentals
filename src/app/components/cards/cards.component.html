@@ -1,0 +1,17 @@
+<ul class="insights__list" role="list" aria-labelledby="insights-title">
+@for (item of insights; track $index) {
+    <li class="insights__item" (click)="onSelectArticle(item.name)">
+      <article class="insights__article {{ item.additionalClass }}">
+        <p class="insights__number" aria-hidden="true">{{ item.number }}</p>
+        <div class="insights__personal {{ item.personalClass }}">
+          <h3>{{ item.name }}</h3>
+          <p>{{ item.position }}</p>
+        </div>
+        <div class="insights__text {{ item.textClass }}">
+          <p>{{ item.description }}</p>
+          <a [href]="item.link">Read more</a>
+        </div>
+      </article>
+    </li>
+  }
+</ul>

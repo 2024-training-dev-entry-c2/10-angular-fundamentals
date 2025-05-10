@@ -1,0 +1,11 @@
+<div class="footer__form">
+    <h2 class="footer__form-title">Sign up for email updates</h2>
+    <p class="footer__form-description">Your one-stop shop for the tech, business, and finance news you
+        need to know each week.</p>
+    <form action="" method="post" aria-labelledby="form-email" aria-label="Subscribe to our newsletter"  
+    (submit)="subscribe(emailInput.value)">
+        <input class="footer__input" type="email" id="email-input" name="email"
+            placeholder="Enter email address..."  #emailInput  required>
+        <button class="footer__button">Subscribe</button>
+    </form>
+</div>

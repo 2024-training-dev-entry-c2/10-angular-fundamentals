@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+# Pipepage
+=======
 # SketchAngular
+>>>>>>> 1bdb79270d4894d0982ab3287b881b3ae77b3143
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.1.
 

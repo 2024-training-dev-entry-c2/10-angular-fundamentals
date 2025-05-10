@@ -1,0 +1,12 @@
+<ul class="{{classContainer}}">
+@for (item of images; track $index) {
+<li class="{{classList}}">
+    <div class="{{classItem}}">
+        <picture>
+            <source srcset=".{{item.src}}" type="image/webp">
+            <img src=".{{item.src}}" alt="{{item.alt}}">
+        </picture>
+    </div>
+</li>
+}
+</ul>

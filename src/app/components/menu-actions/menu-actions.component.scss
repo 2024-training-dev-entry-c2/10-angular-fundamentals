@@ -1,0 +1,61 @@
+@use '../../styles/variables' as vars;
+@use '../../styles/mixin' as mix;
+
+
+
+.navbar {
+  &__menu-item,
+  &__actions-item {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    position: relative;
+    white-space: nowrap;
+    border-radius: vars.$border-radius-small;
+    color: vars.$color-menu-link;
+    display: block;
+  }
+  &__menu-link,
+  &__actions-link {
+    @include mix.typography(
+      0.875em,
+      vars.$font-weight-medium,
+      1.45,
+      vars.$color-menu-link
+    );
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+  }
+
+  &__menu-link:hover {
+    color: #ddd;
+  }
+
+  &__actions {
+    @include mix.flex(row, flex-start, center, 1.25);
+    gap: 1.25;
+
+  }
+  &__actions-list {
+    @include mix.flex(row, flex-start, center, 1.25rem);
+    list-style: none;
+  }
+  &__actions--separator {
+    font-size: 14px;
+    color: vars.$color-actions-separator;
+  }
+  &__actions-link:hover {
+    color: vars.$color-text;
+  }
+
+  &__button {
+    @include mix.button-style(#333, #333);
+    @include mix.typography(
+      vars.$font-size-small,
+      600,
+      1.45rem,
+      vars.$color-text
+    );
+    transition: background-color 0.2s ease-in-out;
+  }
+}

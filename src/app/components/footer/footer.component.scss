@@ -1,0 +1,33 @@
+@use "../../styles/variables" as vars;
+@use "../../styles/mixin" as mix;
+
+.footer{
+  padding-top: vars.$spacing-small;
+  padding-bottom: vars.$size-medium;
+  padding-right: vars.$spacing-small;
+  padding-left: vars.$spacing-small;
+  &__section {
+    @include mix.container(0 vars.$size-small, 92.5rem);
+  }
+  &__container {
+    padding:vars.$spacing-large;
+    padding-top:vars.$spacing-large;
+    padding-bottom: vars.$size-small;
+    border-radius: vars.$border-radius-medium;
+    background: #1a1a1a;
+  }
+  &__nav {
+    @include mix.flex(row, space-between, flex-start,vars.$spacing-large);
+  }
+
+}
+
+app-footer-privacy{
+  @include mix.flex(row, center, center,vars.$spacing-large);
+  border-top: 1px solid;
+  border-top-color: #4d4d4d;
+  margin-top:vars.$spacing-large;
+  padding-top: 1.25rem;
+  flex-direction: row;
+  display: flex;
+}

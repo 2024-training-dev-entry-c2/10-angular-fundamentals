@@ -1,0 +1,13 @@
+
+<nav class="footer__menu">
+@for (item of menuItems; track $index) {
+    <div class="footer__menu-item">
+      <h2>{{ item.title }}</h2>
+      @for (itemLink of item.links; track $index) {
+        <a [href]="itemLink.href" [attr.aria-label]="itemLink.ariaLabel">
+          {{ itemLink.text }}
+        </a>
+      }
+    </div>
+  }
+</nav>

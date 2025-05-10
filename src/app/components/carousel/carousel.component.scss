@@ -1,0 +1,79 @@
+@use "../../styles/variables" as vars;
+@use "../../styles/mixin" as mix;
+.hero {
+  &__list {
+    animation: scroll 40s linear infinite;
+    display: flex;
+    list-style: none;
+    height: 100%;
+    flex-wrap: nowrap;
+    backface-visibility: hidden;
+    margin: 0;
+    word-wrap: break-word;
+    padding: 0;
+    width: calc(100px * 14);
+  }
+
+  &__carousel-item {
+    flex-shrink: 0;
+    margin-right: vars.$size-small;
+    position: relative;
+    width: auto; /* Ajusta el ancho según tu diseño */
+  }
+
+  &__card {
+    @include mix.flex-center(row, center);
+    position: relative;
+    overflow: hidden;
+    border-radius: vars.$size-small;
+    width: 100%;
+    background-color: #0d0d0d;
+    & img {
+      @include mix.size(auto, 345px);
+      object-fit: cover;
+      border-radius: vars.$size-small;
+    }
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+.featured {
+    &__list {
+        @include mix.flex-center();
+        padding-bottom:vars.$spacing-large;
+        position: relative;
+        gap: vars.$size-small;
+        text-decoration: none;
+        list-style: none;
+      }
+      &__item {
+        @include mix.size(79px, 29px);
+        &--forbes-logo img {
+          @include mix.size(79px, 29px);
+        }
+        &--payment-logo {
+          @include mix.size(151px, 29px);
+        }
+        &--techCrunch-logo {
+          @include mix.size(79px, 27px);
+        }
+        &--CFO-logo {
+          @include mix.size(55px, 34px);
+        }
+        &--fintech-logo {
+          @include mix.size(94px, 30px);
+        }
+        &--finextra-logo {
+          @include mix.size(102px, 22px);
+        }
+      }
+}

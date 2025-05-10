@@ -1,0 +1,41 @@
+<main class="content">
+    <app-hero></app-hero>
+    <app-sponsor-section></app-sponsor-section>
+    <app-product-section></app-product-section>
+
+    <section class="featured" aria-labelledby="Meer out Product">
+        <div class="featured__container">
+            <h2 id="featured-title" class="featured__title">Featured in</h2>
+            <app-carousel [images]="logos" classContainer="featured__list"
+                classList="featured__item featured__item--forbes-logo"
+                classItem="featured__item featured__item--forbes-logo"></app-carousel>
+
+        </div>
+    </section>
+    <app-insights></app-insights>
+
+    <section class="demo">
+        <div class="demo__container">
+            <div class="demo__examples">
+                <div class="demo__images">
+                    <img class="demo__image--primary" src="./images/advance-details.svg"
+                        alt="Details of financial advances">
+                    <img class="demo__image--secondary" src="./images/glass iphone 1.svg"
+                        alt="Visual example of financial app interface on an iPhone">
+                    <img class="demo__image--tertiary" src="./images/cards-footer.webp"
+                        alt="Footer section with credit card options">
+                </div>
+            </div>
+            <div class="demo__data">
+                <svg viewBox="0 0 40 41" aria-hidden="true" focusable="false" class="chakra-icon css-hif5qi">
+                    <path fill="none" d="M17.3333 16.7119H24.1667V23.5452M16 24.8786L24 16.8786" stroke="currentColor"
+                        stroke-width="1.5"></path>
+                </svg><img src="" alt="">
+                <header class="demo__header">
+                    <p class="demo__subtitle">Book a demo</p>
+                    <h2 class="demo__button">Speak with our deicated sales team</h2>
+                </header>
+            </div>
+        </div>
+    </section>
+</main>

@@ -1,0 +1,173 @@
+@use '../../../styles/variables' as vars;
+@use '../../../styles/mixin' as mix;
+
+
+
+.insights {
+    padding-bottom: 7.5rem;
+    position: static;
+    background-color: hsl(0, 0%, 5%);
+    justify-content: center; /* Centrar el contenido dentro horizontalmente */
+    align-items: center;
+    &__data {
+      @include mix.flex(row, space-between, stretch);
+      @include mix.container(0, 75rem);
+      margin-bottom: vars.$size-medium;
+      flex-direction: row;
+      & p {
+        @include mix.text-style(
+          vars.$font-secondary,
+          vars.$font-size-very-small,
+          vars.$font-weight-medium,
+          hsla(0, 0%, 90%, 0.6)
+        );
+        line-height: 1.2;
+        text-transform: uppercase;
+      }
+      & h4 {
+        @include mix.text-style(vars.$font-primary, 1.75rem, vars.$font-weight-medium, vars.$color-text);
+        margin-top: vars.$spacing-medium;
+        max-width: 75%;
+      }
+    }
+  
+    &__button {
+      @include mix.flex-center(row, flex-end);
+      width: 30%;
+      align-items: flex-end;
+      & a {
+        @include mix.flex-center(row, center);
+        @include mix.typography(vars.$font-size-small, vars.$font-weight-medium, inherit, vars.$color-text);
+        text-decoration: none;
+        display: inline-flex;
+        outline: 2px solid transparent;
+        border-radius: vars.$border-radius-small;
+        transition: all 100ms ease-in-out;
+        height: 2.5rem;
+        padding: 0 vars.$size-small;
+        background-color: rgba(255, 255, 255, 0.05);
+      }
+    }
+  
+    &__cards {
+      @include mix.container(0, 75rem);
+      margin-top: vars.$spacing-small;
+      transform: translateZ(0);
+    }
+    &__list {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      box-sizing: content-box;
+      height: 400px;
+      list-style: none;
+    }
+    &__item {
+      transform: translateZ(0);
+      backface-visibility: hidden;
+      padding-right: vars.$size-small;
+      transition: transform 0.3s ease;
+    }
+  
+    &__article {
+      @include mix.border-shadow(10px, 0 4px 10px rgba(0, 0, 0, 0.3));
+      @include mix.flex(column, center, stretch);
+      @include mix.size(288px, 400px);
+      padding: vars.$spacing-medium;
+      background-color: #f25a29; /* Color naranja */
+      position: relative;
+      display: flex;
+      overflow: hidden;
+      & p {
+        @include mix.typography(vars.$font-size-very-small, vars.$font-weight-medium, inherit, inherit);
+        text-transform: uppercase;
+        bottom: 100px;
+      }
+      &--second {
+        background-color: vars.$color-text;
+        color: vars.$colot-text-dark;
+      }
+      &--second a,
+      &--second p {
+        color: vars.$colot-text-dark;
+      }
+      &--third {
+        background-color: #192a80;
+      }
+      &--fourth {
+        background-color: #1f1f1f;
+      }
+    }
+  
+    &__number {
+      position: absolute;
+      top:vars.$spacing-large;
+    }
+  
+    &__personal {
+      bottom: 1.75rem;
+      margin-top: auto;
+      transition: bottom 0.5s ease;
+      position: absolute;
+      & h2 {
+        margin: 0;
+        font-size: 22px;
+        font-weight: bold;
+      }
+      & p {
+        margin: 5px 0 0;
+        font-size: 0.875rem;
+        color: hsla(0, 0%, 90%, 0.6);
+        text-transform: capitalize;
+      }
+      &--white p {
+        color: hsl(0, 0%, 40%);
+      }
+    }
+  
+    &__text {
+      position: absolute;
+      bottom: -40%;
+      justify-content: center;
+      align-items: center;
+      width: 240px;
+      transition: bottom 0.5s ease;
+      & p {
+        @include mix.text-style(vars.$font-primary, vars.$font-size-small, 400, vars.$color-text);
+        text-transform: none;
+        padding-bottom: 2.5rem;
+        color: hsl(0, 0%, 90%);
+        font-size: 14px;
+      }
+      & a {
+        display: block;
+        width: 100%;
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+        font-family: "Inter", sans-serif;
+        align-items: center;
+        text-decoration: none;
+        color: vars.$color-text;
+        padding: vars.$font-size-small vars.$size-small;
+        border-radius: vars.$border-radius-small;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.16);
+      }
+      &--white p {
+        color: hsl(0, 0%, 30%);
+      }
+      &--white a {
+        background-color: hsl(0, 0%, 80%);
+        color: hsl(0, 0%, 30%);
+      }
+    }
+  }
+  
+  .insights__item:hover {
+    .insights__personal {
+      bottom: 70%;
+    }
+    .insights__text {
+      bottom: 5%;
+    }
+  }

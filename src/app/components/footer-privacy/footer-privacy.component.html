@@ -1,0 +1,15 @@
+<div class="footer__privacy-items">
+    @for (item of menuItemsLink; track $index) {
+    <a href="{{item.link}}">{{item.name}}</a>
+    }
+    <p>©2025 Pipe Technologies Inc. All rights reserved.</p>
+</div>
+<div class="footer__logos">
+    @for(item of socialLinks; track $index) {
+        <a href="">
+            <svg class="footer__icon">
+                <use [attr.xlink:href]="item.url"></use>
+            </svg>
+        </a>
+    }
+</div>
